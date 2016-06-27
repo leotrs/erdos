@@ -1,0 +1,14 @@
+# python stuff
+*.pyc
+*.pyo
+__pycache__
+
+# pelican stuff
+output
+develop_server.sh
+
+# notes and todo lists
+notes.org
+
+# input files for testing solutions
+input.txt
