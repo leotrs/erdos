@@ -22,9 +22,7 @@ def example_pic():
     labels = {node: str(node) for node in graph.node.keys()}
 
     # configure the image
-    fig = plt.figure(figsize=(2, 2))
-    # ax = fig.add_subplot(111)
-    # ax.set_title('A graph with four nodes and four edges.')
+    plt.figure(figsize=(2, 2))
     plt.axis('off')
 
     # draw all of the things!
