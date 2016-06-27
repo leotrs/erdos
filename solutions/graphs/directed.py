@@ -1,9 +1,12 @@
 """
 solutions/directed.py
-========================
+=====================
 
 Solution for /content/directed.md.
+
 """
+
+
 def directed():
     """Read the graph from stdin, and return the nodes with highest outdegree
     and indegree, respectively.

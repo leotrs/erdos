@@ -3,7 +3,9 @@ solutions/nodes_edges.py
 ========================
 
 Solution for /content/nodes_edges.md.
+
 """
+
 
 def nodes_edges():
     """Read the graph from stdin, and return node with highest degree.
