@@ -11,7 +11,8 @@ A graph is defined as a set of **nodes**, defining the locations, sites or
 elements of the graph, and a set of **edges**, representing the relationships
 between two nodes.
 
-![Alt text]({filename}/images/nodes_edges_example.png "A graph with four nodes and four edges.")
+![Alt text]({filename}/images/nodes_edges_example.png "A graph with four
+ nodes and four edges.")
 
 There are many ways to represent a graph, and both nodes and edges can have
 many different properties. For now, we choose the simplest possible way to
