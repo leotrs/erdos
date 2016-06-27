@@ -17,13 +17,13 @@ relationship is asymmetrical, we draw them with arrows and say the graph is
 
 IMAGE
 
-For this problem, you need to read a file from stdin and output two nodes:
-the node with the hightest *outgoing* edges and the node with the hightest
-*incoming* edges.
+For this problem, you need to read a file from stdin and output two
+integers: the node with the hightest nomber of *outgoing* edges and the
+node with the hightest nomber of *incoming* edges.
 
 Note: for a given node `u`, the number of outgoing edges from `u` is called
-*outdegree* of u, and the number of incoming edges to `u` is the *indgree*
-of u.
+*outdegree* of `u`, and the number of incoming edges to `u` is the *indgree*
+of `u`.
 
 
 ### Input
