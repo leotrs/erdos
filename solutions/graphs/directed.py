@@ -1,5 +1,5 @@
 """
-solutions/nodes_edges.py
+solutions/directed.py
 ========================
 
 Solution for /content/directed.md.
