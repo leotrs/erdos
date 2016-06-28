@@ -4,7 +4,7 @@ Date: 2016-06-26
 Position: 20
 Summary: The most comon type of graphs.
 
-# Theory
+# Context
 
 Up to this point we haven't put any restrictions on the general structure
 of our graphs. However, the general definition of a graph as just a set of
