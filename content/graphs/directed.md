@@ -31,7 +31,7 @@ of `u`.
 
 The input is a file in which the first line contains two integers, `n` and
 `m`, defining the number of nodes and edges, respectively. The next `m`
-lines each contain two integers, `u` and `v`, reprsenting two nodes that
+lines each contain two integers, `u` and `v`, representing two nodes that
 are joined by a directed edge, going from `u` to `v`.
 
 ### Output
