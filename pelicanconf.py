@@ -49,5 +49,5 @@ LANDING_PAGE_ABOUT = {'title': 'Erdos', 'subtitle': 'About this site', 'details'
                       '</a> for math and programming, <a href='
                       '"http://rosalind.info/about/">ROSALIND</a> for bioninformatics,'
                       ' and <a href="https://cryptopals.com/">the cryptopals'
-                      ' challenges</a> for cryptography.</p><p>Erdos is '
-                      'coming soon!</p>'}
+                      ' challenges</a> for cryptography.</p><p>Start <a href='
+                      '"/pages/network-science.html">here.</p>'}
