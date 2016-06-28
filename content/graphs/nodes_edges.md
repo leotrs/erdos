@@ -33,7 +33,7 @@ called *adjacent*, or *neighbors*.
 
 The input is a file in the aforementioned format, where the first line
 contains two integers, `n` and `m`, defining the number of nodes and edges,
-respectively. The next `m` lines each contain two integers, reprsenting two
+respectively. The next `m` lines each contain two integers, representing two
 nodes that are joined by an edge.
 
 ### Output
