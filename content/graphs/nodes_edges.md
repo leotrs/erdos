@@ -1,8 +1,11 @@
 Title: Nodes and edges
 Category: Graphs
 Date: 2016-06-26
-Position: 1
+Position: 10
 Summary: Graphs are made of nodes and edges
+
+
+# Theory
 
 **Graph** is the mathematical term for a network, and we use these two terms
 interchangeably throughout the problem sets.
@@ -22,15 +25,13 @@ each edge by a pair of two nodes.
 With these conventions, we can represent a graph in a file by defining the
 number of nodes, edges, and each edge in a separate line (see Sample Input below).
 
-For this problem, you need to read a file in this format and find the node
-with the most edges or *highest degree*.
 
-**Degree**:
+### Degree
 
 - For a given node `u`, the number of edges connecting to `u` is called the
 *degree* of u.
 
-**Adjacent / Neighbors**:
+### Adjacent / Neighbors
 
 Another way to describe a node's degree:
 

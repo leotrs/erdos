@@ -17,7 +17,6 @@ def directed():
     degrees as the edges are read, and never store the edges in memory.
 
     """
-
     num_nodes, num_edges = [int(i) for i in input().split(" ")]
 
     # nodes are just labeled by numbers
