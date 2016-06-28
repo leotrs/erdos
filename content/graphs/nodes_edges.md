@@ -33,12 +33,11 @@ number of nodes, edges, and each edge in a separate line (see Sample Input below
 
 ### Adjacent / Neighbors
 
-Another way to describe a node's degree:
+Another way to describe a node's degree is to say that:
 
 - If two nodes `u` and `v` are connected by an edge, they are
-called *adjacent*, or *neighbors*.
-in reference to one node being *adjacent* to another node.
-- These two nodes are then said to be *neighbors*.
+called *adjacent*.
+- These two nodes are also said to be *neighbors*.
 
 
 ## Problem
