@@ -1,7 +1,7 @@
 Title: Directed and Undirected Graphs
 Category: Graphs
 Date: 2016-06-26
-Position: 2
+Position: 3
 Summary: Edges can have a direction
 
 Edges in a graph join any two nodes, representing a relationship between
@@ -19,8 +19,8 @@ relationship is asymmetrical, we draw them with arrows and say the graph is
  nodes and five directed edges.")
 
 For this problem, you need to read a file from stdin and output two
-integers: the node with the hightest nomber of *outgoing* edges and the
-node with the hightest nomber of *incoming* edges.
+integers: the node with the highest number of *outgoing* edges and the
+node with the highest number of *incoming* edges.
 
 Note: for a given node `u`, the number of outgoing edges from `u` is called
 *outdegree* of `u`, and the number of incoming edges to `u` is the *indgree*
