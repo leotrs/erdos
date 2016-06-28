@@ -1,7 +1,7 @@
 Title: Directed and Undirected Graphs
 Category: Graphs
 Date: 2016-06-26
-Position: 3
+Position: 30
 Summary: Edges can have a direction
 
 Edges in a graph join any two nodes, representing a relationship between

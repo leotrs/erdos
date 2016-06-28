@@ -39,18 +39,23 @@ called *adjacent*, or *neighbors*.
 in reference to one node being *adjacent* to another node.
 - These two nodes are then said to be *neighbors*.
 
-### Input
+
+## Problem
+
+
+For this problem, you need to read a file in this format and find the node
+with the most edges or *highest degree*.
+
 
 The input is a file in the aforementioned format, where the first line
 contains two integers, `n` and `m`, defining the number of nodes and edges,
 respectively. The next `m` lines each contain two integers, representing two
 nodes that are joined by an edge.
 
-### Output
 
 Output the node with the highest degree.
 
-### Test Input
+### Sample Input
 
 ```
 4 4
@@ -61,7 +66,7 @@ Output the node with the highest degree.
 
 ```
 
-### Test Output
+### Sample Output
 
 ```
 0
