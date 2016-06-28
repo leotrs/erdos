@@ -26,7 +26,8 @@ For this problem, you need to read a file in this format and find the node
 with the most edges.
 
 Note: for a given node `u`, the number of edges connecting to `u` is called
-*degree* of u.
+*degree* of u. If two nodes `u` and `v` are connected by an edge, they are
+called *adjacent*, or *neighbors*.
 
 ### Input
 
