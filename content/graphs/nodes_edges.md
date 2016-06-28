@@ -17,17 +17,27 @@ between two nodes.
 There are many ways to represent a graph, and both nodes and edges can have
 many different properties. For now, we choose the simplest possible way to
 represent a graph, where each node is represented by a single integer, and
-each edge, by a pair of two nodes.
+each edge by a pair of two nodes.
 
-With these conventions, we could save a graph to a file by defining the
-number of nodes, edges, and each edge in a separate line.
+With these conventions, we can represent a graph in a file by defining the
+number of nodes, edges, and each edge in a separate line (see Sample Input below).
 
 For this problem, you need to read a file in this format and find the node
-with the most edges.
+with the most edges or *highest degree*.
 
-Note: for a given node `u`, the number of edges connecting to `u` is called
-*degree* of u. If two nodes `u` and `v` are connected by an edge, they are
+**Degree**:
+
+- For a given node `u`, the number of edges connecting to `u` is called the
+*degree* of u.
+
+**Adjacent / Neighbors**:
+
+Another way to describe a node's degree:
+
+- If two nodes `u` and `v` are connected by an edge, they are
 called *adjacent*, or *neighbors*.
+in reference to one node being *adjacent* to another node.
+- These two nodes are then said to be *neighbors*.
 
 ### Input
 
