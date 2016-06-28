@@ -5,7 +5,7 @@ Position: 10
 Summary: Graphs are made of nodes and edges
 
 
-# Theory
+# Context
 
 **Graph** is the mathematical term for a network, and we use these two terms
 interchangeably throughout the problem sets.
