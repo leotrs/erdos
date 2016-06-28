@@ -25,19 +25,18 @@ number of nodes, edges, and each edge in a separate line (see Sample Input below
 For this problem, you need to read a file in this format and find the node
 with the most edges or *highest degree*.
 
-**Degree**:
+**Degree**
 
 - For a given node `u`, the number of edges connecting to `u` is called the
 *degree* of u.
 
-**Adjacent / Neighbors**:
+**Adjacent / Neighbors**
 
-Another way to describe a node's degree:
+Another way to describe a node's degree is to say that:
 
 - If two nodes `u` and `v` are connected by an edge, they are
-called *adjacent*, or *neighbors*.
-in reference to one node being *adjacent* to another node.
-- These two nodes are then said to be *neighbors*.
+called *adjacent*.
+- These two nodes are also said to be *neighbors*.
 
 ### Input
 
