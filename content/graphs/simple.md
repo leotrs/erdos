@@ -2,7 +2,7 @@ Title: Simple Graphs
 Category: Graphs
 Date: 2016-06-26
 Position: 20
-Summary: The most comon type of graphs.
+Summary: The most common type of graphs.
 
 # Context
 
