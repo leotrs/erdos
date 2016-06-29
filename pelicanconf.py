@@ -126,13 +126,16 @@ href="https://en.wikipedia.org/wiki/Network_science">Network
 Science.</a></p>
 
 <p>Erdos has been inspired by projects like
-<ahref="https://projecteuler.net/">Project Euler </a> for math and
+<a href="https://projecteuler.net/">Project Euler</a> for math and
 programming, <a href= "http://rosalind.info/about/">ROSALIND</a> for
 bioninformatics, and the <a href="https://cryptopals.com/">cryptopals
 challenges</a> for cryptography.</p>
 
 <p>If you want to know more about Network Science, start <a
 href="/pages/network-science.html">here.</a></p>
+
+<p>If you want to learn how to use this site, read all about it <a
+href="/pages/how-to.html">here.</a></p>
 
 <p>If you want to dive right in, see our problem sets <a
 href="/categories.html">here.</p>
