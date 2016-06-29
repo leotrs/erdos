@@ -4,7 +4,7 @@ Date: 2016-06-26
 Position: 10
 Summary: Graphs are made of nodes and edges
 
-# Context
+!INCLUDE "static/context_header.md"
 
 When we study a real world or abstract network, we usually refer to an
 underlying mathematical object, called a *graph*. We use these two terms
@@ -35,7 +35,7 @@ Adjacent / Neighbors[](#neighbors)
 **adjacent** or **neighbors**.
 
 
-## Problem
+!INCLUDE "static/problem_header.md"
 
 For this problem, you need to read a file in this format and find the node
 with the most edges (or highest degree).
@@ -48,7 +48,7 @@ nodes that are joined by an edge.
 
 Output the node with the highest degree.
 
-### Sample Input
+!INCLUDE "static/input_header.md"
 
 ```
 4 4
@@ -59,7 +59,7 @@ Output the node with the highest degree.
 
 ```
 
-### Sample Output
+!INCLUDE "static/output_header.md"
 
 ```
 0
@@ -69,7 +69,7 @@ Output the node with the highest degree.
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/nodes_edges.py).
 
 
-## Expansion Questions
+!INCLUDE "static/question_header.md"
 
 1. this is a question?
 2. this is a question?

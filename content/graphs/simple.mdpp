@@ -4,7 +4,7 @@ Date: 2016-06-26
 Position: 20
 Summary: The most common type of graphs.
 
-# Context
+!INCLUDE "static/context_header.md"
 
 Up to this point we haven't put any restrictions on the general structure
 of our graphs. However, the general definition of a graph as just a set of
@@ -12,19 +12,22 @@ nodes and a set of edges allows for many different possibilities, including
 some that might be undesirable in certain cases. For this reason, there's
 a stricter definition that we introduce next.
 
-### Simple graph
+Simple graph[](#simple-graph)
+: A **simple graph** is a graph whose edges never join the same node and any
+pair of nodes is joined by at most one edge.
 
-- A *simple graph* is a graph whose edges never join the same node and any
-  pair of nodes is joined by at most one edge.
-- An edge that has the same node as both endpoints is called a self-loop.
-- A graph that is not a simple graph is called multigraph.
+Self-loop[](#self-loop)
+: An edge that has the same node as both endpoints is called a *self-loop*.
+
+Multigraph[](#multigraph)
+: A graph that is not a simple graph is called *multigraph*.
 
 
 IMAGE1
 IMAGE2
 
 
-## Problem
+!INCLUDE "static/problem_header.md"
 
 For this problem, you need to read a file in the usual format and check if
 the graph is a simple graph. Assume the graph is undirected.
@@ -36,7 +39,7 @@ an edge.
 
 Output 'YES' or 'NO', depending on whether or not the graph is simple.
 
-### Sample Input
+!INCLUDE "static/input_header.md"
 
 ```
 4 5
@@ -48,7 +51,7 @@ Output 'YES' or 'NO', depending on whether or not the graph is simple.
 
 ```
 
-### Sample Output
+!INCLUDE "static/output_header.md"
 
 ```
 NO
