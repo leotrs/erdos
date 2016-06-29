@@ -4,6 +4,8 @@ Date: 2016-06-26
 Position: 30
 Summary: Edges can have a direction
 
+!INCLUDE "static/context_header.md"
+
 Edges in a graph join any two nodes, representing a relationship between
 them. Sometimes, this relationship can be bilateral (or symmetric), e.g.,
 "Alice and Bob are friends of each other", while other times, the
@@ -18,10 +20,6 @@ relationship is asymmetrical, we draw them with arrows and say the graph is
 ![Alt text]({filename}/images/directed_example.png "A graph with four
  nodes and five directed edges.")
 
-For this problem, you need to read a file from stdin and output two
-integers: the node with the highest number of *outgoing* edges and the
-node with the highest number of *incoming* edges.
-
 Outdegree[](#Outdegree)
 : For a given node `u`, the number of outgoing edges from `u` is called
 **outdegree** of `u`.
@@ -29,21 +27,22 @@ Outdegree[](#Outdegree)
 Indegree[](#Indegree)
 : The number of incoming edges to `u` is the **indgree** of `u`.
 
+!INCLUDE "static/problem_header.md"
 
-### Input
+For this problem, you need to read a file from stdin and output two
+integers: the node with the highest number of *outgoing* edges and the
+node with the highest number of *incoming* edges.
+
 
 The input is a file in which the first line contains two integers, `n` and
 `m`, defining the number of nodes and edges, respectively. The next `m`
 lines each contain two integers, `u` and `v`, representing two nodes that
 are joined by a directed edge, going from `u` to `v`.
 
-### Output
-
 Output two integers, representing the nodes with the highest outdegree and
 highest indegree.
 
-
-### Test Input
+!INCLUDE "static/input_header.md"
 
 ```
 4 5
@@ -54,10 +53,17 @@ highest indegree.
 3 0
 ```
 
-### Test Output
+!INCLUDE "static/output_header.md"
 
 ```
 0 3
 ```
 --------------------------------------------------------
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/directed.py).
+
+
+!INCLUDE "static/question_header.md"
+
+1. this is a question?
+2. this is a question?
+3. this is a question?

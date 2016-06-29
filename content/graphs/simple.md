@@ -12,12 +12,15 @@ nodes and a set of edges allows for many different possibilities, including
 some that might be undesirable in certain cases. For this reason, there's
 a stricter definition that we introduce next.
 
-### Simple graph
+Simple graph[](#simple-graph)
+: A **simple graph** is a graph whose edges never join the same node and any
+pair of nodes is joined by at most one edge.
 
-- A *simple graph* is a graph whose edges never join the same node and any
-  pair of nodes is joined by at most one edge.
-- An edge that has the same node as both endpoints is called a self-loop.
-- A graph that is not a simple graph is called multigraph.
+Self-loop[](#self-loop)
+: An edge that has the same node as both endpoints is called a *self-loop*.
+
+Multigraph[](#multigraph)
+: A graph that is not a simple graph is called *multigraph*.
 
 
 IMAGE1
