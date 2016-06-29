@@ -4,18 +4,18 @@ Date: 2016-06-26
 Position: 10
 Summary: Graphs are made of nodes and edges
 
-
 # Context
 
 **Graph** is the mathematical term for a network, and we use these two terms
 interchangeably throughout the problem sets.
 
-A graph is defined as a set of **nodes**, defining the locations, sites or
+Graph[](#graph)
+: A **graph** is defined as a set of **nodes**, defining the locations, sites or
 elements of the graph, and a set of **edges**, representing the relationships
 between two nodes.
 
-![Alt text]({filename}/images/nodes_edges_example.png "A graph with four
- nodes and four edges.")
+![Couldn't load image](/images/nodes_edges_example.png A graph with four
+ nodes and four edges.)
 
 There are many ways to represent a graph, and both nodes and edges can have
 many different properties. For now, we choose the simplest possible way to
