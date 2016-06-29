@@ -68,3 +68,10 @@ Output the node with the highest degree.
 
 --------------------------------------------------------
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/nodes_edges.py).
+
+
+## Expansion Questions
+
+1. this is a question?
+2. this is a question?
+3. this is a question?
