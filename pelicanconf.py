@@ -14,7 +14,7 @@ import markdown as md
 AUTHOR = 'dleonardotn'
 SITENAME = 'erdos'
 SITEURL = ''
-SITESUBTITLE = 'Learn about Network Science through problem solving.'
+SITESUBTITLE = 'Problem-based NetSci'
 PATH = 'content'
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
