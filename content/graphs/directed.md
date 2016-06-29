@@ -1,4 +1,4 @@
-Title: Directed and Undirected Graphs
+Title: Directed Graphs
 Category: Graphs
 Date: 2016-06-26
 Position: 30
@@ -22,9 +22,12 @@ For this problem, you need to read a file from stdin and output two
 integers: the node with the highest number of *outgoing* edges and the
 node with the highest number of *incoming* edges.
 
-Note: for a given node `u`, the number of outgoing edges from `u` is called
-*outdegree* of `u`, and the number of incoming edges to `u` is the *indgree*
-of `u`.
+Outdegree[](#Outdegree)
+: For a given node `u`, the number of outgoing edges from `u` is called
+*outdegree* of `u`.
+
+Indegree[](#Indegree)
+: The number of incoming edges to `u` is the *indgree* of `u`.
 
 
 ### Input
@@ -49,14 +52,12 @@ highest indegree.
 2 0
 3 2
 3 0
-
 ```
 
 ### Test Output
 
 ```
 0 3
-
 ```
 --------------------------------------------------------
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/directed.py).

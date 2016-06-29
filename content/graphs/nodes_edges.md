@@ -25,19 +25,13 @@ each edge by a pair of two nodes.
 With these conventions, we can represent a graph in a file by defining the
 number of nodes, edges, and each edge in a separate line (see Sample Input below).
 
+Degree[](#degree)
+: The number of edges connecting to a node `u` is called the *degree* of
+`u`.
 
-### Degree
-
-- For a given node `u`, the number of edges connecting to `u` is called the
-*degree* of u.
-
-### Adjacent / Neighbors
-
-Another way to describe a node's degree is to say that:
-
-- If two nodes `u` and `v` are connected by an edge, they are
-called *adjacent*.
-- These two nodes are also said to be *neighbors*.
+Adjacent / Neighbors[](#neighbors)
+: If two nodes `u` and `v` are connected by an edge, they are called
+*adjacent* or *neighbors*.
 
 
 ## Problem
