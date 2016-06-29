@@ -88,19 +88,27 @@ def get_definitions_md(markdown):
 
 
 def all_definitions():
-    """Reads all pages and extracts definition lists.
+    """Reads all Markdown pages and extracts definition lists.
 
     Return a list of the form
+
     [('def_title', 'def_link', 'def_content'), ... ]
+
+    Note: reads only .md, not .mdpp files.
     """
     articles = []
 
-    for subdir in [d for d in os.listdir(PATH) if os.path.isdir(os.path.join(PATH, d))]:
+    for subdir in [d for d in os.listdir(PATH) if
+                   os.path.isdir(os.path.join(PATH, d))]:
         if subdir == 'images' or subdir == 'pages':
             continue
 
         subpath = os.path.join(PATH, subdir)
-        articles += [os.path.join(subpath, f) for f in os.listdir(os.path.join(PATH, subdir))]
+
+        for filename in os.listdir(os.path.join(PATH, subdir)):
+            fullname = os.path.join(subpath, filename)
+            if os.path.splitext(fullname)[1] == '.md':
+                articles.append(fullname)
 
     definitions = []
     for article in articles:
