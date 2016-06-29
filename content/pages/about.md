@@ -8,7 +8,8 @@ GitHub page, [here](https://github.com/Leockard/erdos/).
 Erdos uses [python](https://www.python.org/) to showcase solutions, and for
 generating the site itself, with the help of
 [pelican](http://getpelican.com/) and
-[elegant-theme](http://oncrashreboot.com/pelican-elegant).
+[elegant-theme](http://oncrashreboot.com/pelican-elegant), and
+[markdown-pp](https://github.com/jreese/markdown-pp).
 
 If you have any question, comment, suggestion, or would like to contribute
 to Erdos, we would like to hear form you! You can find the contact
