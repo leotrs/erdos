@@ -1,16 +1,10 @@
 Title: How To
 Position: 2
+Side: left
 
 Erdos is an educational site for learning about
 [Network Science](https://en.wikipedia.org/wiki/Network_science) based on
 programmatic problem-solving and open-ended exercises and questions.
-
-## NetSci Primer
-
-If you're curious about NetSci, but don't know what it is or where to
-begin, you can read about it [here](network-science.html). If this exciting
-area of science sounds interesting, continue reading to learn how to use
-Erdos.
 
 ## Problem Sets
 
@@ -40,18 +34,3 @@ solution on the comment section of each problem.
 
 Problems include definitions of important concepts in Network Science. They
 are all compiled in the [Glossary](/glossary.html).
-
-## Contact
-
-If you have any question, comment, suggestion, or would like to contribute
-to Erdos, we would like to hear form you! You can find the contact
-information to the right of this page.
-
-## Contribute
-
-Erdos is open source and free of charge. You can contribute directly on our
-GitHub page, [here](https://github.com/Leockard/erdos/).
-
- Erdos uses [python](https://www.python.org/) to showcase solutions, and
-for generating the site itself, with [pelican](http://getpelican.com/) and
-[elegant-theme](http://oncrashreboot.com/pelican-elegant).

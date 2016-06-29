@@ -131,11 +131,13 @@ programming, <a href= "http://rosalind.info/about/">ROSALIND</a> for
 bioninformatics, and the <a href="https://cryptopals.com/">cryptopals
 challenges</a> for cryptography.</p>
 
-<p>If you want to know more about Network Science, start <a
-href="/pages/network-science.html">here.</a></p>
+<p>If you're curious about NetSci, but don't know what it is or where to
+begin, you can read about it <a href="network-science.html">here</a>. If
+this exciting area of science sounds interesting, continue reading to learn
+how to use Erdos.</p>
 
-<p>If you want to learn how to use this site, read all about it <a
-href="/pages/how-to.html">here.</a></p>
+<p>If you want to learn how to use this site, read the <a
+href="/pages/how-to.html">how to.</a></p>
 
 <p>If you want to dive right in, see our problem sets <a
 href="/categories.html">here.</p>
