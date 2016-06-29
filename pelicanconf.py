@@ -123,17 +123,24 @@ LANDING_PAGE_DETAILS = """
 <p>Erdos is a site with educational problem sets of increasing difficulty
 for learning about <a
 href="https://en.wikipedia.org/wiki/Network_science">Network
-Science.</a></p> <p>Erdos has been inspired by projects like
+Science.</a></p>
+
+<p>Erdos has been inspired by projects like
 <ahref="https://projecteuler.net/">Project Euler </a> for math and
 programming, <a href= "http://rosalind.info/about/">ROSALIND</a> for
 bioninformatics, and the <a href="https://cryptopals.com/">cryptopals
-challenges</a> for cryptography.</p><p>Start <a
-href="/pages/network-science.html">here.</p>
+challenges</a> for cryptography.</p>
+
+<p>If you want to know more about Network Science, start <a
+href="/pages/network-science.html">here.</a></p>
+
+<p>If you want to dive right in, see our problem sets <a
+href="/categories.html">here.</p>
 
 """
 
 # "About This Site" section in root url
-LANDING_PAGE_ABOUT = {'title': 'Erdos', 'subtitle': 'Problem-based NetSci',
+LANDING_PAGE_ABOUT = {'title': 'Erdos', 'subtitle': SITESUBTITLE,
                       'details': LANDING_PAGE_DETAILS}
 
 

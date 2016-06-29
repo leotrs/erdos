@@ -23,15 +23,15 @@ represent a graph, where each node is represented by a single integer, and
 each edge by a pair of two nodes.
 
 With these conventions, we can represent a graph in a file by defining the
-number of nodes, edges, and each edge in a separate line (see Sample Input below).
+number of nodes, edges, and each edge in a separate line.
 
 Degree[](#degree)
-: The number of edges connecting to a node `u` is called the *degree* of
+: The number of edges connecting to a node `u` is called the **degree** of
 `u`.
 
 Adjacent / Neighbors[](#neighbors)
 : If two nodes `u` and `v` are connected by an edge, they are called
-*adjacent* or *neighbors*.
+**adjacent** or **neighbors**.
 
 
 ## Problem

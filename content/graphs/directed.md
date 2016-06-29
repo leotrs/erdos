@@ -24,10 +24,10 @@ node with the highest number of *incoming* edges.
 
 Outdegree[](#Outdegree)
 : For a given node `u`, the number of outgoing edges from `u` is called
-*outdegree* of `u`.
+**outdegree** of `u`.
 
 Indegree[](#Indegree)
-: The number of incoming edges to `u` is the *indgree* of `u`.
+: The number of incoming edges to `u` is the **indgree** of `u`.
 
 
 ### Input
