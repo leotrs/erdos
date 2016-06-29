@@ -17,10 +17,10 @@ Simple graph[](#simple-graph)
 pair of nodes is joined by at most one edge.
 
 Self-loop[](#self-loop)
-: An edge that has the same node as both endpoints is called a *self-loop*.
+: An edge that has the same node as both endpoints is called a **self-loop**.
 
 Multigraph[](#multigraph)
-: A graph that is not a simple graph is called *multigraph*.
+: A graph that is not a simple graph is called **multigraph**.
 
 
 IMAGE1
