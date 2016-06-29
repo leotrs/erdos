@@ -48,3 +48,8 @@ are all compiled in the [Glossary](/glossary.html).
 If you have any question, comment, suggestion, or would like to contribute
 to Erdos, we would like to hear form you! You can find the contact
 information to the right of this page.
+
+## Contribute
+
+Erdos is open source and free of charge. You can contribute directly on our
+GitHub page, [here](https://github.com/Leockard/erdos/).
