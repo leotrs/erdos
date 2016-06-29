@@ -1,4 +1,5 @@
 Title: How To
+Position: 2
 
 Erdos is an educational site for learning about
 [Network Science](https://en.wikipedia.org/wiki/Network_science) based on
