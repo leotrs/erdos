@@ -132,7 +132,7 @@ bioninformatics, and the <a href="https://cryptopals.com/">cryptopals
 challenges</a> for cryptography.</p>
 
 <p>If you're curious about NetSci, but don't know what it is or where to
-begin, you can read about it <a href="network-science.html">here</a>. If
+begin, you can read about it <a href="/pages/network-science.html">here</a>. If
 this exciting area of science sounds interesting, continue reading to learn
 how to use Erdos.</p>
 
