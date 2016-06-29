@@ -6,7 +6,8 @@ Summary: Graphs are made of nodes and edges
 
 # Context
 
-**Graph** is the mathematical term for a network, and we use these two terms
+When we study a real world or abstract network, we usually refer to an
+underlying mathematical object, called a *graph*. We use these two terms
 interchangeably throughout the problem sets.
 
 Graph[](#graph)
@@ -36,10 +37,8 @@ Adjacent / Neighbors[](#neighbors)
 
 ## Problem
 
-
 For this problem, you need to read a file in this format and find the node
-with the most edges or *highest degree*.
-
+with the most edges (or highest degree).
 
 The input is a file in the aforementioned format, where the first line
 contains two integers, `n` and `m`, defining the number of nodes and edges,
