@@ -133,22 +133,14 @@ for learning about <a
 href="https://en.wikipedia.org/wiki/Network_science">Network
 Science.</a></p>
 
-<p>Erdos has been inspired by projects like
-<a href="https://projecteuler.net/">Project Euler</a> for math and
-programming, <a href= "http://rosalind.info/about/">ROSALIND</a> for
-bioninformatics, and the <a href="https://cryptopals.com/">cryptopals
-challenges</a> for cryptography.</p>
-
-<p>If you're curious about NetSci, but don't know what it is or where to
-begin, you can read about it <a href="/pages/network-science.html">here</a>. If
-this exciting area of science sounds interesting, continue reading to learn
-how to use Erdos.</p>
+<p>If you're curious about NetSci, but don't know where to begin, you can
+read about it <a href="/pages/network-science.html">here</a>. If this
+exciting area of science sounds interesting, you're welcome to explore the
+content on Erdos.</p>
 
 <p>If you want to learn how to use this site, read the <a
-href="/pages/how-to.html">how to.</a></p>
-
-<p>If you want to dive right in, see our problem sets <a
-href="/categories.html">here.</p>
+href="/pages/how-to.html">how to.</a> If you want to dive right in, see our
+problem sets <a href="/categories.html">here.</p>
 
 """
 
