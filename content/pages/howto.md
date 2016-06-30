@@ -15,7 +15,12 @@ knowledge of any programming language.
 
 If you don't feel comfortable with things such as control flow, lists, and
 reading and writing files, you can check out a python tutorial
-[here](https://docs.python.org/3/tutorial/).
+[here](https://docs.python.org/3/tutorial/). Some of the more advanced
+problems require a deeper knowledge of algorithms and data structures, as
+well as a bit of
+[graph theory](https://en.wikipedia.org/wiki/Graph_theory). However, Erdos
+aims to be as self-contained as possible, and you will be offered pointers
+and further resources when necessary.
 
 ### Categories
 

@@ -22,15 +22,16 @@ Self-loop[](#self-loop)
 Multigraph[](#multigraph)
 : A graph that is not a simple graph is called **multigraph**.
 
+From now on, we will work exclusively with simple graphs, unless explicitly
+stated otherwise.
 
 IMAGE1
 IMAGE2
 
-
 ## Problem
 
 For this problem, you need to read a file in the usual format and check if
-the graph is a simple graph. Assume the graph is undirected.
+the graph is a simple graph.
 
 The input is a file where the first line contains two integers, `n` and
 `m`, defining the number of nodes and edges, respectively. The next `m`
@@ -56,6 +57,17 @@ Output 'YES' or 'NO', depending on whether or not the graph is simple.
 ```
 NO
 ```
+
+## Expansion Questions
+
+1. Consider the social network of your immediate Facebook friends. In this
+   graph, every node stands in for one of your friends, and there is a node
+   between two nodes if the corresponding persons are friends with each
+   other.
+    + Is this graph simple?
+    + What is your degree in this network?
+    + Consider the extended network of all Facebook users. Estimate the
+      number of nodes and edges. (Doesn't have to be an exact number.)
 
 --------------------------------------------------------
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/simple.py).

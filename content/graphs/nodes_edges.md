@@ -6,25 +6,28 @@ Summary: Graphs are made of nodes and edges
 
 # Context
 
-When we study a real world or abstract network, we usually refer to an
-underlying mathematical object, called a *graph*. We use these two terms
-interchangeably throughout the problem sets.
+When we study a real world network, we usually refer to an underlying
+mathematical object, called a *graph*. We use the terms *network* and
+*graph* interchangeably throughout the problem sets.
 
 Graph[](#graph)
-: A **graph** is defined as a set of **nodes**, defining the locations, sites or
-elements of the graph, and a set of **edges**, representing the relationships
-between two nodes.
+: A **graph** is defined as a set of **nodes**, defining the locations,
+sites or elements of the graph, and a set of **edges**, representing the
+relationships between two nodes.
+
+Graph Theory[](#graph-theory)
+: The field of mathematics concerned with the study of graphs is called
+**graph theory**. Network Science relies heavily in graph theory, as every
+network can be represented as a graph.
 
 ![Couldn't load image](/images/nodes_edges_example.png A graph with four
  nodes and four edges.)
 
-There are many ways to represent a graph, and both nodes and edges can have
-many different properties. For now, we choose the simplest possible way to
-represent a graph, where each node is represented by a single integer, and
-each edge by a pair of two nodes.
-
-With these conventions, we can represent a graph in a file by defining the
-number of nodes, edges, and each edge in a separate line.
+Both nodes and edges can have many different properties. One of the most
+fundamental properties of graphs is the number of edges connecting to each
+node. This gives a rough measure of importance, size, or
+connectedness. These concepts will become clearer as we delve deeper into
+Network Science and Graph Theory.
 
 Degree[](#degree)
 : The number of edges connecting to a node `u` is called the **degree** of
@@ -34,8 +37,13 @@ Adjacent / Neighbors[](#neighbors)
 : If two nodes `u` and `v` are connected by an edge, they are called
 **adjacent** or **neighbors**.
 
-
 ## Problem
+
+There are many ways to represent a graph, For now, we choose the simplest
+possible way to do it, where each node is represented by a single integer,
+and each edge by a pair of two nodes. In this way, we can represent a graph
+in a file by defining the number of nodes, edges, and each edge in a
+separate line.
 
 For this problem, you need to read a file in this format and find the node
 with the most edges (or highest degree).
@@ -65,12 +73,25 @@ Output the node with the highest degree.
 0
 ```
 
---------------------------------------------------------
-[Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/nodes_edges.py).
-
-
 ## Expansion Questions
 
-1. this is a question?
-2. this is a question?
-3. this is a question?
+1. We've defined just one measurement of "importance" for a node, its
+   degree. What might be other ways of gauging the importance of a node in
+   a network?
+2. Consider the social network of your immediate Facebook friends. In this
+   graph, every node stands in for one of your friends, and there is a node
+   between two nodes if the corresponding persons are friends with each
+   other.
+    + Estimate the number of nodes and edges in this network.
+    + What is your degree in this network?
+    + Consider the extended network of all Facebook users. Estimate the
+      number of nodes and edges. (Doesn't have to be an exact number.)
+3. Discuss the possibility of measuring the "importance" of an edge in a
+   network. Can you come up with a proposal for how to measure it?
+
+
+--------------------------------------------------------
+
+## Solutions
+
+[Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/nodes_edges.py).
