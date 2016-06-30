@@ -82,7 +82,7 @@ Output the node with the highest degree.
    degree. What might be other ways of measuring the importance of a node
    in a network?
 2. Consider the social network of your immediate Facebook friends. In this
-   graph, every node stands in for one of your friends, and there is a node
+   graph, every node stands in for one of your friends, and there is an edge
    between two nodes if the corresponding persons are friends with each
    other.
     + Estimate the number of nodes and edges in this network.

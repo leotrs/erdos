@@ -6,11 +6,11 @@ Summary: The most common type of graphs.
 
 !INCLUDE "static/context_header.md"
 
-Up to this point we haven't put any restrictions on the general structure
-of our graphs. However, the general definition of a graph as just a set of
-nodes and a set of edges allows for many different possibilities, including
-some that might be undesirable in certain cases. For this reason, there's
-a stricter definition that we introduce next.
+Last time we didn't put any restrictions on the general structure of our
+graphs. However, the general definition of a graph as just a set of nodes
+and a set of edges allows for many different possibilities, including some
+that might be undesirable in certain cases. For this reason, there's a
+stricter definition that we introduce next.
 
 Simple graph[](#simple-graph)
 : A **simple graph** is a graph whose edges never join the same node and any
@@ -60,14 +60,23 @@ NO
 
 !INCLUDE "static/question_header.md"
 
-1. Consider the social network of your immediate Facebook friends. In this
-   graph, every node stands in for one of your friends, and there is a node
-   between two nodes if the corresponding persons are friends with each
-   other.
-    + Is this graph simple?
-    + What is your degree in this network?
-    + Consider the extended network of all Facebook users. Estimate the
-      number of nodes and edges. (Doesn't have to be an exact number.)
+1. For the following networks, decide if they are simple or multigraphs. If
+   they are not simple, explain what would self-loops or multiedges
+   represent.
+    + The social network of your immediate Facebook friends. In this graph,
+      every node stands in for one of your friends, and there is an edge
+      between two nodes if the corresponding persons are friends with each
+      other.
+    + The transportation network of roads between cities in a country. In
+      this graph, every node represents a city and there is one edge
+      between any two cities for each road connecting them.
+    + The information network of devices connected to the internet
+      (computers, routers, cell phones, etc), where every node represents a
+      device and every edge represents physical or wireless connections
+      to network devices.
 
 --------------------------------------------------------
+
+!INCLUDE "static/solutions_header.md"
+
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/simple.py).
