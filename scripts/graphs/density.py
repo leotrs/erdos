@@ -1,6 +1,6 @@
 """
 scripts/density.py
-==============
+==================
 
 Code used for /content/density.md.
 """
@@ -60,6 +60,7 @@ def example_pic():
     path = os.path.join(os.environ['ERDOS_PATH'], "content/images", "density.png")
     plt.savefig(path)
     plt.show()
+
 
 if __name__ == '__main__':
     example_pic()

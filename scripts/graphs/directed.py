@@ -2,7 +2,7 @@
 scripts/directed.py
 ==============
 
-Code used for /content/directed.md.
+Code used for /content/graphs/directed.md.
 """
 
 import os
@@ -35,6 +35,7 @@ def example_pic():
     plt.savefig(path)
 
     # plt.show()
+
 
 if __name__ == '__main__':
     example_pic()

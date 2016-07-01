@@ -2,7 +2,7 @@
 solutions/density.py
 ========================
 
-Solution for /content/density.md.
+Solution for /content/graphs/density.md.
 
 """
 
