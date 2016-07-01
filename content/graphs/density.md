@@ -1,8 +1,8 @@
-Title: Maximum Number of Edges
+Title: Graph Density
 Category: Graphs
 Date: 2016-06-26
 Position: 40
-Summary: The maximum number of edges depends on the type of graph.
+Summary: The density is a global graph property.
 
 # Context
 
