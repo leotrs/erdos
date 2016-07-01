@@ -140,7 +140,7 @@ content on Erdos.</p>
 
 <p>If you want to learn how to use this site, read the <a
 href="/pages/how-to.html">how to.</a> If you want to dive right in, see our
-problem sets <a href="/categories.html">here.</p>
+problem sets <a href="/categories.html">here.</a></p>
 
 """
 
