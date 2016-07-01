@@ -37,6 +37,8 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
+PELICANOPTS += -t ../pelican/pelican-themes/pelican-elegant
+
 help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
@@ -62,6 +64,7 @@ help:
 	@echo '                                                                          '
 
 html:
+	find content/ -name *.mdpp -exec sh -c 'markdown-pp {} -o `echo {} | cut -d. -f1 `.md' \;
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
