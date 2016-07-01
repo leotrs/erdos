@@ -9,13 +9,23 @@ Summary: Edges can have a direction
 Edges in a graph join any two nodes, representing a relationship between
 them. Sometimes, this relationship can be bilateral (or symmetric), e.g.,
 "Alice and Bob are friends of each other", while other times, the
-relationship can be unilateral (asymmetric): "Alice follows Bob's blog (but
-not the other way around)".
+relationship can be unilateral (or asymmetric): "Alice follows Bob's blog
+(but not the other way around)".
 
-When the relationship represented by the edges in a graph is symmetrical,
-we draw them as lines or arcs and say the graph is **undirected**. When the
-relationship is asymmetrical, we draw them with arrows and say the graph is
-**directed**.
+Directed graph[](#directed)
+: A graph is **directed** when the edges represent an asymmetric
+relationship. In this case, every edge is represented by an *oredered pair*
+of nodes: `(u, v)`, with the first one sometimes being called the *source*
+and the second, the *target*.
+
+Undirected graph[](#undirected)
+: A graph is undirected when the relationship between nodes is
+symmetrical. In this case, every edge is written as an *unordered pair* of
+nodes: `{u, v}`.
+
+When drawing an undirected graph, we draw the edges as lines or arcs,
+whereas, for directed graphs, we draw them with arrows stemming from source
+nodes into target nodes.
 
 ![Alt text]({filename}/images/directed_example.png "A graph with four
  nodes and five directed edges.")
@@ -37,7 +47,8 @@ node with the highest number of *incoming* edges.
 The input is a file in which the first line contains two integers, `n` and
 `m`, defining the number of nodes and edges, respectively. The next `m`
 lines each contain two integers, `u` and `v`, representing two nodes that
-are joined by a directed edge, going from `u` to `v`.
+are joined by a directed edge, `(u, v)` with `u` as the source and `v` as
+the target.
 
 Output two integers, representing the nodes with the highest outdegree and
 highest indegree.
@@ -58,12 +69,29 @@ highest indegree.
 ```
 0 3
 ```
---------------------------------------------------------
-[Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/directed.py).
-
 
 !INCLUDE "static/question_header.md"
 
-1. this is a question?
-2. this is a question?
-3. this is a question?
+1. For the following networks, decide if they are simple or multigraphs. If
+   they are not simple, explain what would self-loops or multiedges
+   represent.
+    + The social network of your immediate Facebook friends. In this graph,
+      every node stands in for one of your friends, and there is an edge
+      between two nodes if the corresponding persons are friends with each
+      other.
+    + The social network of your followers on Twitter. In this graph, every
+      node stands for one user, and each edge between users A and B
+      represents the relationship "A follows B".
+    + The transportation network of roads between cities in a country. In
+      this graph, every node represents a city and there is one edge
+      between any two cities for each road connecting them.
+    + The information network of devices connected to the internet
+      (computers, routers, cell phones, etc), where every node represents a
+      device and every edge represents physical or wireless connections
+      to network devices.
+
+--------------------------------------------------------
+
+!INCLUDE "static/solutions_header.md"
+
+[Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/directed.py).

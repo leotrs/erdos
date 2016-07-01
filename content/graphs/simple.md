@@ -22,11 +22,12 @@ Self-loop[](#self-loop)
 Multigraph[](#multigraph)
 : A graph that is not a simple graph is called **multigraph**.
 
+![Couldn't load image](/images/simple1.png A multigraph with one self-edge
+and two parallel edges.) ![Couldn't load image](/images/simple2.png A simple graph similar to the
+ previous multigraph.)
+
 From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.
-
-IMAGE1
-IMAGE2
 
 ## Problem
 
@@ -67,6 +68,9 @@ NO
       every node stands in for one of your friends, and there is an edge
       between two nodes if the corresponding persons are friends with each
       other.
+    + The social network of your followers on Twitter. In this graph, every
+      node stands for one user, and each edge between users A and B
+      represents the relationship "A follows B".
     + The transportation network of roads between cities in a country. In
       this graph, every node represents a city and there is one edge
       between any two cities for each road connecting them.

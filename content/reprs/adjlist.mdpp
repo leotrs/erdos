@@ -50,7 +50,6 @@ each adjacency list in ascending order.
 0 2
 1 3
 3 0
-
 ```
 
 ### Test Output
