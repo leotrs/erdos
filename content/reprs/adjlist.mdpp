@@ -40,7 +40,7 @@ an edge. Assume undirected edges.
 
 Write `n` lines, where each line holds a list of space-separated integers,
 representing the adjacencies of every node. As before, assume that nodes
-are labeled from `0` to `n`. Write the lines in ascending order of node
+are labeled from `0` to `n-1`. Write the lines in ascending order of node
 label, e.g., the first line of the output should contain the adjacencies of
 node `0`, the second line should contain the adjacencies of node `1`,
 etc. Print each adjacency list in ascending order.
