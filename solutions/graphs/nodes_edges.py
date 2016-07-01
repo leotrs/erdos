@@ -2,7 +2,7 @@
 solutions/nodes_edges.py
 ========================
 
-Solution for /content/nodes_edges.md.
+Solution for /content/graphs/nodes_edges.md.
 
 """
 
