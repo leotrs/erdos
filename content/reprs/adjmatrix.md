@@ -112,9 +112,12 @@ Output the adjacency matrix of the graph.
 
 ## Expansion Questions
 
-1. Consider the adjacency matrix of an undirected graph. What can you say
-   about the entries at row `i`, column `j`, as compared to the entry at
-   row `j`, column `i`?  What if the graph is undirected?
+1. Consider the adjacency matrix of an undirected graph.
+    1. What can you say about the entry at row `i`, column `j`, as compared
+       to the entry at row `j`, column `i`?
+    2. What if the graph is undirected?
+    3. How might your answer to 1.1 affect the solution to the above
+       problem, assuming that the graph is undirected?
 2. For a given node `u` in the example network, compute the degree of `u`
    using only the adjacency matrix.
 3. Compute the density of the example network using only its adjacency
@@ -125,4 +128,4 @@ Output the adjacency matrix of the graph.
 
 ## Solutions
 
-[Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/adjmatrix.py).
+[Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjmatrix.py).
