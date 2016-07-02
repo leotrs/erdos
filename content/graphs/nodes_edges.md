@@ -12,7 +12,7 @@ mathematical object, called a *graph*. We use the terms *network* and
 
 Graph[](#graph)
 : A **graph** is defined as a set of **nodes**, defining the locations,
-sites or elements of the graph, and a set of **edges**, representing the
+entities or elements of the graph, and a set of **edges**, representing the
 relationships between two nodes.
 
 Graph Theory[](#graph-theory)
