@@ -20,8 +20,11 @@ Graph Theory[](#graph-theory)
 **graph theory**. Network Science relies heavily on graph theory, as every
 network is represented by a graph.
 
-![Couldn't load image](/images/nodes_edges_example.png A graph with four
- nodes and four edges.)
+<div class="img-desc">
+  <p><img src="/images/nodes_edges_example.png" title="A graph with four
+	nodes and four edges."></p>
+  <p><em>A graph with four nodes and four edges.</em></p>
+</div>
 
 Both nodes and edges can have many different properties. One of the most
 fundamental properties of graphs is the number of edges connecting to each
