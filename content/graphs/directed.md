@@ -27,8 +27,10 @@ When drawing an undirected graph, we draw the edges as lines or arcs,
 whereas, for directed graphs, we draw them with arrows stemming from source
 nodes into target nodes.
 
-![Alt text]({filename}/images/directed_example.png "A graph with four
- nodes and five directed edges.")
+<div class="img-desc">
+  <p><img src="/images/directed_example.png" title="A graph with four nodes and five directed edges."></p>
+  <p><em>A graph with four nodes and five directed edges.</em></p>
+</div>
 
 Outdegree[](#Outdegree)
 : For a given node `u`, the number of outgoing edges from `u` is called

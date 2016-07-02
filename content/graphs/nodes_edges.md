@@ -21,8 +21,7 @@ Graph Theory[](#graph-theory)
 network is represented by a graph.
 
 <div class="img-desc">
-  <p><img src="/images/nodes_edges_example.png" title="A graph with four
-	nodes and four edges."></p>
+  <p><img src="/images/nodes_edges_example.png" title="A graph with four nodes and four edges."></p>
   <p><em>A graph with four nodes and four edges.</em></p>
 </div>
 
