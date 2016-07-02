@@ -14,7 +14,10 @@ algebra to manipulate them.
 Consider the graph in the picture and assume we were trying to write down
 all of the edges in the graph.
 
-![Couldn't load image](/images/adjmatrix.png Example graph.)
+<div class="img-desc">
+  <p><img src="/images/adjmatrix.png" title="Example graph."></p>
+  <p><em>Example graph.</em></p>
+</div>
 
 If all we had was this drawing (instead of, say, an adjacency list
 representation of the network), we would need to examine node by node and

@@ -22,9 +22,15 @@ Self-loop[](#self-loop)
 Multigraph[](#multigraph)
 : A graph that is not a simple graph is called **multigraph**.
 
-![Couldn't load image](/images/simple1.png A multigraph with one self-edge
-and two parallel edges.) ![Couldn't load image](/images/simple2.png A simple graph similar to the
- previous multigraph.)
+<div class="img-desc">
+  <p><img src="/images/simple1.png" title="A multigraph with one self-edge and two parallel edges."></p>
+  <p><em>A multigraph with one self-edge and two parallel edges.</em></p>
+</div>
+
+<div class="img-desc">
+  <p><img src="/images/simple2.png" title="A simple graph similar to the previous multigraph."></p>
+  <p><em>A simple graph similar to the previous multigraph.</em></p>
+</div>
 
 From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.
