@@ -45,7 +45,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 # Read into 'DIRECT_TEMPLATES' in pelican/settings.py
-DIRECT_TEMPLATES = ['index', 'categories', 'glossary'] # 'tags', 'authors'
+DIRECT_TEMPLATES = ['index', 'categories', 'glossary', '404'] # 'tags', 'authors'
 
 
 #############################################################################
