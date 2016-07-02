@@ -53,17 +53,18 @@ authors. The Erdos number is part of the folklore of mathematics and
 academia, used to this day as a tongue-in-cheek ranking among the academic
 community.
 
+
 six degrees of separartion (small-world phenomenon)
 
 example networks measures
 
 
-## NetSci in 30 minutes
+This is only the start and some elementary properties of Network
+Science. Nowadays, NetSci is used to study epidemiology, the brain, social
+network analysis, spread of information, markets and trading, economic
+agents, ??
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-est laborum.
+
+<!-- ## NetSci in 30 minutes -->
+
+<!-- More stuff here? -->
