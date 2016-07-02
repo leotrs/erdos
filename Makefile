@@ -12,10 +12,10 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=localhost
+SSH_HOST=erdosnet.work
 SSH_PORT=22
-SSH_USER=leo
-SSH_TARGET_DIR=/var/www
+SSH_USER=erdosnet
+SSH_TARGET_DIR=~/www
 
 S3_BUCKET=my_s3_bucket
 
@@ -65,6 +65,7 @@ help:
 
 html:
 	find content/ -name *.mdpp -exec sh -c 'markdown-pp {} -o `echo {} | cut -d. -f1 `.md' \;
+	# find content/ -name *.mdpp -exec sh -c 'markdown-pp {} -o `echo {} | cut -d. -f1 `.md -e latexrender' \;
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:

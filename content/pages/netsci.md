@@ -25,6 +25,8 @@ Neuroscience.
 
 ## NetSci in 10 minutes
 
+### What does *Erdos* mean, anyway?
+
 During the mid twentieth century, Hungarian mathematician **Paul Erdos**
 became known for his passion for mathematics, his eccentric demeanor, and
 his astoundingly prolific output. He published more than 1500 articles in
@@ -51,20 +53,6 @@ In this way, Erdos was not only an expert in graph theory, but he also wove
 a real interconnected network of mathematicians, scientists and
 authors. The Erdos number is part of the folklore of mathematics and
 academia, used to this day as a tongue-in-cheek ranking among the academic
-community.
-
-
-six degrees of separartion (small-world phenomenon)
-
-example networks measures
-
-
-This is only the start and some elementary properties of Network
-Science. Nowadays, NetSci is used to study epidemiology, the brain, social
-network analysis, spread of information, markets and trading, economic
-agents, ??
-
-
-<!-- ## NetSci in 30 minutes -->
-
-<!-- More stuff here? -->
+community. There is even a *Bacon number*, defined much in the same way but
+around actor Kevin Bacon, which traces the network of collaboration among
+stage artists.
