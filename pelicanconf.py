@@ -18,6 +18,7 @@ SITESUBTITLE = 'Problem-based NetSci'
 PATH = 'content'
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
+DISQUS_SITENAME = "erdos"
 
 # Choose theme
 THEME = 'pelican-elegant'
