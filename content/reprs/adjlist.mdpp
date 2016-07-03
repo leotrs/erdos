@@ -3,6 +3,7 @@ Category: Representing Graphs
 Date: 2016-06-26
 Position: 1
 Summary: Graphs can be represented by lists defining the adjacencies of every node.
+Disqus_identifier: 2f2822f5-graphs-can-be-represented-by-lists-defining-the-adjacencies-of-every-node
 
 !INCLUDE "static/context_header.md"
 
