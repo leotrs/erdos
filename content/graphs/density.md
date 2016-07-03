@@ -2,7 +2,8 @@ Title: Graph Density
 Category: Graphs
 Date: 2016-06-26
 Position: 40
-Summary: The density is a global graph property.
+Summary: Density is a global graph property.
+Disqus_identifier: 8675fa49-density-is-a-global-graph-property
 
 # Context
 
