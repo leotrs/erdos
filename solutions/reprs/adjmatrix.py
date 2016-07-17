@@ -1,8 +1,8 @@
 """
-scripts/ajcmatrix.py
+scripts/adjmatrix.py
 ==============
 
-Code used for /content/reprs/adjmatrix.md.
+Solution /content/reprs/adjmatrix.md.
 """
 
 
