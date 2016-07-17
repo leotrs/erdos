@@ -90,8 +90,8 @@ The input will be a file where the first line contains just one integer,
 holds a list of space-separated integers, representing the adjacencies of
 every node. As before, assume that nodes are labeled from `0` to `n-1`. The
 lines are in ascending order of node label, e.g., the first line of the
-output contains the adjacencies of node `0`, the second line should
-contains the adjacencies of node `1`, etc.
+output contains the adjacencies of node `0`, the second line contains the
+adjacencies of node `1`, etc.
 
 Output the adjacency matrix of the graph.
 
