@@ -11,6 +11,8 @@ Side: right
 * The Structure and Function of Complex Networks.
   [arxiv](https://arxiv.org/abs/cond-mat/0303516)
 * Network Science Society. [NetSci](http://www.netscisociety.net/)
+* A Gallery of Graphs.
+  [website](http://www.math.ucsd.edu/~fan/graphs/gallery/)
 
 
 ## Books
@@ -38,6 +40,12 @@ Side: right
 * Yale Institute for Network Science. [Yale University](http://yins.yale.edu/)
 * Indiana University Network Science Institute. [Indiana University](http://iuni.iu.edu/)
 * Network Science IGERT. [UCSB](http://networkscience.igert.ucsb.edu/)
+
+## Datasets
+* Stanford Large Network Dataset Collection. [SNAP](https://snap.stanford.edu/data/)
+* UC Irvine Network Data Repository. [UCI](https://networkdata.ics.uci.edu/resources.php)
+* Social Computing Data Repository. [ASU](http://socialcomputing.asu.edu/pages/datasets)
+* Mark Newman’s Network Data. [UMICH](http://www-personal.umich.edu/~mejn/netdata/)
 
 ## Other
 * Complex Systems.
