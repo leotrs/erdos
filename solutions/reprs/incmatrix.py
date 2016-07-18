@@ -24,7 +24,7 @@ def inc_matrix():
     # v are joined by an edge, v appears in u's adjacency list and vice
     # versa. To avoid repeating edges, we need to keep a running count of
     # the ones that we have already observed. To do so efficiently, we keep
-    # a dictionary similar to the full adjacency list, but only of with the
+    # a dictionary similar to the full adjacency list, but only with the
     # edges we have read.
     edges = {node: set([]) for node in nodes}
 
