@@ -24,10 +24,7 @@ Complete graph[](#complete-graph)
 : A **complete graph** is a graph that has all possible edges present,
 i.e., its density is equal to `1`.
 
-<div class="img-desc">
-  <p><img src="/images/density.png" title="Two graphs with different densities."></p>
-  <p><em>Two graphs with different densities.</em></p>
-</div>
+!INCLUDE "static/img_desc.html" {src: "/images/density.png", title: "Two graphs with different densities.", desc: Two graphs with different densities.}
 
 ## Problem
 

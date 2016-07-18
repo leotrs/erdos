@@ -23,15 +23,9 @@ Self-loop[](#self-loop)
 Multigraph[](#multigraph)
 : A graph that is not a simple graph is called **multigraph**.
 
-<div class="img-desc">
-  <p><img src="/images/simple1.png" title="A multigraph with one self-edge and two parallel edges."></p>
-  <p><em>A multigraph with one self-edge and two parallel edges.</em></p>
-</div>
+!INCLUDE "static/img_desc.html" {src: "/images/simple1.png", title: "A multigraph with one self-edge and two parallel edges.", desc: A multigraph with one self-edge and two parallel edges.}
 
-<div class="img-desc">
-  <p><img src="/images/simple2.png" title="A simple graph similar to the previous multigraph."></p>
-  <p><em>A simple graph similar to the previous multigraph.</em></p>
-</div>
+!INCLUDE "static/img_desc.html" {src: "/images/simple2.png", title: "A simple graph similar to the previous multigraph.", desc: A simple graph similar to the previous multigraph.}
 
 From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.

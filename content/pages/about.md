@@ -9,13 +9,13 @@ Erdos has been inspired by projects like
 
 Erdos is open source and free of charge. You can contribute directly on our
 GitHub page, [here](https://github.com/Leockard/erdos/). Erdos uses
-[python](https://www.python.org/) to generate the site, with the help of
-[pelican](http://getpelican.com/), a modification of
+[Python](https://www.python.org/) to generate the site, with the help of
+[Pelican](http://getpelican.com/), a modification of
 [elegant-theme](http://oncrashreboot.com/pelican-elegant) that can be found
 [here](https://github.com/Leockard/pelican-elegant), and
 [markdown-pp](https://github.com/jreese/markdown-pp). Most solutions are
-also written in python.
+also written in Python.
 
-If you have any question, comment, suggestion, or would like to contribute
+If you have any questions, comments, suggestions, or would like to contribute
 to Erdos, we would like to hear from you! You can find the contact
 information to the right of this page.
