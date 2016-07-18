@@ -10,7 +10,10 @@ Disqus_identifier: d7c72056-graphs-can-be-represented-by-a-matrix
 The incidence matrix is another matrix representation of a graph. It stores
 the same information as other representations, but in a different way.
 
-!INCLUDE "static/img_desc.html" {src: "/images/incmatrix.png", title: "Example graph.", desc: Example graph.}
+<div class="img-desc">
+  <p><img src="/images/incmatrix.png" title="Example graph."></p>
+  <p><em>Example graph.</em></p>
+</div>
 
 To construct the incidence matrix of the example graph, we first need to
 order its edges, not just the nodes. The matrix will have one row for each
