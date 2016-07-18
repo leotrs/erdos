@@ -1,4 +1,4 @@
-Title: Indidence Matrix
+Title: Incidence Matrix
 Category: Representing Graphs
 Date: 2016-07-17
 Position: 3
@@ -17,11 +17,10 @@ order its edges, not just the nodes. The matrix will have one row for each
 node, and one column for each edge.
 
 ```
-0 0 0 0
-0 0 0 0
-0 0 0 0
-0 0 0 0
-0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
 ```
 
 Now, for each edge, going through them in order, we need to write down
