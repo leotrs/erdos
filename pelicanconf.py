@@ -57,7 +57,6 @@ DIRECT_TEMPLATES = ['index', 'categories', 'glossary', '404'] # 'tags', 'authors
 ### Extract definitions from all articles
 #############################################################################
 
-
 def get_definitions_md(markdown):
     r"""Extract definition lists from markdown and return as dictionary.
 
@@ -97,7 +96,7 @@ def all_definitions():
 
     Return a list of the form
 
-    [('def_title', 'def_link', 'def_content'), ... ]
+        [('def_title', 'def_link', 'def_content'), ... ]
 
     Note: reads only .md, not .mdpp files.
     """
