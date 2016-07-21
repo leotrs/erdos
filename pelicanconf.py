@@ -10,15 +10,19 @@ import markdown as md
 ### Tweaks to defaults
 #############################################################################
 
-# Basic quickstart stuff
+# Basic stuff
 AUTHOR = 'dleonardotn'
 SITENAME = 'erdos'
 SITEURL = ''
 SITESUBTITLE = 'Problem-based NetSci'
-PATH = 'content'
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
 DISQUS_SITENAME = "erdos"
+
+# Directories
+PATH = 'content'
+CACHE_PATH = '.cache'
+CACHE_CONTENT = True
 
 # Choose theme
 THEME = 'pelican-elegant'
