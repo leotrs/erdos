@@ -36,10 +36,10 @@ Multigraph[](#multigraph)
 From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.
 
-## Problem
+## Challenge
 
-For this problem, you need to read a file in the usual format and check if
-the graph is a simple graph.
+For this challenge, you need to read a file in the usual format and check
+if the graph is a simple graph.
 
 The input is a file where the first line contains two integers, `n` and
 `m`, defining the number of nodes and edges, respectively. The next `m`

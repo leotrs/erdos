@@ -24,12 +24,12 @@ measures. It is easy to see how they describe the structure of the network,
 the degree holds information about each node's importance and the density
 helps differentiate between sparse and dense graphs.
 
-## Problem
+## Challenge
 
 Before introducing new graph measures, we are going to acquire some
 experience with using the adjacency matrix to compute them.
 
-For this problem, you need to read a file that contains the adjacency
+For this challenge, you need to read a file that contains the adjacency
 matrix of an undirected graph and compute the graph measures we already
 know.
 

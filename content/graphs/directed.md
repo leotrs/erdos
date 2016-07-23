@@ -40,11 +40,11 @@ Outdegree[](#Outdegree)
 Indegree[](#Indegree)
 : The number of incoming edges to `u` is the **indgree** of `u`.
 
-## Problem
+## Challenge
 
-For this problem, you need to read a file from stdin and output two
-integers: the node with the highest number of *outgoing* edges and the
-node with the highest number of *incoming* edges.
+For this challenge, you need to read a file from stdin and output two
+integers: the node with the highest number of *outgoing* edges and the node
+with the highest number of *incoming* edges.
 
 
 The input is a file in which the first line contains two integers, `n` and
