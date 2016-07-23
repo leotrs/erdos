@@ -40,7 +40,7 @@ Adjacent / Neighbors[](#neighbors)
 : If two nodes `u` and `v` are connected by an edge, they are called
 **adjacent** or **neighbors**.
 
-## Problem
+## Challenge
 
 There are many ways to represent a graph, for now, we choose the simplest
 possible way to do it, where each node is represented by a single integer,
@@ -48,8 +48,8 @@ and each edge by a pair of two nodes. In this way, we can represent a graph
 in a file by defining the number of nodes, edges, and each edge in a
 separate line.
 
-For this problem, you need to read a file in this format and find the node
-with the most edges (or highest degree).
+For this challenge, you need to read a file in this format and find the
+node with the most edges (or highest degree).
 
 The input is a file in the aforementioned format, where the first line
 contains two integers, `n` and `m`, defining the number of nodes and edges,

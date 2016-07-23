@@ -29,9 +29,9 @@ means that, if the graph is moderately dense, we will have `n < m ~
 n(n+1)/2`, and therefore, our new graph representation will in general
 have fewer lines than the previous one.
 
-## Problem
+## Challenge
 
-For this problem, you need to read a file representing a graph in the
+For this challenge, you need to read a file representing a graph in the
 previous, long, format, and output it in the new, shorter one.
 
 The input is a file where the first line contains two integers, `n` and

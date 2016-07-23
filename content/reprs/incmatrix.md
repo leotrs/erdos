@@ -67,10 +67,10 @@ edges. The entry in the `i`-th row and `j`-th column indicates whether edge
 `j` is incident to node `i`.
 
 
-## Problem
+## Challenge
 
-To solve this problem, you will need to read a file in adjacency list form,
-and output its incidence matrix.
+To solve this challenge, you will need to read a file in adjacency list
+form, and output its incidence matrix.
 
 The input will be a file where the first line contains just one integer,
 `n`, the number of nodes in the graph. Each of the following `n` lines

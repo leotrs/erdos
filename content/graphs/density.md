@@ -29,10 +29,10 @@ i.e., its density is equal to `1`.
   <p><em>Two graphs with different densities.</em></p>
 </div>
 
-## Problem
+## Challenge
 
-For this problem, you need to read a file representing a graph, and compute
-the density of the network.
+For this challenge, you need to read a file representing a graph, and
+compute the density of the network.
 
 The input is a file where the first line contains two integers, `n` and
 `m`, defining the number of nodes and edges, respectively. The next `m`

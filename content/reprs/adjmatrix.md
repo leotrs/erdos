@@ -80,10 +80,10 @@ would look as follows.
 
 
 
-## Problem
+## Challenge
 
-To solve this problem, you will need to read a file in adjacency list form,
-and output its adjacency matrix.
+To solve this challenge, you will need to read a file in adjacency list
+form, and output its adjacency matrix.
 
 The input will be a file where the first line contains just one integer,
 `n`, the number of nodes in the graph. Each of the following `n` lines
