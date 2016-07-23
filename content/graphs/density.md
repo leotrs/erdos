@@ -5,6 +5,7 @@ Position: 40
 Summary: Density is a global graph property.
 Disqus_identifier: 8675fa49-density-is-a-global-graph-property
 
+<div markdown class="erdos-context">
 # Context
 
 We have seen one property of nodes, the degree, and one property of edges,
@@ -29,6 +30,13 @@ i.e., its density is equal to `1`.
   <p><em>Two graphs with different densities.</em></p>
 </div>
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+  Show challenge
+  </button>
+</div> <!-- erdos-context -->
+
+<div markdown class="erdos-challenge">
+<hr />
 ## Challenge
 
 For this challenge, you need to read a file representing a graph, and
@@ -78,8 +86,13 @@ marked as 'done'. Keep a running count and finally output the total.
 
 
 
---------------------------------------------------------
+<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+  </button>
+</div> <!-- erdos-challenge -->
 
+<div markdown class="erdos-solutions">
+<hr />
 ## Solutions
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/density.py).

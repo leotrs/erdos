@@ -65,8 +65,6 @@ etc. Print each adjacency list in ascending order.
 0 1
 ```
 
---------------------------------------------------------
-
 !INCLUDE "static/solutions_header.md"
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjlist.py).

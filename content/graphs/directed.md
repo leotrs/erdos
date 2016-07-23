@@ -5,6 +5,7 @@ Position: 30
 Summary: Edges can have a direction
 Disqus_identifier: fd6d2c66-edges-can-have-a-direction
 
+<div markdown class="erdos-context">
 # Context
 
 Edges in a graph join any two nodes, representing a relationship between
@@ -40,6 +41,13 @@ Outdegree[](#Outdegree)
 Indegree[](#Indegree)
 : The number of incoming edges to `u` is the **indgree** of `u`.
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+  Show challenge
+  </button>
+</div> <!-- erdos-context -->
+
+<div markdown class="erdos-challenge">
+<hr />
 ## Challenge
 
 For this challenge, you need to read a file from stdin and output two
@@ -93,8 +101,13 @@ highest indegree.
       device and every edge represents physical or wireless connections
       to network devices.
 
---------------------------------------------------------
+<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+  </button>
+</div> <!-- erdos-challenge -->
 
+<div markdown class="erdos-solutions">
+<hr />
 ## Solutions
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/directed.py).

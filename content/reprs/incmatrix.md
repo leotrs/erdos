@@ -5,6 +5,7 @@ Position: 3
 Summary: Graphs can be represented by a matrix
 Disqus_identifier: d7c72056-graphs-can-be-represented-by-a-matrix
 
+<div markdown class="erdos-context">
 # Context
 
 The incidence matrix is another matrix representation of a graph. It stores
@@ -67,6 +68,13 @@ edges. The entry in the `i`-th row and `j`-th column indicates whether edge
 `j` is incident to node `i`.
 
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+  Show challenge
+  </button>
+</div> <!-- erdos-context -->
+
+<div markdown class="erdos-challenge">
+<hr />
 ## Challenge
 
 To solve this challenge, you will need to read a file in adjacency list
@@ -115,8 +123,13 @@ Output the incidence matrix of the graph.
    same procedure as in this page? Why or why not?
    1. Propose a better way to build incidence matrices for directed graphs.
 
---------------------------------------------------------
+<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+  </button>
+</div> <!-- erdos-challenge -->
 
+<div markdown class="erdos-solutions">
+<hr />
 ## Solutions
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/incmatrix.py).

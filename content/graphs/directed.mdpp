@@ -90,8 +90,6 @@ highest indegree.
       device and every edge represents physical or wireless connections
       to network devices.
 
---------------------------------------------------------
-
 !INCLUDE "static/solutions_header.md"
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/directed.py).

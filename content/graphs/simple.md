@@ -5,6 +5,7 @@ Position: 20
 Summary: The most common type of graph.
 Disqus_identifier: 64bd8458-the-most-common-type-of-graph
 
+<div markdown class="erdos-context">
 # Context
 
 Last time we didn't put any restrictions on the general structure of our
@@ -36,6 +37,13 @@ Multigraph[](#multigraph)
 From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+  Show challenge
+  </button>
+</div> <!-- erdos-context -->
+
+<div markdown class="erdos-challenge">
+<hr />
 ## Challenge
 
 For this challenge, you need to read a file in the usual format and check
@@ -86,8 +94,14 @@ NO
       device and every edge represents physical or wireless connections
       to network devices.
 
---------------------------------------------------------
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+  </button>
+</div> <!-- erdos-challenge -->
+
+<div markdown class="erdos-solutions">
+<hr />
 ## Solutions
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/simple.py).

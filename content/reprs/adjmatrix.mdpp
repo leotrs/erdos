@@ -124,8 +124,6 @@ Output the adjacency matrix of the graph.
    matrix.
 4. Can you construct the adjacency matrix of multigraph? Why or why not?
 
---------------------------------------------------------
-
 !INCLUDE "static/solutions_header.md"
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjmatrix.py).

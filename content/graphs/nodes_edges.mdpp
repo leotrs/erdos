@@ -74,8 +74,6 @@ Output the node with the highest degree.
 0
 ```
 
-----------------------------------------
-
 !INCLUDE "static/question_header.md"
 
 1. We've defined one measurement of the "importance" of a node, its
@@ -92,7 +90,6 @@ Output the node with the highest degree.
 3. Discuss the possibility of measuring the "importance" of an edge in a
    network. Can you come up with a proposal for how to measure it?
 
---------------------------------------------------------
 
 !INCLUDE "static/solutions_header.md"
 

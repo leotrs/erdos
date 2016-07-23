@@ -5,6 +5,7 @@ Position: 10
 Summary: Graphs are made of nodes and edges
 Disqus_identifier: 81be0b7a-graphs-are-made-of-nodes-and-edges
 
+<div markdown class="erdos-context">
 # Context
 
 When we study a real-life network, we usually refer to an underlying
@@ -40,6 +41,13 @@ Adjacent / Neighbors[](#neighbors)
 : If two nodes `u` and `v` are connected by an edge, they are called
 **adjacent** or **neighbors**.
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+  Show challenge
+  </button>
+</div> <!-- erdos-context -->
+
+<div markdown class="erdos-challenge">
+<hr />
 ## Challenge
 
 There are many ways to represent a graph, for now, we choose the simplest
@@ -77,8 +85,6 @@ Output the node with the highest degree.
 0
 ```
 
-----------------------------------------
-
 ## Expansion Questions
 
 1. We've defined one measurement of the "importance" of a node, its
@@ -95,8 +101,14 @@ Output the node with the highest degree.
 3. Discuss the possibility of measuring the "importance" of an edge in a
    network. Can you come up with a proposal for how to measure it?
 
---------------------------------------------------------
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+  </button>
+</div> <!-- erdos-challenge -->
+
+<div markdown class="erdos-solutions">
+<hr />
 ## Solutions
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/nodes_edges.py).

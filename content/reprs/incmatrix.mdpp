@@ -111,8 +111,6 @@ Output the incidence matrix of the graph.
    same procedure as in this page? Why or why not?
    1. Propose a better way to build incidence matrices for directed graphs.
 
---------------------------------------------------------
-
 !INCLUDE "static/solutions_header.md"
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/incmatrix.py).

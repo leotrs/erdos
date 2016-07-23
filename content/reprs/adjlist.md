@@ -5,6 +5,7 @@ Position: 1
 Summary: Graphs can be represented by lists defining the adjacencies of every node.
 Disqus_identifier: 2f2822f5-graphs-can-be-represented-by-lists-defining-the-adjacencies-of-every-node
 
+<div markdown class="erdos-context">
 # Context
 
 In the previous problems, we read a graph from a file which listed each
@@ -29,6 +30,13 @@ means that, if the graph is moderately dense, we will have `n < m ~
 n(n+1)/2`, and therefore, our new graph representation will in general
 have fewer lines than the previous one.
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+  Show challenge
+  </button>
+</div> <!-- erdos-context -->
+
+<div markdown class="erdos-challenge">
+<hr />
 ## Challenge
 
 For this challenge, you need to read a file representing a graph in the
@@ -65,8 +73,13 @@ etc. Print each adjacency list in ascending order.
 0 1
 ```
 
---------------------------------------------------------
+<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+  </button>
+</div> <!-- erdos-challenge -->
 
+<div markdown class="erdos-solutions">
+<hr />
 ## Solutions
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjlist.py).

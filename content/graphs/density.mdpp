@@ -74,8 +74,6 @@ marked as 'done'. Keep a running count and finally output the total.
    $\displaystyle (n - 1) + (n - 2) + (n - 3) + ... + 2 + 1 $
 
 
---------------------------------------------------------
-
 !INCLUDE "static/solutions_header.md"
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/density.py).

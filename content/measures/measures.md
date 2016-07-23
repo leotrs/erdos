@@ -5,6 +5,7 @@ Position: 10
 Summary: Measures help describe a network
 Disqus_identifier: 2dae387f-measures-help-describe-a-network
 
+<div markdown class="erdos-context">
 # Context
 
 A graph measure is a number that can be calculated from a graph, used to
@@ -24,6 +25,13 @@ measures. It is easy to see how they describe the structure of the network,
 the degree holds information about each node's importance and the density
 helps differentiate between sparse and dense graphs.
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+  Show challenge
+  </button>
+</div> <!-- erdos-context -->
+
+<div markdown class="erdos-challenge">
+<hr />
 ## Challenge
 
 Before introducing new graph measures, we are going to acquire some
@@ -75,8 +83,13 @@ information about the graph.
 2. The degree of a node is simply the sum of all entries in the
    corresponding row in the adjacency matrix. Why?
 
---------------------------------------------------------
+<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+  </button>
+</div> <!-- erdos-challenge -->
 
+<div markdown class="erdos-solutions">
+<hr />
 ## Solutions
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/measures/measures.py).
