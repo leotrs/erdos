@@ -184,3 +184,14 @@ JINJA_FILTERS = {
     # 'regex_replace': regex_replace,
     # 'get_definitions': get_definitions
 }
+
+
+#############################################################################
+### Define positions for categories
+#############################################################################
+
+CATEGORIES_POS = {
+    'Graphs': 10,
+    'Representing Graphs': 20,
+    'Measures': 30
+}
