@@ -75,8 +75,6 @@ information about the graph.
 2. The degree of a node is simply the sum of all entries in the
    corresponding row in the adjacency matrix. Why?
 
---------------------------------------------------------
-
 !INCLUDE "static/solutions_header.md"
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/measures/measures.py).

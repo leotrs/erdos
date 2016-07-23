@@ -5,6 +5,7 @@ Position: 2
 Summary: Graphs can be represented by a matrix
 Disqus_identifier: 2c59cbd3-graphs-can-be-represented-by-a-matrix
 
+<div markdown class="erdos-context">
 # Context
 
 Adjacency matrices provide another way to represent a graph, using a square
@@ -80,6 +81,13 @@ would look as follows.
 
 
 
+<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+  Show challenge
+  </button>
+</div> <!-- erdos-context -->
+
+<div markdown class="erdos-challenge">
+<hr />
 ## Challenge
 
 To solve this challenge, you will need to read a file in adjacency list
@@ -128,8 +136,13 @@ Output the adjacency matrix of the graph.
    matrix.
 4. Can you construct the adjacency matrix of multigraph? Why or why not?
 
---------------------------------------------------------
+<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+  </button>
+</div> <!-- erdos-challenge -->
 
+<div markdown class="erdos-solutions">
+<hr />
 ## Solutions
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjmatrix.py).
