@@ -11,7 +11,7 @@ import markdown as md
 #############################################################################
 
 # Basic stuff
-AUTHOR = 'dleonardotn'
+AUTHOR = 'leotorr'
 SITENAME = 'erdos'
 SITEURL = ''
 SITESUBTITLE = 'Problem-based NetSci'
@@ -41,7 +41,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/ErdosNS'),
-          ('github', 'https://github.com/Leockard/erdos'),
+          ('github', 'https://github.com/leotorr/erdos'),
           ('email', 'mailto:leo@erdosnet.work'),)
 
 DEFAULT_PAGINATION = 10
