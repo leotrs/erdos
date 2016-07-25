@@ -82,8 +82,8 @@ information about the graph.
    or less difficult?
 2. The degree of a node is simply the sum of all entries in the
    corresponding row in the adjacency matrix. Why?
-3. How can you compute the degree of a node in a directed graph from its
-   adjacency matrix?
+3. How can you compute the indegree and outdegree of a node in a directed
+   graph from its adjacency matrix?
 
 <button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
   Show solutions
