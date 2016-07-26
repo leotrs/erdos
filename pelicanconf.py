@@ -25,7 +25,7 @@ CACHE_PATH = '.cache'
 CACHE_CONTENT = True
 
 # Choose theme
-THEME = 'pelican-elegant'
+THEME = '../pelican/pelican-themes/pelican-elegant'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
