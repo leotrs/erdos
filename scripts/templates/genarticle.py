@@ -10,6 +10,7 @@ import os
 import argparse
 import subprocess
 from collections import defaultdict
+from string import punctuation
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -24,10 +25,17 @@ def make_vars(**kwargs):
     vars_dict = defaultdict(str)
     vars_dict.update(kwargs)
 
+    # generate dd/mm/yyyy date string
     vars_dict['date'] = subprocess.getoutput('date "+%x"')
 
+    # generate a random-ish string of 8 chars ..
     md5 = subprocess.getoutput('date | md5sum | cut -c1-8')
-    slug = vars_dict['summary'].lower().replace(' ', '-')
+
+    # .. and a hyphenated version of article summary ..
+    table = {ord(p): '' for p in punctuation}
+    slug = vars_dict['summary'].lower().translate(table).replace(' ', '-')
+
+    # ..to get a unique disqus id!
     vars_dict['disqus_id'] = md5 + '-' + slug
 
     return vars_dict
