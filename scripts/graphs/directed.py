@@ -1,8 +1,8 @@
 """
-scripts/directed.py
-==============
+directed.py
+-----------
 
-Code used for /content/graphs/directed.md.
+Code used for graphs/directed.md.
 """
 
 import os
