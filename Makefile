@@ -40,7 +40,6 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
-PELICANOPTS += -t ../pelican/pelican-themes/pelican-elegant
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
