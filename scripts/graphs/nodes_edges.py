@@ -1,8 +1,8 @@
 """
-scripts/nodes_edges.py
-==============
+nodes_edges.py
+--------------
 
-Code used for /content/nodes_edges.md.
+Code used for nodes_edges.md.
 """
 
 import networkx as nx

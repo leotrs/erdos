@@ -1,8 +1,8 @@
 """
-solutions/nodes_edges.py
-========================
+nodes_edges.py
+--------------
 
-Solution for /content/graphs/nodes_edges.md.
+Solution for graphs/nodes_edges.md.
 
 """
 

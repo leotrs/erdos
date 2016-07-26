@@ -1,8 +1,8 @@
 """
-scripts/density.py
-==================
+density.py
+----------
 
-Code used for /content/density.md.
+Code used for graphs/density.md.
 """
 
 import networkx as nx
