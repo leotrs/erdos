@@ -66,7 +66,11 @@ help:
 	@echo '                                                                          '
 
 html:
-	$(MDPP) $(MDPPOPTS) $(INPUTDIR)
+	$(MDPP) $(INPUTDIR) $(MDPPOPTS) -e latexrender
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+
+latex:
+	$(MDPP) $(INPUTDIR) $(MDPPOPTS)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
