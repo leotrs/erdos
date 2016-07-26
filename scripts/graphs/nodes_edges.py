@@ -31,7 +31,8 @@ def example_pic():
     nx.draw_networkx_labels(graph, pos, labels, font_size=16)
 
     # place the file where it belongs
-    path = os.path.join(os.environ['ERDOS_PATH'], "content/images", "nodes_edges_example.png")
+    path = os.path.join(os.environ['ERDOS_PATH'], "content/images",
+                        "nodes_edges_example.png")
     plt.savefig(path)
 
     # plt.show()
