@@ -11,7 +11,7 @@ develop_server.sh
 notes.org
 
 # input files for testing solutions
-input.txt
+input*.txt
 
 # scratch files for playing with python
 scratch.py
