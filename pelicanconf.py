@@ -25,7 +25,8 @@ CACHE_PATH = '.cache'
 CACHE_CONTENT = True
 
 # Choose theme
-THEME = '../pelican/pelican-themes/pelican-elegant'
+THEME_PATH = '../pelican/pelican-themes/'
+THEME = os.path.join(THEME_PATH, 'pelican-elegant')
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
