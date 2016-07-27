@@ -69,9 +69,20 @@ Print out the number of connected components in the graph.
 
 !INCLUDE "static/question_header.md"
 
-1. Make sure these are actually questions,
-2. Or at the very least, explain exactly
-3. What it is to be discussed
+1. In directed graphs, it is necessary to distinguish between nodes `u` and
+   `v` being *connected* and `v` being *reachable* from `u` and vice
+   versa. Discuss why this is necessary and how this distinction affects
+   the number of components in a directed graph.
+2. Consider the network of the World Wide Web. In this network, a node
+   represents one website, and nodes `u` and `v` are joined by a *directed*
+   edge from `u` to `v` if the former contains a link to the latter.
+    + For this network, estimate the number of nodes and edges.
+    + Imagine you are writing a new search engine for the WWW. Your
+      objective is to index (catalogue) *every* website online. Given
+      enough resources, can you achieve this goal? Discuss in terms of
+      connected components, as well as the possibility of there being nodes
+      with no incoming or outgoing edges (websites with no incoming or
+      outgoing links).
 
 
 !INCLUDE "static/solutions_header.md"
