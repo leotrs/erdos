@@ -70,11 +70,10 @@ marked as 'done'. Keep a running count and finally output the total.
 {% include "question_header.md" %}
 
 1. If you followed the hint to solve the problem above, then you might have
-   found yourself computing a sum of numbers that looked like the
-   following. Can you find a formula for this sum, without needing to add
-   up all the numbers every time? This is a very important fact that will
-   be used throughout future problem sets.
-   $\displaystyle (n - 1) + (n - 2) + (n - 3) + ... + 2 + 1 $
+   found yourself computing a sum of numbers like the following: $(n - 1) +
+   (n - 2) + (n - 3) + ... + 2 + 1$. Can you find a formula for this sum,
+   without needing to add up all the numbers every time? This is a very
+   important fact that will be used throughout future problem sets.
 
 
 {% include "solutions_header.md" %}

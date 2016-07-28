@@ -76,7 +76,7 @@ whose element at the `i`-th row and `j`-th column indicates whether nodes
 In the usual mathematical typsetting, the adjacency matrix of this example
 would look as follows.
 
-$\displaystyle \begin{pmatrix} 0  &1  &1  &1 \\ 1  &0  &0  &1 \\ 1  &0  &0  &0 \\ 1  &1  &0  &0 \end{pmatrix} $
+$$\begin {pmatrix}0  &1  &1  &1 \\ 1  &0  &0  &1 \\ 1  &0  &0  &0 \\ 1  &1  &0  &0 \end{pmatrix}$$
 
 
 {% include "problem_header.md" %}
