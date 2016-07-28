@@ -2,9 +2,6 @@ PY?=python3
 PELICAN?=pelican
 PELICANOPTS=
 
-MDPP=markdown-pp
-MDPPOPTS=-r
-
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
@@ -66,11 +63,9 @@ help:
 	@echo '                                                                          '
 
 html:
-	$(MDPP) $(INPUTDIR) $(MDPPOPTS) -e latexrender
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 latex:
-	$(MDPP) $(INPUTDIR) $(MDPPOPTS)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:

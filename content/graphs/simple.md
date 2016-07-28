@@ -5,8 +5,7 @@ Position: 20
 Summary: The most common type of graph.
 Disqus_identifier: 64bd8458-the-most-common-type-of-graph
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 Last time we didn't put any restrictions on the general structure of our
 graphs. However, the general definition of a graph as just a set of nodes
@@ -24,27 +23,19 @@ Self-loop[](#self-loop)
 Multigraph[](#multigraph)
 : A graph that is not a simple graph is called **multigraph**.
 
-<div class="img-desc">
-  <p><img src="/images/simple1.png" title="A multigraph with one self-edge and two parallel edges."></p>
-  <p><em>A multigraph with one self-edge and two parallel edges.</em></p>
-</div>
+{% from 'img_desc.html' import img_desc %}
+{{ img_desc("/images/simple1.png",
+            "A multigraph with one self-edge and two parallel edges.",
+            "A multigraph with one self-edge and two parallel edges.")}}
 
-<div class="img-desc">
-  <p><img src="/images/simple2.png" title="A simple graph similar to the previous multigraph."></p>
-  <p><em>A simple graph similar to the previous multigraph.</em></p>
-</div>
+{{ img_desc("/images/simple2.png",
+            "A simple graph similar to the previous multigraph.",
+            "A simple graph similar to the previous multigraph.")}}
 
 From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 For this challenge, you need to read a file in the usual format and check
 if the graph is a simple graph.
@@ -56,7 +47,7 @@ an edge.
 
 Output 'YES' or 'NO', depending on whether or not the graph is simple.
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 4 5
@@ -68,13 +59,13 @@ Output 'YES' or 'NO', depending on whether or not the graph is simple.
 
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 NO
 ```
 
-## Expansion Questions
+{% include "question_header.md" %}
 
 1. For the following networks, decide if they are simple or multigraphs. If
    they are not simple, explain what would self-loops or multiedges
@@ -95,13 +86,6 @@ NO
       to network devices.
 
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/simple.py).

@@ -101,7 +101,7 @@
 the same information as other representations, but in a different way.</p>
 <div class="img-desc">
   <p><img src="/images/incmatrix.png" title="Example graph."></p>
-  <p><em>Example graph.</em></p>
+  <p><em>Exampld graph.</em></p>
 </div>
 
 <p>To construct the incidence matrix of the example graph, we first need to
@@ -139,7 +139,7 @@ we write it like so</p>
 
 
 <p>We continue in the same fashion until all edges have been accounted for.</p>
-<p><img alt="\displaystyle \begin{pmatrix} 1  &amp;1  &amp;0  &amp;0  &amp;0 \ 1  &amp;0  &amp;1  &amp;1  &amp;0 \ 0  &amp;0  &amp;1  &amp;0  &amp;1 \ 0  &amp;1  &amp;0  &amp;1  &amp;1 \end{pmatrix} " src="http://quicklatex.com/cache3/48/ql_3654db993ca296b41bb72e69ce149148_l3.png" title="\displaystyle \begin{pmatrix} 1 &amp;1 &amp;0 &amp;0 &amp;0 \ 1 &amp;0 &amp;1 &amp;1 &amp;0 \ 0 &amp;0 &amp;1 &amp;0 &amp;1 \ 0 &amp;1 &amp;0 &amp;1 &amp;1 \end{pmatrix} " /></p>
+<p>$\displaystyle <div class="math">\begin{pmatrix} 1  &amp;1  &amp;0  &amp;0  &amp;0 \\ 1  &amp;0  &amp;1  &amp;1  &amp;0 \\ 0  &amp;0  &amp;1  &amp;0  &amp;1 \\ 0  &amp;1  &amp;0  &amp;1  &amp;1 \end{pmatrix}</div> $</p>
 <p>This is the incidence matrix of our graph.</p>
 <dl>
 <dt>Incidence Matrix<a href="#adjacency-matrix"></a></dt>
@@ -150,7 +150,7 @@ edges. The entry in the <code>i</code>-th row and <code>j</code>-th column indic
 </dl>
 <p><button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
   Show challenge
-  </button>
+</button>
 </p>
 </div>
 <!-- erdos-context -->
@@ -201,7 +201,7 @@ adjacencies of node <code>1</code>, etc.</p>
 </ol>
 <p><button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
   Show solutions
-  </button>
+</button>
 </p>
 </div>
 <!-- erdos-challenge -->
@@ -212,6 +212,63 @@ adjacencies of node <code>1</code>, etc.</p>
 <h2>Solutions</h2>
 <p><a href="https://github.com/Leockard/erdos/blob/master/solutions/reprs/incmatrix.py">Solution</a>.</p>
 </div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
       
       <section>
 <div class="accordion" id="accordion2">

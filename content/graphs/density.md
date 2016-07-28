@@ -5,8 +5,7 @@ Position: 40
 Summary: Density is a global graph property.
 Disqus_identifier: 8675fa49-density-is-a-global-graph-property
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 We have seen one property of nodes, the degree, and one property of edges,
 whether or not they are directed. These are called local properties,
@@ -25,19 +24,12 @@ Complete graph[](#complete-graph)
 : A **complete graph** is a graph that has all possible edges present,
 i.e., its density is equal to `1`.
 
-<div class="img-desc">
-  <p><img src="/images/density.png" title="Two graphs with different densities."></p>
-  <p><em>Two graphs with different densities.</em></p>
-</div>
+{% from 'img_desc.html' import img_desc %}
+{{ img_desc("/images/density.png",
+            "Graphs with different densities.",
+            "Graphs with different densities.")}}
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 For this challenge, you need to read a file representing a graph, and
 compute the density of the network.
@@ -59,7 +51,7 @@ count all the edges connecting it to all others, and mark that edge as
 node and connecting it to all other unmarked nodes, until they are all
 marked as 'done'. Keep a running count and finally output the total.
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 4 4
@@ -69,30 +61,21 @@ marked as 'done'. Keep a running count and finally output the total.
 3 0
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 0.667
 ```
 
-## Expansion Questions
+{% include "question_header.md" %}
 
 1. If you followed the hint to solve the problem above, then you might have
-   found yourself computing a sum of numbers that looked like the
-   following. Can you find a formula for this sum, without needing to add
-   up all the numbers every time? This is a very important fact that will
-   be used throughout future problem sets.
-   ![\displaystyle (n - 1) + (n - 2) + (n - 3) + ... + 2 + 1 ](http://quicklatex.com/cache3/bf/ql_9ef4c642ac0c0fe62857b337cc097dbf_l3.png "\displaystyle (n - 1) + (n - 2) + (n - 3) + ... + 2 + 1 ")
+   found yourself computing a sum of numbers like the following: $(n - 1) +
+   (n - 2) + (n - 3) + ... + 2 + 1$. Can you find a formula for this sum,
+   without needing to add up all the numbers every time? This is a very
+   important fact that will be used throughout future problem sets.
 
 
-
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/density.py).

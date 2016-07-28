@@ -5,8 +5,7 @@ Position: 1
 Summary: Graphs can be represented by lists defining the adjacencies of every node.
 Disqus_identifier: 2f2822f5-graphs-can-be-represented-by-lists-defining-the-adjacencies-of-every-node
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 In the previous problems, we read a graph from a file which listed each
 edge in one line. Now, we are going to represent a graph in a different,
@@ -30,14 +29,7 @@ means that, if the graph is moderately dense, we will have `n < m ~
 n(n+1)/2`, and therefore, our new graph representation will in general
 have fewer lines than the previous one.
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 For this challenge, you need to read a file representing a graph in the
 previous, long, format, and output it in the new, shorter one.
@@ -54,7 +46,7 @@ label, e.g., the first line of the output should contain the adjacencies of
 node `0`, the second line should contain the adjacencies of node `1`,
 etc. Print each adjacency list in ascending order.
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 4 4
@@ -64,7 +56,7 @@ etc. Print each adjacency list in ascending order.
 3 0
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 1 2 3
@@ -73,13 +65,6 @@ etc. Print each adjacency list in ascending order.
 0 1
 ```
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjlist.py).

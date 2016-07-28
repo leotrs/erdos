@@ -5,8 +5,8 @@ Position: 10
 Summary: Graphs are made of nodes and edges
 Disqus_identifier: 81be0b7a-graphs-are-made-of-nodes-and-edges
 
-<div markdown class="erdos-context">
-# Context
+
+{% include "context_header.md" %}
 
 When we study a real-life network, we usually refer to an underlying
 mathematical object, called a *graph*. We use the terms *network* and
@@ -22,10 +22,10 @@ Graph Theory[](#graph-theory)
 **graph theory**. Network Science relies heavily on graph theory, as every
 network is represented by a graph.
 
-<div class="img-desc">
-  <p><img src="/images/nodes_edges_example.png" title="A graph with four nodes and four edges."></p>
-  <p><em>A graph with four nodes and four edges.</em></p>
-</div>
+{% from 'img_desc.html' import img_desc %}
+{{ img_desc("/images/nodes_edges_example.png",
+            "A graph with four nodes and four edges.",
+            "A graph with four nodes and four edges.")}}
 
 Both nodes and edges can have many different properties. One of the most
 fundamental properties of graphs is the number of edges connecting to each
@@ -41,14 +41,7 @@ Adjacent / Neighbors[](#neighbors)
 : If two nodes `u` and `v` are connected by an edge, they are called
 **adjacent** or **neighbors**.
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 There are many ways to represent a graph, for now, we choose the simplest
 possible way to do it, where each node is represented by a single integer,
@@ -68,7 +61,7 @@ assumed to be represented by the integers from `0` to `n - 1`.
 
 Output the node with the highest degree.
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 4 4
@@ -79,13 +72,14 @@ Output the node with the highest degree.
 
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 0
 ```
 
-## Expansion Questions
+{% include "question_header.md" %}
+
 
 1. We've defined one measurement of the "importance" of a node, its
    degree. What might be other ways of measuring the importance of a node
@@ -102,13 +96,8 @@ Output the node with the highest degree.
    network. Can you come up with a proposal for how to measure it?
 
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/nodes_edges.py).
+
+</div>
