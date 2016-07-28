@@ -196,3 +196,10 @@ CATEGORIES_POS = {
     'Representing Graphs': 20,
     'Measures': 30
 }
+
+
+#############################################################################
+### Pelican plugins
+#############################################################################
+PLUGIN_PATHS = ['../pelican/pelican-plugins/']
+PLUGINS = ['pelican-jinja2content', 'render_math']

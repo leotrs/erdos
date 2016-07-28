@@ -5,8 +5,7 @@ Position: 2
 Summary: Graphs can be represented by a matrix
 Disqus_identifier: 2c59cbd3-graphs-can-be-represented-by-a-matrix
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 Adjacency matrices provide another way to represent a graph, using a square
 array of numbers. They are slightly more complicated than adjacency lists,
@@ -16,10 +15,10 @@ algebra to manipulate them.
 Consider the graph in the picture and assume we were trying to write down
 all of the edges in the graph.
 
-<div class="img-desc">
-  <p><img src="/images/adjmatrix.png" title="Example graph."></p>
-  <p><em>Example graph.</em></p>
-</div>
+{% from 'img_desc.html' import img_desc %}
+{{ img_desc("/images/adjmatrix.png",
+            "Example graph.",
+            "Example graph.")}}
 
 If all we had was this drawing (instead of, say, an adjacency list
 representation of the network), we would need to examine node by node and
@@ -77,18 +76,10 @@ whose element at the `i`-th row and `j`-th column indicates whether nodes
 In the usual mathematical typsetting, the adjacency matrix of this example
 would look as follows.
 
-![\displaystyle \begin{pmatrix} 0  &1  &1  &1 \\ 1  &0  &0  &1 \\ 1  &0  &0  &0 \\ 1  &1  &0  &0 \end{pmatrix} ](http://quicklatex.com/cache3/40/ql_c359dd3fc22df3ab137f67304fac0340_l3.png "\displaystyle \begin{pmatrix} 0  &1  &1  &1 \\ 1  &0  &0  &1 \\ 1  &0  &0  &0 \\ 1  &1  &0  &0 \end{pmatrix} ")
+$$\begin {pmatrix}0  &1  &1  &1 \\ 1  &0  &0  &1 \\ 1  &0  &0  &0 \\ 1  &1  &0  &0 \end{pmatrix}$$
 
 
-
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 To solve this challenge, you will need to read a file in adjacency list
 form, and output its adjacency matrix.
@@ -103,7 +94,7 @@ adjacencies of node `1`, etc.
 
 Output the adjacency matrix of the graph.
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 4
@@ -113,7 +104,7 @@ Output the adjacency matrix of the graph.
 0 1
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 0 1 1 1
@@ -122,7 +113,7 @@ Output the adjacency matrix of the graph.
 1 1 0 0
 ```
 
-## Expansion Questions
+{% include "question_header.md" %}
 
 1. Consider the adjacency matrix of an undirected graph.
     1. What can you say about the entry at row `i`, column `j`, as compared
@@ -136,13 +127,6 @@ Output the adjacency matrix of the graph.
    matrix.
 4. Can you construct the adjacency matrix of multigraph? Why or why not?
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjmatrix.py).

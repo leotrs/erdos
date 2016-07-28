@@ -5,8 +5,7 @@ Position: 10
 Summary: Measures help describe a network
 Disqus_identifier: 2dae387f-measures-help-describe-a-network
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 A graph measure is a number that can be calculated from a graph, used to
 describe its properties. They are similar in this respect to the statistics
@@ -25,14 +24,7 @@ measures. It is easy to see how they describe the structure of the network,
 the degree holds information about each node's importance and the density
 helps differentiate between sparse and dense graphs.
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 Before introducing new graph measures, we are going to acquire some
 experience with using the adjacency matrix to compute them.
@@ -53,7 +45,7 @@ of this challenge is to get used to using the adjacency matrix to extract
 information about the graph.
 
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 4
@@ -63,7 +55,7 @@ information about the graph.
 1 1 0 0
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 0
@@ -72,7 +64,7 @@ information about the graph.
 
 ----------------------------------------
 
-## Expansion Questions
+{% include "question_header.md" %}
 
 1. Compare the difficulty of computing these graph measures using the
    adjacency matrix as opposed to using a different representation (see the
@@ -85,13 +77,6 @@ information about the graph.
 3. How can you compute the indegree and outdegree of a node in a directed
    graph from its adjacency matrix?
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/measures/measures.py).

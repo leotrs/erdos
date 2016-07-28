@@ -6,8 +6,7 @@ Summary: Components are the "separate" parts of a graph.
 Disqus_identifier: fe6f0ebd-components-are-the-separate-parts-of-a-graph
 
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 Networks come in all shapes and sizes, presenting many different properties
 and structures. We've already seen how the degree describes the importance
@@ -33,19 +32,13 @@ Connected Component[](#component)
 which any two are connected by a path. A graph that only has one component
 is called **connected graph**
 
-<div class="img-desc">
-  <p><img src="/images/paths.png" title="A graph with three components"></p>
-  <p><em>A graph with three components. Note a sole node counts as one more component.</em></p>
-</div>
+{% from 'img_desc.html' import img_desc %}
+{{ img_desc("/images/paths.png",
+            "A graph with three components.",
+            "A graph with three components. Note a sole node counts as one more component.")}}
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
 
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 In this challenge, you are asked to compute the number of components in a
 graph.
@@ -58,7 +51,7 @@ an edge. Assume undirected edges.
 Print out the number of connected components in the graph.
 
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 8 7
@@ -71,7 +64,7 @@ Print out the number of connected components in the graph.
 6 3
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 3
@@ -80,7 +73,7 @@ Print out the number of connected components in the graph.
 ----------------------------------------
 
 
-## Expansion Questions
+{% include "question_header.md" %}
 
 1. In directed graphs, it is necessary to distinguish between nodes `u` and
    `v` being *connected* and `v` being *reachable* from `u` and vice
@@ -98,13 +91,6 @@ Print out the number of connected components in the graph.
       outgoing links).
 
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/paths.py).
