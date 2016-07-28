@@ -6,8 +6,7 @@ Summary: Triangles describe network transitivity.
 Disqus_identifier: d2615dde-triangles-describe-network-transitivity
 
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 Context goes here.
 
@@ -17,20 +16,13 @@ long. Try not to make it too long, though.
 
 More context could go here. And for example, an image:
 
-<div class="img-desc">
-  <p><img src="/path/to/image.png" title="tooltip text"></p>
-  <p><em>description text.</em></p>
-</div>
+{% from 'img_desc.html' import img_desc %}
+{{ img_desc("/images/path_to_image.png",
+            "Text.",
+            "Description text.")}}
 
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 Introduce the challenge, and state the goal precisely.
 
@@ -39,13 +31,13 @@ Describe the input file.
 Describe the desired output.
 
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 example input
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 example output
@@ -54,20 +46,13 @@ example output
 ----------------------------------------
 
 
-## Expansion Questions
+{% include "question_header.md" %}
 
 1. Make sure these are actually questions,
 2. Or at the very least, explain exactly
 3. What it is to be discussed
 
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/measures/triangles.py).

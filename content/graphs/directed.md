@@ -5,8 +5,7 @@ Position: 30
 Summary: Edges can have a direction
 Disqus_identifier: fd6d2c66-edges-can-have-a-direction
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 Edges in a graph join any two nodes, representing a relationship between
 them. Sometimes, this relationship can be bilateral (or symmetric), e.g.,
@@ -29,10 +28,10 @@ When drawing an undirected graph, we draw the edges as lines or arcs,
 whereas, for directed graphs, we draw them with arrows stemming from source
 nodes into target nodes.
 
-<div class="img-desc">
-  <p><img src="/images/directed_example.png" title="A graph with four nodes and five directed edges."></p>
-  <p><em>A graph with four nodes and five directed edges.</em></p>
-</div>
+{% from 'img_desc.html' import img_desc %}
+{{ img_desc("/images/directed_example.png",
+            "A graph with four nodes and five directed edges.",
+            "A graph with four nodes and five directed edges.")}}
 
 Outdegree[](#Outdegree)
 : For a given node `u`, the number of outgoing edges from `u` is called
@@ -41,14 +40,7 @@ Outdegree[](#Outdegree)
 Indegree[](#Indegree)
 : The number of incoming edges to `u` is the **indgree** of `u`.
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 For this challenge, you need to read a file from stdin and output two
 integers: the node with the highest number of *outgoing* edges and the node
@@ -64,7 +56,7 @@ the target.
 Output two integers, representing the nodes with the highest outdegree and
 highest indegree.
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 4 5
@@ -75,13 +67,13 @@ highest indegree.
 3 0
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 0 3
 ```
 
-## Expansion Questions
+{% include "question_header.md" %}
 
 1. For the following networks, decide if they are simple or multigraphs. If
    they are not simple, explain what would self-loops or multiedges
@@ -101,13 +93,6 @@ highest indegree.
       device and every edge represents physical or wireless connections
       to network devices.
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/directed.py).
