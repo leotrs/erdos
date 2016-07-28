@@ -30,12 +30,14 @@ path from `u` to `v`, we say `u` and `v` are **connected**.
 
 Connected Component[](#component)
 : A **connected component**, or simply **component**, is a set of nodes in
-which any two are connected by a path.
+which any two are connected by a path. A graph that only has one component
+is called **connected graph**
 
 <div class="img-desc">
   <p><img src="/images/paths.png" title="A graph with three components"></p>
   <p><em>A graph with three components. Note a sole node counts as one more component.</em></p>
 </div>
+
 <button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
   Show challenge
   </button>
