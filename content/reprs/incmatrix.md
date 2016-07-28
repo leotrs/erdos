@@ -5,16 +5,15 @@ Position: 3
 Summary: Graphs can be represented by a matrix
 Disqus_identifier: d7c72056-graphs-can-be-represented-by-a-matrix
 
-<div markdown class="erdos-context">
-# Context
+{% include "context_header.md" %}
 
 The incidence matrix is another matrix representation of a graph. It stores
 the same information as other representations, but in a different way.
 
-<div class="img-desc">
-  <p><img src="/images/incmatrix.png" title="Example graph."></p>
-  <p><em>Example graph.</em></p>
-</div>
+{% from 'img_desc.html' import img_desc %}
+{{ img_desc("/images/incmatrix.png",
+            "Example graph.",
+            "Exampld graph.")}}
 
 To construct the incidence matrix of the example graph, we first need to
 order its edges, not just the nodes. The matrix will have one row for each
@@ -55,8 +54,7 @@ Edge number `1` is incident to nodes `0` and `3`:
 
 We continue in the same fashion until all edges have been accounted for.
 
-![\displaystyle \begin{pmatrix} 1  &1  &0  &0  &0 \\ 1  &0  &1  &1  &0 \\ 0  &0  &1  &0  &1 \\ 0  &1  &0  &1  &1 \end{pmatrix} ](http://quicklatex.com/cache3/48/ql_3654db993ca296b41bb72e69ce149148_l3.png "\displaystyle \begin{pmatrix} 1  &1  &0  &0  &0 \\ 1  &0  &1  &1  &0 \\ 0  &0  &1  &0  &1 \\ 0  &1  &0  &1  &1 \end{pmatrix} ")
-
+$\displaystyle \begin{pmatrix} 1  &1  &0  &0  &0 \\ 1  &0  &1  &1  &0 \\ 0  &0  &1  &0  &1 \\ 0  &1  &0  &1  &1 \end{pmatrix} $
 
 
 This is the incidence matrix of our graph.
@@ -68,14 +66,7 @@ edges. The entry in the `i`-th row and `j`-th column indicates whether edge
 `j` is incident to node `i`.
 
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
-  Show challenge
-  </button>
-</div> <!-- erdos-context -->
-
-<div markdown class="erdos-challenge">
-<hr />
-## Challenge
+{% include "problem_header.md" %}
 
 To solve this challenge, you will need to read a file in adjacency list
 form, and output its incidence matrix.
@@ -91,7 +82,7 @@ adjacencies of node `1`, etc.
 Output the incidence matrix of the graph.
 
 
-### Sample Input
+{% include "input_header.md" %}
 
 ```
 4
@@ -101,7 +92,7 @@ Output the incidence matrix of the graph.
 0 1 2
 ```
 
-### Sample Output
+{% include "output_header.md" %}
 
 ```
 1 1 0 0 0
@@ -110,7 +101,7 @@ Output the incidence matrix of the graph.
 0 1 0 1 1
 ```
 
-## Expansion Questions
+{% include "question_header.md" %}
 
 1. For a network with `n` nodes and `m` edges, how many `1`s will the
    incidence matrix have?
@@ -123,13 +114,6 @@ Output the incidence matrix of the graph.
    same procedure as in this page? Why or why not?
    1. Propose a better way to build incidence matrices for directed graphs.
 
-<button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
-  Show solutions
-  </button>
-</div> <!-- erdos-challenge -->
-
-<div markdown class="erdos-solutions">
-<hr />
-## Solutions
+{% include "solutions_header.md" %}
 
 [Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/incmatrix.py).
