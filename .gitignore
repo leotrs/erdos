@@ -4,6 +4,7 @@
 __pycache__
 
 # pelican stuff
+output/
 develop_server.sh
 
 # notes and todo lists
