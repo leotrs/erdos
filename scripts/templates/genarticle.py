@@ -17,7 +17,7 @@ from jinja2 import Environment, FileSystemLoader
 ROOT = '/home/leo/code/erdos/'
 CONTENT_DIR = os.path.join(ROOT, 'content/')
 TEMPLATES_DIR = os.path.join(ROOT, 'scripts/templates/')
-TEMPLATE_FILE = 'article.mdpp'   # must be realteive to TEMPLATES_DIR
+TEMPLATE_FILE = 'article.md'    # must be realteive to TEMPLATES_DIR
 
 
 def make_vars(**kwargs):
