@@ -29,9 +29,11 @@ path from `u` to `v`, we say `u` and `v` are **connected**.
 
 Connected Component[](#component)
 : A **connected component**, or simply **component**, is a set of nodes in
-which any two are connected by a path.
+which any two are connected by a path. A graph that only has one component
+is called **connected graph**
 
 !INCLUDE "static/img_desc.html" {src: "/images/paths.png", title: "A graph with three components", desc: A graph with three components. Note a sole node counts as one more component.}
+
 !INCLUDE "static/problem_header.md"
 
 In this challenge, you are asked to compute the number of components in a
