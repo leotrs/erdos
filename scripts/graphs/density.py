@@ -41,9 +41,6 @@ def example_pic():
     plt.setp(axes.get_xaxis(), visible=False)
     plt.setp(axes.get_yaxis(), visible=False)
 
-    print(type(axes))
-    print(dir(axes))
-
     draw_graph(complete)
 
     # create a sparse graph
@@ -59,7 +56,8 @@ def example_pic():
     # place the file where it belongs
     path = os.path.join(os.environ['ERDOS_PATH'], "content/images", "density.png")
     plt.savefig(path)
-    plt.show()
+
+    # plt.show()
 
 
 if __name__ == '__main__':
