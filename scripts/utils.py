@@ -11,7 +11,10 @@ import networkx as nx
 from matplotlib.pylab import plt
 
 
-def example_image(graph, filename, show=False):
+LAYOUT_DICT = {'spring': nx.spring_layout, 'shell': nx.shell_layout}
+
+
+def example_image(graph, filename, layout='spring', show=False):
     """Generates example image with graph.
 
     Uses nx.draw_networkx_* methods, and matplotlib to draw and save the
@@ -19,7 +22,7 @@ def example_image(graph, filename, show=False):
 
     """
     # positions for all nodes
-    pos = nx.spring_layout(graph)
+    pos = LAYOUT_DICT[layout](graph)
 
     # each node is labaled by its own name
     labels = {node: str(node) for node in graph.nodes()}
