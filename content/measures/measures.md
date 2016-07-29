@@ -33,10 +33,10 @@ For this challenge, you need to read a file that contains the adjacency
 matrix of an undirected graph and compute the graph measures we already
 know.
 
-The input is a file contains one line with a single integer `n`, the number
-of nodes in the network. The following `n` lines each contain one row of
-the adjacency matrix of the network, where each entry is separated by a
-space.
+The input is a file which contains one line with a single integer `n`, the
+number of nodes in the network. The following `n` lines each contain one
+row of the adjacency matrix of the network, where each entry is separated
+by a space.
 
 Output two lines: the node with maximum degree, and the edge density.
 
