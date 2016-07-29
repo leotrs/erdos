@@ -23,9 +23,6 @@ def example_pic():
                                node_color='r', node_size=100)
         nx.draw_networkx_edges(graph, pos, width=1.0, alpha=0.5)
 
-        # labels = {node: str(node) for node in graph.node.keys()}
-        # nx.draw_networkx_labels(graph, pos, labels, font_size=16)
-
     # configure and config the image
     plt.figure(figsize=(5, 2.5))
     plt.axis('off')
