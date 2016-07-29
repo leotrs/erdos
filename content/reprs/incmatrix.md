@@ -54,7 +54,7 @@ Edge number `1` is incident to nodes `0` and `3`:
 
 We continue in the same fashion until all edges have been accounted for.
 
-$\displaystyle \begin{pmatrix} 1  &1  &0  &0  &0 \\ 1  &0  &1  &1  &0 \\ 0  &0  &1  &0  &1 \\ 0  &1  &0  &1  &1 \end{pmatrix} $
+$$\begin{pmatrix} 1  &1  &0  &0  &0 \\ 1  &0  &1  &1  &0 \\ 0  &0  &1  &0  &1 \\ 0  &1  &0  &1  &1 \end{pmatrix}$$
 
 
 This is the incidence matrix of our graph.
