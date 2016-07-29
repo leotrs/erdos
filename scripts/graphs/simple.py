@@ -1,13 +1,7 @@
-"""
-scripts/simple.py
-==============
+"""simple.py
+---------
 
-Code used for /content/simple.md.
-"""
-
-"""
-simple.py
-=========
+Code used for graphs/simple.md.
 
 This script uses the .dot graph file format, because networkx doesn't
 support drawing multigraphs. This script uses the 'neato' command, which
