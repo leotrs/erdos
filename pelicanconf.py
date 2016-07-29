@@ -13,19 +13,19 @@ import markdown as md
 # Basic stuff
 AUTHOR = 'leotorr'
 SITENAME = 'erdos'
-SITEURL = ''
 SITESUBTITLE = 'Problem-based NetSci'
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
 DISQUS_SITENAME = "erdos"
+SITEURL = ''                    # gets overwritten by publishconf.py
 
 # Directories
 PATH = 'content'
 CACHE_PATH = '.cache'
 CACHE_CONTENT = True
+THEME_PATH = '../pelican/pelican-themes/'
 
 # Choose theme
-THEME_PATH = '../pelican/pelican-themes/'
 THEME = os.path.join(THEME_PATH, 'pelican-elegant')
 
 # Feed generation is usually not desired when developing
@@ -35,19 +35,15 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),)
-
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/ErdosNS'),
           ('github', 'https://github.com/leotorr/erdos'),
           ('email', 'mailto:leo@erdosnet.work'),)
 
+# How many articles per page
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
+# Allow document-relative URLs when developing
 RELATIVE_URLS = True
 
 # These templates don't need files that use them: they are rendered directly
@@ -163,33 +159,7 @@ LANDING_PAGE_ABOUT = {'title': 'Erdos', 'subtitle': SITESUBTITLE,
 ### Custom filters
 #############################################################################
 
-# def get_definitions(html):
-#     """Extract definition lists from html and return as dictionary."""
-#     url_regex = re.compile(r'"og:url=".*?"(.*?)"', re.DOTALL)
-#     url = re.findall(url_regex, html)
-
-#     title_regex = re.compile(r'<dt>(.*?)</dt>', re.DOTALL)
-#     titles = re.findall(title_regex, html)
-#     contents_regex = re.compile(r'<dd>(.*?)</dd>', re.DOTALL)
-#     contents = re.findall(contents_regex, html)
-
-#     definitions = [(title, content) for title, content in zip(titles, contents)]
-#     return definitions
-
-# def regex_replace(s, find, replace):
-#     """A non-optimal implementation of a regex filter"""
-#     return re.sub(find, replace, s)
-
-# def print_filter(s):
-#     """Debug filter."""
-#     print(s)
-#     return s
-
-JINJA_FILTERS = {
-    # 'print': print_filter,
-    # 'regex_replace': regex_replace,
-    # 'get_definitions': get_definitions
-}
+JINJA_FILTERS = {}
 
 
 #############################################################################
