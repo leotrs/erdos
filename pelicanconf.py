@@ -50,8 +50,13 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-# Read into 'DIRECT_TEMPLATES' in pelican/settings.py
-DIRECT_TEMPLATES = ['index', 'categories', 'glossary', '404'] # 'tags', 'authors'
+# These templates don't need files that use them: they are rendered directly
+DIRECT_TEMPLATES = ['index', 'categories', 'glossary', '404']
+
+# Set to empty string to avoid generating these pages
+AUTHOR_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+TAGS_SAVE_AS = ''
 
 
 #############################################################################
