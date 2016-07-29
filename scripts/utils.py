@@ -22,14 +22,14 @@ def example_image(graph, filename, show=False):
     pos = nx.spring_layout(graph)
 
     # each node is labaled by its own name
-    labels = {node: str(node) for node in graph.node.keys()}
+    labels = {node: str(node) for node in graph.nodes()}
 
     # configure the image
     plt.figure(figsize=(2, 2))
     plt.axis('off')
 
     # draw all of the things!
-    nx.draw_networkx_nodes(graph, pos, nodelist=[0, 1, 2, 3], node_color='r')
+    nx.draw_networkx_nodes(graph, pos, nodelist=graph.nodes(), node_color='r')
     nx.draw_networkx_edges(graph, pos, width=1.0, alpha=0.5, arrows=True)
     nx.draw_networkx_labels(graph, pos, labels, font_size=16)
 
