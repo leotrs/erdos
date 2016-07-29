@@ -1,4 +1,4 @@
-Title: Triangles
+Title: Triangles and Transitivity
 Category: Measures
 Date: 07/25/2016
 Position: 20

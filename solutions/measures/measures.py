@@ -1,8 +1,8 @@
 """
-solutions/measures.py
----------------------
+measures.py
+-----------
 
-Solution for /content/measures/measures.md.
+Solution for measures/measures.md.
 
 """
 

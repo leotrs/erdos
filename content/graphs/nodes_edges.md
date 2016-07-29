@@ -1,4 +1,4 @@
-Title: Nodes and edges
+Title: Nodes and Edges
 Category: Graphs
 Date: 2016-06-26
 Position: 10
@@ -39,7 +39,8 @@ Degree[](#degree)
 
 Adjacent / Neighbors[](#neighbors)
 : If two nodes `u` and `v` are connected by an edge, they are called
-**adjacent** or **neighbors**.
+**adjacent** or **neighbors**. If `u` and `v` are adjacent, we write `u ~
+v`.
 
 {% include "problem_header.md" %}
 
