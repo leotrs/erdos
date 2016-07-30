@@ -22,6 +22,7 @@ SITEURL = ''                    # gets overwritten by publishconf.py
 # Directories
 PATH = 'content'
 CACHE_PATH = '.cache'
+LOAD_CONTENT_CACHE = True
 CACHE_CONTENT = True
 THEME_PATH = '../pelican/pelican-themes/'
 
@@ -53,6 +54,7 @@ DIRECT_TEMPLATES = ['index', 'categories', 'glossary', '404']
 AUTHOR_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''
 TAGS_SAVE_AS = ''
+TAG_SAVE_AS = ''
 
 
 #############################################################################
