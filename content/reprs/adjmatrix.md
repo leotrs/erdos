@@ -43,7 +43,7 @@ YES NO  NO  NO
 YES YES NO  NO
 ```
 
-Hint:
+Hint
 : When you consider a node `u` and go through every node, remember to ask
 if a node is connected to itself (allow for self-loops), and to cover the
 nodes always in the same order.
