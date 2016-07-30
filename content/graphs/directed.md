@@ -20,7 +20,7 @@ of nodes: `(u, v)`, with the first one sometimes being called the *source*
 and the second, the *target*.
 
 Undirected graph[](#undirected)
-: A graph is undirected when the relationship between nodes is
+: A graph is **undirected** when the relationship between nodes is
 symmetrical. In this case, every edge is written as an *unordered pair* of
 nodes: `{u, v}`.
 
