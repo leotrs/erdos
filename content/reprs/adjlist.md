@@ -12,7 +12,7 @@ edge in one line. Now, we are going to represent a graph in a different,
 more succint way. For every node `u`, we want to create a list defining the
 nodes adjacent to `u`.
 
-Adjacency list[](#adjacency-list)
+Adjacency List[](#adjacency-list)
 : Given a node `u`, the **adjacency list** of `u` is a list of all nodes
 that `u` is connected to. If the graph is directed, the list contains
 either all the nodes connecting to `u`, or all the nodes receiving edges
