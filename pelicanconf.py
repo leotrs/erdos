@@ -170,7 +170,7 @@ JINJA_FILTERS = {}
 
 CATEGORIES_POS = {
     'Graphs': 10,
-    'Representing Graphs': 20,
+    'Representations': 20,
     'Measures': 30
 }
 

@@ -1,5 +1,5 @@
 Title: Adjacency Matrix
-Category: Representing Graphs
+Category: Representations
 Date: 2016-06-26
 Position: 2
 Summary: Graphs can be represented by a matrix
