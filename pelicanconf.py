@@ -179,4 +179,4 @@ CATEGORIES_POS = {
 ### Pelican plugins
 #############################################################################
 PLUGIN_PATHS = ['../pelican/pelican-plugins/']
-PLUGINS = ['pelican-jinja2content', 'render_math']
+PLUGINS = ['pelican-jinja2content', 'render_math', 'glossary']
