@@ -1,5 +1,5 @@
 Title: Incidence Matrix
-Category: Representing Graphs
+Category: Representations
 Date: 2016-07-17
 Position: 3
 Summary: Graphs can be represented by a matrix

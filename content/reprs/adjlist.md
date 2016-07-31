@@ -1,5 +1,5 @@
 Title: Adjacency Lists
-Category: Representing Graphs
+Category: Representations
 Date: 2016-06-26
 Position: 1
 Summary: Graphs can be represented by lists defining the adjacencies of every node.
