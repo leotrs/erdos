@@ -136,13 +136,9 @@ the same information as other representations, but in a different way.</p>
 <p>To construct the incidence matrix of the example graph, we first need to
 order its edges, not just the nodes. The matrix will have one row for each
 node, and one column for each edge.</p>
-<div class="highlight"><pre><span></span>0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-</pre></div>
-
-
+<p>
+<div class="math">$$\begin {pmatrix}0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \end{pmatrix}$$</div>
+</p>
 <p>Now, for each edge, going through them in order, we need to write down
 which nodes it is <em>incident</em> to.</p>
 <dl>
@@ -152,21 +148,13 @@ endpoints.</dd>
 </dl>
 <p>Starting from the first edge, we see it's incident to nodes <code>0</code> and <code>1</code>, so
 we write it like so</p>
-<div class="highlight"><pre><span></span>1 0 0 0 0
-1 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-</pre></div>
-
-
+<p>
+<div class="math">$$\begin {pmatrix}1  &amp;0  &amp;0  &amp;0  &amp;0 \\ 1  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \end{pmatrix}$$</div>
+</p>
 <p>Edge number <code>1</code> is incident to nodes <code>0</code> and <code>3</code>:</p>
-<div class="highlight"><pre><span></span>1 1 0 0 0
-1 0 0 0 0
-0 0 0 0 0
-0 1 0 0 0
-</pre></div>
-
-
+<p>
+<div class="math">$$\begin {pmatrix}1  &amp;1  &amp;0  &amp;0  &amp;0 \\ 1  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;1  &amp;0  &amp;0  &amp;0 \end{pmatrix}$$</div>
+</p>
 <p>We continue in the same fashion until all edges have been accounted for.</p>
 <p>
 <div class="math">$$\begin{pmatrix} 1  &amp;1  &amp;0  &amp;0  &amp;0 \\ 1  &amp;0  &amp;1  &amp;1  &amp;0 \\ 0  &amp;0  &amp;1  &amp;0  &amp;1 \\ 0  &amp;1  &amp;0  &amp;1  &amp;1 \end{pmatrix}$$</div>
@@ -174,9 +162,9 @@ we write it like so</p>
 <p>This is the incidence matrix of our graph.</p>
 <dl>
 <dt>Incidence Matrix<a href="#adjacency-matrix"></a></dt>
-<dd>The <strong>incidence matrix</strong> of a graph with <code>n</code> nodes and <code>m</code> edges is an
-<code>nxm</code> matrix whose rows represent nodes and whose columns represent
-edges. The entry in the <code>i</code>-th row and <code>j</code>-th column indicates whether edge
+<dd>The <strong>incidence matrix</strong> of a graph with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges is an
+<span class="math">\(n \times m\)</span> matrix whose rows represent nodes and whose columns represent
+edges. The entry in the <span class="math">\(i\)</span>-th row and <span class="math">\(j\)</span>-th column indicates whether edge
 <code>j</code> is incident to node <code>i</code>.</dd>
 </dl>
 <p><button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
@@ -193,7 +181,7 @@ edges. The entry in the <code>i</code>-th row and <code>j</code>-th column indic
 <p>To solve this challenge, you will need to read a file in adjacency list
 form, and output its incidence matrix.</p>
 <p>The input will be a file where the first line contains just one integer,
-<code>n</code>, the number of nodes in the graph. Each of the following <code>n</code> lines
+<span class="math">\(n\)</span>, the number of nodes in the graph. Each of the following <span class="math">\(n\)</span> lines
 holds a list of space-separated integers, representing the adjacencies of
 every node. As before, assume that nodes are labeled from <code>0</code> to <code>n-1</code>. The
 lines are in ascending order of node label, e.g., the first line of the
@@ -219,10 +207,10 @@ adjacencies of node <code>1</code>, etc.</p>
 
 <h2>Expansion Questions</h2>
 <ol>
-<li>For a network with <code>n</code> nodes and <code>m</code> edges, how many <code>1</code>s will the
+<li>For a network with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges, how many <span class="math">\(1\)</span>s will the
    incidence matrix have?</li>
 <li>Compare the memory usage of adjacency lists, adjacency matrix and
-   incidence matrix for a given network with <code>n</code> nodes and <code>m</code> edges.</li>
+   incidence matrix for a given network with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges.</li>
 <li>Compute the incidence matrix for a graph equal to the one in the
    example, but whose edges are labeled in a different order. How are these
    two matrices related?</li>

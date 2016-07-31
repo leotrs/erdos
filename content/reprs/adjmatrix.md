@@ -56,28 +56,17 @@ computational power, we need a matrix.
 
 To write down our adjacency matrix, all we need to do is convert our array
 of answers into an array of numbers, by replacing every occurrence of `YES`
-to `1`, and every `NO` to `0`.
+to $1$, and every `NO` to $0$.
 
-```
-NO  YES YES YES       0 1 1 1
-YES NO  NO  YES  -->  1 0 0 1
-YES NO  NO  NO		  1 0 0 0
-YES YES NO  NO		  1 1 0 0
-```
+$$\begin {pmatrix}0  &1  &1  &1 \\ 1  &0  &0  &1 \\ 1  &0  &0  &0 \\ 1  &1  &0  &0 \end{pmatrix}$$
 
 The array of numbers we have constructed is called the adjacency matrix of
 the graph.
 
 Adjacency Matrix[](#adjacency-matrix)
-: The **adjacency matrix** of a graph with `n` nodes is an `nxn` matrix
-whose element at the `i`-th row and `j`-th column indicates whether nodes
+: The **adjacency matrix** of a graph with $n$ nodes is an $n \times n$ matrix
+whose element at the $i$-th row and $j$-th column indicates whether nodes
 `i` and `j` are adjacent or not.
-
-In the usual mathematical typsetting, the adjacency matrix of this example
-would look as follows.
-
-$$\begin {pmatrix}0  &1  &1  &1 \\ 1  &0  &0  &1 \\ 1  &0  &0  &0 \\ 1  &1  &0  &0 \end{pmatrix}$$
-
 
 {% include "problem_header.md" %}
 
@@ -85,7 +74,7 @@ To solve this challenge, you will need to read a file in adjacency list
 form, and output its adjacency matrix.
 
 The input will be a file where the first line contains just one integer,
-`n`, the number of nodes in the graph. Each of the following `n` lines
+$n$, the number of nodes in the graph. Each of the following $n$ lines
 holds a list of space-separated integers, representing the adjacencies of
 every node. As before, assume that nodes are labeled from `0` to `n-1`. The
 lines are in ascending order of node label, e.g., the first line of the
@@ -116,8 +105,8 @@ Output the adjacency matrix of the graph.
 {% include "question_header.md" %}
 
 1. Consider the adjacency matrix of an undirected graph.
-    1. What can you say about the entry at row `i`, column `j`, as compared
-       to the entry at row `j`, column `i`?
+    1. What can you say about the entry at row $i$, column $j$, as compared
+       to the entry at row $j$, column $i$?
     2. What if the graph is undirected?
     3. How might your answer to 1.1 affect the solution to the above
        problem, assuming that the graph is undirected?

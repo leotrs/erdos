@@ -171,27 +171,18 @@ to compute anything with a bunch of words sorted in a nice way. For real
 computational power, we need a matrix.</p>
 <p>To write down our adjacency matrix, all we need to do is convert our array
 of answers into an array of numbers, by replacing every occurrence of <code>YES</code>
-to <code>1</code>, and every <code>NO</code> to <code>0</code>.</p>
-<div class="highlight"><pre><span></span>NO  YES YES YES       0 1 1 1
-YES NO  NO  YES  --&gt;  1 0 0 1
-YES NO  NO  NO        1 0 0 0
-YES YES NO  NO        1 1 0 0
-</pre></div>
-
-
+to <span class="math">\(1\)</span>, and every <code>NO</code> to <span class="math">\(0\)</span>.</p>
+<p>
+<div class="math">$$\begin {pmatrix}0  &amp;1  &amp;1  &amp;1 \\ 1  &amp;0  &amp;0  &amp;1 \\ 1  &amp;0  &amp;0  &amp;0 \\ 1  &amp;1  &amp;0  &amp;0 \end{pmatrix}$$</div>
+</p>
 <p>The array of numbers we have constructed is called the adjacency matrix of
 the graph.</p>
 <dl>
 <dt>Adjacency Matrix<a href="#adjacency-matrix"></a></dt>
-<dd>The <strong>adjacency matrix</strong> of a graph with <code>n</code> nodes is an <code>nxn</code> matrix
-whose element at the <code>i</code>-th row and <code>j</code>-th column indicates whether nodes
+<dd>The <strong>adjacency matrix</strong> of a graph with <span class="math">\(n\)</span> nodes is an <span class="math">\(n \times n\)</span> matrix
+whose element at the <span class="math">\(i\)</span>-th row and <span class="math">\(j\)</span>-th column indicates whether nodes
 <code>i</code> and <code>j</code> are adjacent or not.</dd>
 </dl>
-<p>In the usual mathematical typsetting, the adjacency matrix of this example
-would look as follows.</p>
-<p>
-<div class="math">$$\begin {pmatrix}0  &amp;1  &amp;1  &amp;1 \\ 1  &amp;0  &amp;0  &amp;1 \\ 1  &amp;0  &amp;0  &amp;0 \\ 1  &amp;1  &amp;0  &amp;0 \end{pmatrix}$$</div>
-</p>
 <p><button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
   Show challenge
 </button>
@@ -206,7 +197,7 @@ would look as follows.</p>
 <p>To solve this challenge, you will need to read a file in adjacency list
 form, and output its adjacency matrix.</p>
 <p>The input will be a file where the first line contains just one integer,
-<code>n</code>, the number of nodes in the graph. Each of the following <code>n</code> lines
+<span class="math">\(n\)</span>, the number of nodes in the graph. Each of the following <span class="math">\(n\)</span> lines
 holds a list of space-separated integers, representing the adjacencies of
 every node. As before, assume that nodes are labeled from <code>0</code> to <code>n-1</code>. The
 lines are in ascending order of node label, e.g., the first line of the
@@ -233,8 +224,8 @@ adjacencies of node <code>1</code>, etc.</p>
 <h2>Expansion Questions</h2>
 <ol>
 <li>Consider the adjacency matrix of an undirected graph.<ol>
-<li>What can you say about the entry at row <code>i</code>, column <code>j</code>, as compared
-   to the entry at row <code>j</code>, column <code>i</code>?</li>
+<li>What can you say about the entry at row <span class="math">\(i\)</span>, column <span class="math">\(j\)</span>, as compared
+   to the entry at row <span class="math">\(j\)</span>, column <span class="math">\(i\)</span>?</li>
 <li>What if the graph is undirected?</li>
 <li>How might your answer to 1.1 affect the solution to the above
    problem, assuming that the graph is undirected?</li>
