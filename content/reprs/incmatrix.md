@@ -19,12 +19,7 @@ To construct the incidence matrix of the example graph, we first need to
 order its edges, not just the nodes. The matrix will have one row for each
 node, and one column for each edge.
 
-```
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-```
+$$\begin {pmatrix}0  &0  &0  &0  &0 \\ 0  &0  &0  &0  &0 \\ 0  &0  &0  &0  &0 \\ 0  &0  &0  &0  &0 \end{pmatrix}$$
 
 Now, for each edge, going through them in order, we need to write down
 which nodes it is *incident* to.
@@ -36,21 +31,11 @@ endpoints.
 Starting from the first edge, we see it's incident to nodes `0` and `1`, so
 we write it like so
 
-```
-1 0 0 0 0
-1 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-```
+$$\begin {pmatrix}1  &0  &0  &0  &0 \\ 1  &0  &0  &0  &0 \\ 0  &0  &0  &0  &0 \\ 0  &0  &0  &0  &0 \end{pmatrix}$$
 
 Edge number `1` is incident to nodes `0` and `3`:
 
-```
-1 1 0 0 0
-1 0 0 0 0
-0 0 0 0 0
-0 1 0 0 0
-```
+$$\begin {pmatrix}1  &1  &0  &0  &0 \\ 1  &0  &0  &0  &0 \\ 0  &0  &0  &0  &0 \\ 0  &1  &0  &0  &0 \end{pmatrix}$$
 
 We continue in the same fashion until all edges have been accounted for.
 
@@ -60,9 +45,9 @@ $$\begin{pmatrix} 1  &1  &0  &0  &0 \\ 1  &0  &1  &1  &0 \\ 0  &0  &1  &0  &1 \\
 This is the incidence matrix of our graph.
 
 Incidence Matrix[](#adjacency-matrix)
-: The **incidence matrix** of a graph with `n` nodes and `m` edges is an
-`nxm` matrix whose rows represent nodes and whose columns represent
-edges. The entry in the `i`-th row and `j`-th column indicates whether edge
+: The **incidence matrix** of a graph with $n$ nodes and $m$ edges is an
+$n \times m$ matrix whose rows represent nodes and whose columns represent
+edges. The entry in the $i$-th row and $j$-th column indicates whether edge
 `j` is incident to node `i`.
 
 
@@ -72,7 +57,7 @@ To solve this challenge, you will need to read a file in adjacency list
 form, and output its incidence matrix.
 
 The input will be a file where the first line contains just one integer,
-`n`, the number of nodes in the graph. Each of the following `n` lines
+$n$, the number of nodes in the graph. Each of the following $n$ lines
 holds a list of space-separated integers, representing the adjacencies of
 every node. As before, assume that nodes are labeled from `0` to `n-1`. The
 lines are in ascending order of node label, e.g., the first line of the
@@ -103,10 +88,10 @@ Output the incidence matrix of the graph.
 
 {% include "question_header.md" %}
 
-1. For a network with `n` nodes and `m` edges, how many `1`s will the
+1. For a network with $n$ nodes and $m$ edges, how many $1$s will the
    incidence matrix have?
 2. Compare the memory usage of adjacency lists, adjacency matrix and
-   incidence matrix for a given network with `n` nodes and `m` edges.
+   incidence matrix for a given network with $n$ nodes and $m$ edges.
 3. Compute the incidence matrix for a graph equal to the one in the
    example, but whose edges are labeled in a different order. How are these
    two matrices related?

@@ -137,14 +137,14 @@ that <code>u</code> is connected to. If the graph is directed, the list contains
 either all the nodes connecting to <code>u</code>, or all the nodes receiving edges
 from <code>u</code>, but not both.</dd>
 </dl>
-<p>Consider a graph with <code>n</code> nodes and <code>m</code> edges. In our previous
+<p>Consider a graph with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges. In our previous
 representation, the file contained one line to define the number of nodes
-and edges, <code>n</code> and <code>m</code>, and one line for each edge, <code>m + 1</code> lines in
-total. In the new representation, our file will still need one line for <code>m</code>
-and <code>n</code>, but only <code>n</code> lines will follow, one for each node's adjacencies.</p>
-<p>As we saw before, a graph can hold up to <code>n(n+1)/2</code> edges in total. This
-means that, if the graph is moderately dense, we will have <code>n &lt; m ~
-n(n+1)/2</code>, and therefore, our new graph representation will in general
+and edges, <span class="math">\(n\)</span> and <span class="math">\(m\)</span>, and one line for each edge, <span class="math">\(m + 1\)</span> lines in
+total. In the new representation, our file will still need one line for <span class="math">\(m\)</span>
+and <span class="math">\(n\)</span>, but only <span class="math">\(n\)</span> lines will follow, one for each node's adjacencies.</p>
+<p>As we saw before, a graph can hold up to <span class="math">\(n(n+1)/2\)</span> edges in total. This
+means that, if the graph is moderately dense, we will have <span class="math">\(n &lt; m \approx
+n(n+1)/2\)</span>, and therefore, our new graph representation will in general
 have fewer lines than the previous one.</p>
 <p><button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
   Show challenge
@@ -159,11 +159,11 @@ have fewer lines than the previous one.</p>
 <h2>Challenge</h2>
 <p>For this challenge, you need to read a file representing a graph in the
 previous, long, format, and output it in the new, shorter one.</p>
-<p>The input is a file where the first line contains two integers, <code>n</code> and
-<code>m</code>, defining the number of nodes and edges, respectively. The next <code>m</code>
+<p>The input is a file where the first line contains two integers, <span class="math">\(n\)</span> and
+<span class="math">\(m\)</span>, defining the number of nodes and edges, respectively. The next <span class="math">\(m\)</span>
 lines each contain two integers, representing two nodes that are joined by
 an edge. Assume undirected edges.</p>
-<p>Write <code>n</code> lines, where each line holds a list of space-separated integers,
+<p>Write <span class="math">\(n\)</span> lines, where each line holds a list of space-separated integers,
 representing the adjacencies of every node. As before, assume that nodes
 are labeled from <code>0</code> to <code>n-1</code>. Write the lines in ascending order of node
 label, e.g., the first line of the output should contain the adjacencies of
@@ -199,6 +199,63 @@ etc. Print each adjacency list in ascending order.</p>
 <h2>Solutions</h2>
 <p><a href="https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjlist.py">Solution</a>.</p>
 </div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
       
       <section>
 <div class="accordion" id="accordion2">

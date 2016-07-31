@@ -18,15 +18,15 @@ that `u` is connected to. If the graph is directed, the list contains
 either all the nodes connecting to `u`, or all the nodes receiving edges
 from `u`, but not both.
 
-Consider a graph with `n` nodes and `m` edges. In our previous
+Consider a graph with $n$ nodes and $m$ edges. In our previous
 representation, the file contained one line to define the number of nodes
-and edges, `n` and `m`, and one line for each edge, `m + 1` lines in
-total. In the new representation, our file will still need one line for `m`
-and `n`, but only `n` lines will follow, one for each node's adjacencies.
+and edges, $n$ and $m$, and one line for each edge, $m + 1$ lines in
+total. In the new representation, our file will still need one line for $m$
+and $n$, but only $n$ lines will follow, one for each node's adjacencies.
 
-As we saw before, a graph can hold up to `n(n+1)/2` edges in total. This
-means that, if the graph is moderately dense, we will have `n < m ~
-n(n+1)/2`, and therefore, our new graph representation will in general
+As we saw before, a graph can hold up to $n(n+1)/2$ edges in total. This
+means that, if the graph is moderately dense, we will have $n < m \approx
+n(n+1)/2$, and therefore, our new graph representation will in general
 have fewer lines than the previous one.
 
 {% include "problem_header.md" %}
@@ -34,12 +34,12 @@ have fewer lines than the previous one.
 For this challenge, you need to read a file representing a graph in the
 previous, long, format, and output it in the new, shorter one.
 
-The input is a file where the first line contains two integers, `n` and
-`m`, defining the number of nodes and edges, respectively. The next `m`
+The input is a file where the first line contains two integers, $n$ and
+$m$, defining the number of nodes and edges, respectively. The next $m$
 lines each contain two integers, representing two nodes that are joined by
 an edge. Assume undirected edges.
 
-Write `n` lines, where each line holds a list of space-separated integers,
+Write $n$ lines, where each line holds a list of space-separated integers,
 representing the adjacencies of every node. As before, assume that nodes
 are labeled from `0` to `n-1`. Write the lines in ascending order of node
 label, e.g., the first line of the output should contain the adjacencies of
