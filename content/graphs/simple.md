@@ -40,8 +40,8 @@ stated otherwise.
 For this challenge, you need to read a file in the usual format and check
 if the graph is a simple graph.
 
-The input is a file where the first line contains two integers, `n` and
-`m`, defining the number of nodes and edges, respectively. The next `m`
+The input is a file where the first line contains two integers, $n$ and
+$m$, defining the number of nodes and edges, respectively. The next $m$
 lines each contain two integers, representing two nodes that are joined by
 an edge.
 

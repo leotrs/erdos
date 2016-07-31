@@ -139,7 +139,7 @@ density</em>.</p>
 network divided by the total number of possible edges.</dd>
 <dt>Complete graph<a href="#complete-graph"></a></dt>
 <dd>A <strong>complete graph</strong> is a graph that has all possible edges present,
-i.e., its density is equal to <code>1</code>.</dd>
+i.e., its density is equal to <span class="math">\(1\)</span>.</dd>
 </dl>
 <div class="img-desc">
   <p><img src="/images/density.png" title="Graphs with different densities."></p>
@@ -159,8 +159,8 @@ i.e., its density is equal to <code>1</code>.</dd>
 <h2>Challenge</h2>
 <p>For this challenge, you need to read a file representing a graph, and
 compute the density of the network.</p>
-<p>The input is a file where the first line contains two integers, <code>n</code> and
-<code>m</code>, defining the number of nodes and edges, respectively. The next <code>m</code>
+<p>The input is a file where the first line contains two integers, <span class="math">\(n\)</span> and
+<span class="math">\(m\)</span>, defining the number of nodes and edges, respectively. The next <span class="math">\(m\)</span>
 lines each contain two integers, representing two nodes that are joined by
 an edge. Assume undirected edges.</p>
 <p>Output the density of the network as a single floating point number,
@@ -168,8 +168,8 @@ rounded to three decimal places,</p>
 <dl>
 <dt>Hint</dt>
 <dd>First, you will need to figure out the maximum possible number of edges
-in a graph with <code>n</code> nodes. You can compute it in the following way. First,
-start with a graph with <code>n</code> nodes and no edges. Pick one arbitrary node and
+in a graph with <span class="math">\(n\)</span> nodes. You can compute it in the following way. First,
+start with a graph with <span class="math">\(n\)</span> nodes and no edges. Pick one arbitrary node and
 count all the edges connecting it to all others, and mark that edge as
 'done'. Proceed the same way with all other nodes, picking one unmarked
 node and connecting it to all other unmarked nodes, until they are all
