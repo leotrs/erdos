@@ -36,9 +36,9 @@ mathematical toolbox underlying Network Science.
 Erdos had around 500 direct collaborators for his publications, and due to
 his fame and the prestige it meant to publish with him, his colleagues
 invented the notion of an **Erdos number**. Erdos himself got an Erdos
-number of `0`, while his direct collaborators were assigned the number
-`1`. Collaborators of Erdos' direct co-authors received an Erdos number of
-at most `2`, and so every person is assigned the smallest value among all
+number of $0$, while his direct collaborators were assigned the number
+$1$. Collaborators of Erdos' direct co-authors received an Erdos number of
+at most $2$, and so every person is assigned the smallest value among all
 their collaborators plus one.
 
 The Erdos number also defines an interesting social network of scientific
