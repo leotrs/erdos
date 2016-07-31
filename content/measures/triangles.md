@@ -53,8 +53,8 @@ connected to the other two. Every triangle is a connected triad.
 
 For this challenge, you need to count the number of triangles in a network.
 
-The input is a file which contains one line with a single integer `n`, the
-number of nodes in the network. The following `n` lines each contain one
+The input is a file which contains one line with a single integer $n$, the
+number of nodes in the network. The following $n$ lines each contain one
 row of the adjacency matrix of the network, where each entry is separated
 by a space.
 
