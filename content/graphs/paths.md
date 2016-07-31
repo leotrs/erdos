@@ -43,8 +43,8 @@ is called **connected graph**
 In this challenge, you are asked to compute the number of components in a
 graph.
 
-The input is a file where the first line contains two integers, `n` and
-`m`, defining the number of nodes and edges, respectively. The next `m`
+The input is a file where the first line contains two integers, $n$ and
+$m$, defining the number of nodes and edges, respectively. The next $m$
 lines each contain two integers, representing two nodes that are joined by
 an edge. Assume undirected edges.
 

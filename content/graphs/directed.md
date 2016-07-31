@@ -47,8 +47,8 @@ integers: the node with the highest number of *outgoing* edges and the node
 with the highest number of *incoming* edges.
 
 
-The input is a file in which the first line contains two integers, `n` and
-`m`, defining the number of nodes and edges, respectively. The next `m`
+The input is a file in which the first line contains two integers, $n$ and
+$m$, defining the number of nodes and edges, respectively. The next $m$
 lines each contain two integers, `u` and `v`, representing two nodes that
 are joined by a directed edge, `(u, v)` with `u` as the source and `v` as
 the target.

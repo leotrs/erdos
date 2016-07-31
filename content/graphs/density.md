@@ -22,7 +22,7 @@ network divided by the total number of possible edges.
 
 Complete graph[](#complete-graph)
 : A **complete graph** is a graph that has all possible edges present,
-i.e., its density is equal to `1`.
+i.e., its density is equal to $1$.
 
 {% from 'img_desc.html' import img_desc %}
 {{ img_desc("/images/density.png",
@@ -34,8 +34,8 @@ i.e., its density is equal to `1`.
 For this challenge, you need to read a file representing a graph, and
 compute the density of the network.
 
-The input is a file where the first line contains two integers, `n` and
-`m`, defining the number of nodes and edges, respectively. The next `m`
+The input is a file where the first line contains two integers, $n$ and
+$m$, defining the number of nodes and edges, respectively. The next $m$
 lines each contain two integers, representing two nodes that are joined by
 an edge. Assume undirected edges.
 
@@ -44,8 +44,8 @@ rounded to three decimal places,
 
 Hint
 : First, you will need to figure out the maximum possible number of edges
-in a graph with `n` nodes. You can compute it in the following way. First,
-start with a graph with `n` nodes and no edges. Pick one arbitrary node and
+in a graph with $n$ nodes. You can compute it in the following way. First,
+start with a graph with $n$ nodes and no edges. Pick one arbitrary node and
 count all the edges connecting it to all others, and mark that edge as
 'done'. Proceed the same way with all other nodes, picking one unmarked
 node and connecting it to all other unmarked nodes, until they are all
