@@ -100,5 +100,3 @@ Output the node with the highest degree.
 {% include "solutions_header.md" %}
 
 [Solution](https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py).
-
-</div>
