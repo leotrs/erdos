@@ -34,7 +34,7 @@ PAGE_SAVE_AS = '{slug}.html'
 
 
 # Choose theme
-THEME = os.path.join(THEME_PATH, 'pelican-elegant')
+THEME = os.path.join(THEME_PATH, 'elegant')
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
