@@ -76,12 +76,13 @@ href="https://en.wikipedia.org/wiki/Network_science">Network
 Science.</a></p>
 
 <p>If you're curious about NetSci, but don't know where to begin, you can
-read about it <a href="/pages/network-science.html">here</a>. If this
-exciting area of science sounds interesting, come try out Erdos and <a href=mailto:dleonardotn@gmail.com target="_blank">let us know</a>
-how what you think.</p>
+read about it <a href="/network-science.html">here</a>. If this exciting
+area of science sounds interesting, come try out Erdos and <a
+href=mailto:dleonardotn@gmail.com target="_blank">let us know</a> how what
+you think.</p>
 
 <p>If you want to learn how to use this site, read the <a
-href="/pages/how-to.html">how to.</a> If you want to dive right in, see our
+href="/how-to.html">how to.</a> If you want to dive right in, see our
 problem sets <a href="/categories.html">here.</a></p>
 
 """
