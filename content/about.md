@@ -8,11 +8,11 @@ Erdos has been inspired by projects like
 [cryptopals challenges](https://cryptopals.com/) for cryptography.
 
 Erdos is open source and free of charge. You can contribute directly on our
-GitHub page, [here](https://github.com/Leockard/erdos/). Erdos uses
+GitHub page, [here](https://github.com/leotrs/erdos/). Erdos uses
 [Python](https://www.python.org/) to generate the site, with the help of
 [Pelican](http://getpelican.com/), a modification of
 [elegant-theme](http://oncrashreboot.com/pelican-elegant) that can be found
-[here](https://github.com/Leockard/pelican-elegant), and
+[here](https://github.com/leotrs/pelican-elegant), and
 [markdown-pp](https://github.com/jreese/markdown-pp). Most solutions are
 also written in Python.
 

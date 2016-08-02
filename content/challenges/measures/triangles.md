@@ -100,4 +100,4 @@ Output the number of triangles in the network.
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/Leockard/erdos/blob/master/solutions/measures/triangles.py).
+[Solution](https://github.com/leotrs/erdos/blob/master/solutions/measures/triangles.py).
