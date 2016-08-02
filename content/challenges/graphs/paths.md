@@ -93,4 +93,4 @@ Print out the number of connected components in the graph.
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/Leockard/erdos/blob/master/solutions/graphs/paths.py).
+[Solution](https://github.com/leotrs/erdos/blob/master/solutions/graphs/paths.py).

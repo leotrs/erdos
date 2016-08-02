@@ -55,4 +55,4 @@ example output
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/Leockard/erdos/blob/master/solutions/{{ path.split('.')[0]}}.py).
+[Solution](https://github.com/leotrs/erdos/blob/master/solutions/{{ path.split('.')[0]}}.py).

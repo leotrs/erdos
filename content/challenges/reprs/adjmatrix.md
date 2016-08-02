@@ -118,4 +118,4 @@ Output the adjacency matrix of the graph.
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/Leockard/erdos/blob/master/solutions/reprs/adjmatrix.py).
+[Solution](https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjmatrix.py).

@@ -45,7 +45,7 @@ AUTHOR_FEED_RSS = None
 
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/ErdosNS'),
-          ('github', 'https://github.com/leotorr/erdos'),
+          ('github', 'https://github.com/leotrs/erdos'),
           ('email', 'mailto:leo@erdosnet.work'),)
 
 # How many articles per page

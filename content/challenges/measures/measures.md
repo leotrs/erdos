@@ -79,4 +79,4 @@ information about the graph.
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/Leockard/erdos/blob/master/solutions/measures/measures.py).
+[Solution](https://github.com/leotrs/erdos/blob/master/solutions/measures/measures.py).
