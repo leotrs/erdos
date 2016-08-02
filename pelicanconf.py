@@ -25,6 +25,13 @@ CACHE_PATH = '.cache'
 LOAD_CONTENT_CACHE = True
 CACHE_CONTENT = True
 THEME_PATH = '../pelican/pelican-themes/'
+ARTICLE_PATHS = ['challenges']
+ARTICLE_URL = 'challenges/{slug}.html'
+ARTICLE_SAVE_AS = 'challenges/{slug}.html'
+PAGE_PATHS = ['']
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
+
 
 # Choose theme
 THEME = os.path.join(THEME_PATH, 'pelican-elegant')
