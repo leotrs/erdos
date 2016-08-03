@@ -102,24 +102,19 @@ The solution to this challenge is hosted at
 [Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py).
 
 
-## Answers
+{% include "solutions_header.md" %}
 
 1. Roughly speaking, the importance of a node is called *centrality*. There
-   are many ways to measure centrality, such as
-   [betweenness centrality](https://en.wikipedia.org/wiki/Betweenness_centrality),
-   [closeness centrality](https://en.wikipedia.org/wiki/Centrality#Closeness_centrality),
-   [eigenvector centrality](https://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality),
-   [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality)
-   (or *degree*), and
-   [Katz centrality](https://en.wikipedia.org/wiki/Katz_centrality). We
-   will see each of them in turn in later challenges.
+   are many ways to measure centrality, such as *betweenness
+   centrality*[^1], *closeness centrality*[^2], *eigenvector
+   centrality*[^3], *degree centrality*[^4] (or *degree*), and *Katz
+   centrality*[^5].  We will see each of them in turn in later challenges.
 
-2. According to
-    [one source](http://www.pewresearch.org/fact-tank/2014/02/03/6-new-facts-about-facebook/),
-    young adult Facebook users have a median of $300$ friends. For the sake
-    of example, let's say I have exactly $300$ friends on Facebook. Since I
-    am connected to each one of them, my degree in this network is $300$,
-    while the total number of nodes is $301$.
+2. According to one source[^6], young adult Facebook users have a median of
+    $300$ friends. For the sake of example, let's say I have exactly $300$
+    friends on Facebook. Since I am connected to each one of them, my
+    degree in this network is $300$, while the total number of nodes is
+    $301$.
 
     Now, estimating the number of edges can pose a challenge. Consider the
     nature of your Facebook friends. Most social networks can be
@@ -150,14 +145,25 @@ The solution to this challenge is hosted at
     meaningful analysis.  Furthermore, There are Facebook "users" who are
     not human, e.g. company or automated accounts, and there are also a
     number of users with more than one account. In these cases, we need
-    careful and sophisticated
-    analysis. [These](http://www.vldb.org/pvldb/vol8/p1804-ching.pdf)
-    [sources](https://arxiv.org/pdf/1111.4503.pdf), for example, estimate
-    the number of users in the billions, and the number of edges in the
-    trillions.
+    careful and sophisticated analysis. Some sources[^7]$^,$[^8], for example,
+    estimate the number of users just shy of one billion, and the number of
+    edges in the tens of billions.
 
-3. Discuss the possibility of measuring the "importance" of an edge in a
-   network. Can you come up with a proposal for how to measure it?
+3. Just like nodes, edges are "first-class citizens" in networks. Since
+   they define the relationships between nodes, they are as important, if
+   not more. Since every edge is connected to only two edges at most, there
+   isn't a counterpart for node degree in the case of edges. However, there
+   are many ways to measure edge centrality[^9]$^,$[^10]$^,$[^11].
 
 
-## Further Reading
+[^1]: [Betweenness centrality](https://en.wikipedia.org/wiki/Betweenness_centrality)
+[^2]: [Closeness centrality](https://en.wikipedia.org/wiki/Centrality#Closeness_centrality)
+[^3]: [Eigenvector centrality](https://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality)
+[^4]: [Degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality)
+[^5]: [Katz centrality](https://en.wikipedia.org/wiki/Katz_centrality)
+[^6]: [6 new facts about Facebook](http://www.pewresearch.org/fact-tank/2014/02/03/6-new-facts-about-facebook/)
+[^7]: [One Trillion Edges: Graph Processing at Facebook-Scale](http://www.vldb.org/pvldb/vol8/p1804-ching.pdf)
+[^8]: [The Anatomy of the Facebook Social Graph](https://arxiv.org/pdf/1111.4503.pdf)
+[^9]: [A novel measure of edge centrality in social networks](http://www.sciencedirect.com/science/article/pii/S0950705112000160)
+[^10]: [Spanning Edge Centrality: Large-scale Computation and Applications](https://www.cs.cmu.edu/~jkoutis/papers/spanning_edge.pdf)
+[^11]: [Edge betweenness centrality](https://reference.wolfram.com/language/ref/EdgeBetweennessCentrality.html)

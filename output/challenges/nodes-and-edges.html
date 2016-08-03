@@ -227,26 +227,31 @@ assumed to be labeled by the integers from <code>0</code> to <code>n - 1</code>.
 <h2>Solution</h2>
 <p>The solution to this challenge is hosted at
 <a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py">Github</a>.</p>
-<h2>Answers</h2>
+<p><button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+  Show solutions
+</button>
+</p>
+</div>
+<!-- erdos-challenge -->
+
+<div class="erdos-solutions">
+<hr />
+
+<h2>Solution</h2>
 <ol>
 <li>
 <p>Roughly speaking, the importance of a node is called <em>centrality</em>. There
-   are many ways to measure centrality, such as
-   <a href="https://en.wikipedia.org/wiki/Betweenness_centrality">betweenness centrality</a>,
-   <a href="https://en.wikipedia.org/wiki/Centrality#Closeness_centrality">closeness centrality</a>,
-   <a href="https://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality">eigenvector centrality</a>,
-   <a href="https://en.wikipedia.org/wiki/Centrality#Degree_centrality">degree centrality</a>
-   (or <em>degree</em>), and
-   <a href="https://en.wikipedia.org/wiki/Katz_centrality">Katz centrality</a>. We
-   will see each of them in turn in later challenges.</p>
+   are many ways to measure centrality, such as <em>betweenness
+   centrality</em><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, <em>closeness centrality</em><sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>, <em>eigenvector
+   centrality</em><sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>, <em>degree centrality</em><sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup> (or <em>degree</em>), and <em>Katz
+   centrality</em><sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup>.  We will see each of them in turn in later challenges.</p>
 </li>
 <li>
-<p>According to
-    <a href="http://www.pewresearch.org/fact-tank/2014/02/03/6-new-facts-about-facebook/">one source</a>,
-    young adult Facebook users have a median of <span class="math">\(300\)</span> friends. For the sake
-    of example, let's say I have exactly <span class="math">\(300\)</span> friends on Facebook. Since I
-    am connected to each one of them, my degree in this network is <span class="math">\(300\)</span>,
-    while the total number of nodes is <span class="math">\(301\)</span>.</p>
+<p>According to one source<sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">6</a></sup>, young adult Facebook users have a median of
+    <span class="math">\(300\)</span> friends. For the sake of example, let's say I have exactly <span class="math">\(300\)</span>
+    friends on Facebook. Since I am connected to each one of them, my
+    degree in this network is <span class="math">\(300\)</span>, while the total number of nodes is
+    <span class="math">\(301\)</span>.</p>
 <p>Now, estimating the number of edges can pose a challenge. Consider the
 nature of your Facebook friends. Most social networks can be
 partitioned in three big groups: close friends, family, and
@@ -274,18 +279,56 @@ is possible to gather the data in principle, it can be too large for
 meaningful analysis.  Furthermore, There are Facebook "users" who are
 not human, e.g. company or automated accounts, and there are also a
 number of users with more than one account. In these cases, we need
-careful and sophisticated
-analysis. <a href="http://www.vldb.org/pvldb/vol8/p1804-ching.pdf">These</a>
-<a href="https://arxiv.org/pdf/1111.4503.pdf">sources</a>, for example, estimate
-the number of users in the billions, and the number of edges in the
-trillions.</p>
+careful and sophisticated analysis. Some sources<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup><span class="math">\(^,\)</span><sup id="fnref:8"><a class="footnote-ref" href="#fn:8" rel="footnote">8</a></sup>, for example,
+estimate the number of users just shy of one billion, and the number of
+edges in the tens of billions.</p>
 </li>
 <li>
-<p>Discuss the possibility of measuring the "importance" of an edge in a
-   network. Can you come up with a proposal for how to measure it?</p>
+<p>Just like nodes, edges are "first-class citizens" in networks. Since
+   they define the relationships between nodes, they are as important, if
+   not more. Since every edge is connected to only two edges at most, there
+   isn't a counterpart for node degree in the case of edges. However, there
+   are many ways to measure edge centrality<sup id="fnref:9"><a class="footnote-ref" href="#fn:9" rel="footnote">9</a></sup><span class="math">\(^,\)</span><sup id="fnref:10"><a class="footnote-ref" href="#fn:10" rel="footnote">10</a></sup><span class="math">\(^,\)</span><sup id="fnref:11"><a class="footnote-ref" href="#fn:11" rel="footnote">11</a></sup>.</p>
 </li>
 </ol>
-<h2>Further Reading</h2>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://en.wikipedia.org/wiki/Betweenness_centrality">Betweenness centrality</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://en.wikipedia.org/wiki/Centrality#Closeness_centrality">Closeness centrality</a>&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality">Eigenvector centrality</a>&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://en.wikipedia.org/wiki/Centrality#Degree_centrality">Degree centrality</a>&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="https://en.wikipedia.org/wiki/Katz_centrality">Katz centrality</a>&#160;<a class="footnote-backref" href="#fnref:5" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="http://www.pewresearch.org/fact-tank/2014/02/03/6-new-facts-about-facebook/">6 new facts about Facebook</a>&#160;<a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p><a href="http://www.vldb.org/pvldb/vol8/p1804-ching.pdf">One Trillion Edges: Graph Processing at Facebook-Scale</a>&#160;<a class="footnote-backref" href="#fnref:7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p><a href="https://arxiv.org/pdf/1111.4503.pdf">The Anatomy of the Facebook Social Graph</a>&#160;<a class="footnote-backref" href="#fnref:8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p><a href="http://www.sciencedirect.com/science/article/pii/S0950705112000160">A novel measure of edge centrality in social networks</a>&#160;<a class="footnote-backref" href="#fnref:9" rev="footnote" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p><a href="https://www.cs.cmu.edu/~jkoutis/papers/spanning_edge.pdf">Spanning Edge Centrality: Large-scale Computation and Applications</a>&#160;<a class="footnote-backref" href="#fnref:10" rev="footnote" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p><a href="https://reference.wolfram.com/language/ref/EdgeBetweennessCentrality.html">Edge betweenness centrality</a>&#160;<a class="footnote-backref" href="#fnref:11" rev="footnote" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
