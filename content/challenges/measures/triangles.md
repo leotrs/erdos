@@ -60,6 +60,12 @@ by a space.
 
 Output the number of triangles in the network.
 
+Hint
+: Since you will be given the adjacency matrix, think how it would reflect
+the presence of a triangle. If `u`, `v` and `w` form a triangle, what can
+be said about the entries $a_{uv}$, $a_{vw}$, $a_{wu}$ of the adjacency
+matrix?
+
 
 {% include "input_header.md" %}
 
