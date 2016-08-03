@@ -5,7 +5,6 @@ Position: 10
 Summary: Graphs are made of nodes and edges
 Disqus_identifier: 81be0b7a-graphs-are-made-of-nodes-and-edges
 
-
 {% include "context_header.md" %}
 
 When we study a real-life network, we usually refer to an underlying
@@ -99,4 +98,66 @@ Output the node with the highest degree.
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py).
+The solution to this challenge is hosted at
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py).
+
+
+## Answers
+
+1. Roughly speaking, the importance of a node is called *centrality*. There
+   are many ways to measure centrality, such as
+   [betweenness centrality](https://en.wikipedia.org/wiki/Betweenness_centrality),
+   [closeness centrality](https://en.wikipedia.org/wiki/Centrality#Closeness_centrality),
+   [eigenvector centrality](https://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality),
+   [degree centrality](https://en.wikipedia.org/wiki/Centrality#Degree_centrality)
+   (or *degree*), and
+   [Katz centrality](https://en.wikipedia.org/wiki/Katz_centrality). We
+   will see each of them in turn in later challenges.
+
+2. According to
+    [one source](http://www.pewresearch.org/fact-tank/2014/02/03/6-new-facts-about-facebook/),
+    young adult Facebook users have a median of $300$ friends. For the sake
+    of example, let's say I have exactly $300$ friends on Facebook. Since I
+    am connected to each one of them, my degree in this network is $300$,
+    while the total number of nodes is $301$.
+
+    Now, estimating the number of edges can pose a challenge. Consider the
+    nature of your Facebook friends. Most social networks can be
+    partitioned in three big groups: close friends, family, and
+    acquaintances. Now, most if not all of my close friends know each
+    other, and the same is true for members of my family. Some of my
+    friends know some of my family too. In other words, these two groups
+    are very tightly knit, or *dense*, within themselves, while the
+    connections between them are few, or *sparse*. And what about
+    acquaintances? Well, some of them know some of my friends and/or family
+    and some don't. In other words, it's a mixed bag of nuts.
+
+    Depending on the size of these groups, the total number of edges in the
+    graph can vary considerably. Let's say I have $35$ really close
+    friends, all of whom know each other (from school, say), $15$ family
+    members, all of whom know each other, and a long list of $250$
+    acquaintances, who know some of my other connections to varying
+    degrees, say $10$ on average.  That's $595$ edges within my group of
+    friends, $105$ in my family plus $1250$ edges from acquaintances, for a
+    total of $1950$. In contrast, if I have a big family, say $30$ members,
+    all other things being equal, the total number of edges would be
+    $2280$. And if I was more popular in school, it might get to more than
+    $3000$.
+
+    To estimate the total size of all of Facebook is a different matter.
+    The problem with estimating real-life networks is that even though it
+    is possible to gather the data in principle, it can be too large for
+    meaningful analysis.  Furthermore, There are Facebook "users" who are
+    not human, e.g. company or automated accounts, and there are also a
+    number of users with more than one account. In these cases, we need
+    careful and sophisticated
+    analysis. [These](http://www.vldb.org/pvldb/vol8/p1804-ching.pdf)
+    [sources](https://arxiv.org/pdf/1111.4503.pdf), for example, estimate
+    the number of users in the billions, and the number of edges in the
+    trillions.
+
+3. Discuss the possibility of measuring the "importance" of an edge in a
+   network. Can you come up with a proposal for how to measure it?
+
+
+## Further Reading

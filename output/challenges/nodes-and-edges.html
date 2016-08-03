@@ -224,8 +224,68 @@ assumed to be labeled by the integers from <code>0</code> to <code>n - 1</code>.
 <div class="erdos-solutions">
 <hr />
 
-<h2>Solutions</h2>
-<p><a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py">Solution</a>.</p>
+<h2>Solution</h2>
+<p>The solution to this challenge is hosted at
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py">Github</a>.</p>
+<h2>Answers</h2>
+<ol>
+<li>
+<p>Roughly speaking, the importance of a node is called <em>centrality</em>. There
+   are many ways to measure centrality, such as
+   <a href="https://en.wikipedia.org/wiki/Betweenness_centrality">betweenness centrality</a>,
+   <a href="https://en.wikipedia.org/wiki/Centrality#Closeness_centrality">closeness centrality</a>,
+   <a href="https://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality">eigenvector centrality</a>,
+   <a href="https://en.wikipedia.org/wiki/Centrality#Degree_centrality">degree centrality</a>
+   (or <em>degree</em>), and
+   <a href="https://en.wikipedia.org/wiki/Katz_centrality">Katz centrality</a>. We
+   will see each of them in turn in later challenges.</p>
+</li>
+<li>
+<p>According to
+    <a href="http://www.pewresearch.org/fact-tank/2014/02/03/6-new-facts-about-facebook/">one source</a>,
+    young adult Facebook users have a median of <span class="math">\(300\)</span> friends. For the sake
+    of example, let's say I have exactly <span class="math">\(300\)</span> friends on Facebook. Since I
+    am connected to each one of them, my degree in this network is <span class="math">\(300\)</span>,
+    while the total number of nodes is <span class="math">\(301\)</span>.</p>
+<p>Now, estimating the number of edges can pose a challenge. Consider the
+nature of your Facebook friends. Most social networks can be
+partitioned in three big groups: close friends, family, and
+acquaintances. Now, most if not all of my close friends know each
+other, and the same is true for members of my family. Some of my
+friends know some of my family too. In other words, these two groups
+are very tightly knit, or <em>dense</em>, within themselves, while the
+connections between them are few, or <em>sparse</em>. And what about
+acquaintances? Well, some of them know some of my friends and/or family
+and some don't. In other words, it's a mixed bag of nuts.</p>
+<p>Depending on the size of these groups, the total number of edges in the
+graph can vary considerably. Let's say I have <span class="math">\(35\)</span> really close
+friends, all of whom know each other (from school, say), <span class="math">\(15\)</span> family
+members, all of whom know each other, and a long list of <span class="math">\(250\)</span>
+acquaintances, who know some of my other connections to varying
+degrees, say <span class="math">\(10\)</span> on average.  That's <span class="math">\(595\)</span> edges within my group of
+friends, <span class="math">\(105\)</span> in my family plus <span class="math">\(1250\)</span> edges from acquaintances, for a
+total of <span class="math">\(1950\)</span>. In contrast, if I have a big family, say <span class="math">\(30\)</span> members,
+all other things being equal, the total number of edges would be
+<span class="math">\(2280\)</span>. And if I was more popular in school, it might get to more than
+<span class="math">\(3000\)</span>.</p>
+<p>To estimate the total size of all of Facebook is a different matter.
+The problem with estimating real-life networks is that even though it
+is possible to gather the data in principle, it can be too large for
+meaningful analysis.  Furthermore, There are Facebook "users" who are
+not human, e.g. company or automated accounts, and there are also a
+number of users with more than one account. In these cases, we need
+careful and sophisticated
+analysis. <a href="http://www.vldb.org/pvldb/vol8/p1804-ching.pdf">These</a>
+<a href="https://arxiv.org/pdf/1111.4503.pdf">sources</a>, for example, estimate
+the number of users in the billions, and the number of edges in the
+trillions.</p>
+</li>
+<li>
+<p>Discuss the possibility of measuring the "importance" of an edge in a
+   network. Can you come up with a proposal for how to measure it?</p>
+</li>
+</ol>
+<h2>Further Reading</h2>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
