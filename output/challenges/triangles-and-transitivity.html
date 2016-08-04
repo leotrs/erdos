@@ -148,10 +148,9 @@ edges among them means three different people with two
 friendships. Therefore, network transitivity in a social network measures
 the cases when one person's friends are also friends to each other.</p>
 <div class="img-desc">
-  <p><img src="/images/triangles.png" title="Are my friends themselves friends?"></p>
-  <p><em>Are my friends themselves friends?</em></p>
+<p><img src="/images/triangles.png" title="Are my friends themselves friends?"/></p>
+<p><em>Are my friends themselves friends?</em></p>
 </div>
-
 <p>As the picture should make clear, transitivity simply measures the
 occurrence of triangles in a network. If the network relation is highly
 transitive, then many of its <em>connected triads</em> will form <em>triangles</em>.</p><a name="connected-triad"></a><a name="triangle"></a>
@@ -163,23 +162,21 @@ are called a <strong>connected triad</strong>.</dd>
 <dd>A <strong>triangle</strong> in a graph is a triad of nodes where each one is
 connected to the other two. Every triangle is a connected triad.</dd>
 </dl>
-<p><button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+<p><button class="btn btn-large btn-default erdos-fadein-challenge" type="button">
   Show challenge
 </button>
 </p>
 </div>
 <!-- erdos-context -->
-
 <div class="erdos-challenge">
-<hr />
-
+<hr/>
 <h2>Challenge</h2>
 <p>For this challenge, you need to count the number of triangles in a network.</p>
 <p>The input is a file which contains one line with a single integer <span class="math">\(n\)</span>, the
 number of nodes in the network. The following <span class="math">\(n\)</span> lines each contain one
 row of the adjacency matrix of the network, where each entry is separated
 by a space.</p>
-<p>Output the number of triangles in the network.</p>
+<p>Output the number of triangles in the network.</p><a name="hint"></a>
 <dl>
 <dt>Hint</dt>
 <dd>Since you will be given the adjacency matrix, think how it would reflect
@@ -200,14 +197,10 @@ matrix?</dd>
 0 1 1 1 1 0 0 0 0 0
 0 0 0 1 0 1 0 0 0 0
 </pre></div>
-
-
 <h3>Sample Output</h3>
 <div class="highlight"><pre><span></span>2
 </pre></div>
-
-
-<hr />
+<hr/>
 <h2>Expansion Questions</h2>
 <ol>
 <li>In an undirected network, a triad of nodes can only have one, two or
@@ -221,16 +214,14 @@ matrix?</dd>
    network? Would counting the occurrence of these patterns also be useful
    as a measure for network transitivity?</li>
 </ol>
-<p><button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+<p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
   Show solutions
 </button>
 </p>
 </div>
 <!-- erdos-challenge -->
-
 <div class="erdos-solutions">
-<hr />
-
+<hr/>
 <h2>Solution</h2>
 <p><a href="https://github.com/leotrs/erdos/blob/master/solutions/measures/triangles.py">Solution</a>.</p>
 </div>
