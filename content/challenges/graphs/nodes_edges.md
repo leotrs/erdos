@@ -88,9 +88,9 @@ Output the node with the highest degree.
    graph, every node stands in for one of your friends, and there is an
    edge between two nodes if the corresponding persons are friends with
    each other.
-    + Estimate the number of nodes and edges in this network.
-    + What is your degree in this network?
-    + Consider the extended network of all Facebook users. Estimate the
+    1. Estimate the number of nodes and edges in this network.
+    2. What is your degree in this network?
+    3. Consider the extended network of all Facebook users. Estimate the
       number of nodes and edges. (Doesn't have to be an exact number.)
 3. Discuss the possibility of measuring the "importance" of an edge in a
    network. Can you come up with a proposal for how to measure it?
@@ -98,11 +98,11 @@ Output the node with the highest degree.
 
 {% include "solutions_header.md" %}
 
-The solution to this challenge is hosted at
+The solution to this challenge is hosted on
 [Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py).
 
 
-{% include "solutions_header.md" %}
+{% include "answers_header.md" %}
 
 1. Roughly speaking, the importance of a node is called *centrality*. There
    are many ways to measure centrality, such as *betweenness
