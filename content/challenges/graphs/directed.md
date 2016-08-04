@@ -33,11 +33,11 @@ nodes into target nodes.
             "A graph with four nodes and five directed edges.",
             "A graph with four nodes and five directed edges.")}}
 
-Outdegree[](#Outdegree)
+Outdegree
 : For a given node `u`, the number of outgoing edges from `u` is called
 **outdegree** of `u`.
 
-Indegree[](#Indegree)
+Indegree
 : The number of incoming edges to `u` is the **indgree** of `u`.
 
 {% include "problem_header.md" %}
@@ -75,24 +75,47 @@ highest indegree.
 
 {% include "question_header.md" %}
 
-1. For the following networks, decide if they are simple or multigraphs. If
-   they are not simple, explain what would self-loops or multiedges
-   represent.
-    + The social network of your immediate Facebook friends. In this graph,
+1. For the following networks, decide if they are directed or undirected.
+    1. The social network of your immediate Facebook friends. In this graph,
       every node stands in for one of your friends, and there is an edge
       between two nodes if the corresponding persons are friends with each
       other.
-    + The social network of your followers on Twitter. In this graph, every
+    2. The social network of your followers on Twitter. In this graph, every
       node stands for one user, and each edge between users A and B
       represents the relationship "A follows B".
-    + The transportation network of roads between cities in a country. In
+    3. The transportation network of roads between cities in a country. In
       this graph, every node represents a city and there is one edge
       between any two cities for each road connecting them.
-    + The information network of devices connected to the internet
+    4. The information network of devices connected to the internet
       (computers, routers, cell phones, etc), where every node represents a
       device and every edge represents physical or wireless connections
       to network devices.
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/graphs/directed.py).
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/directed.py).
+
+
+{% include "answers_header.md" %}
+
+1. The relationship "`x` is friends with `y`" on Facebook is always
+   symmetrical: it always implies that "`y` is friends with `x`" too. This
+   is an undirected network.
+
+2. In contrast, "`x` follows `y`" on Twitter doesn't imply that "`y`
+   follows `x`" back. This relationship is asymmetrical, and the graph is
+   directed.
+
+3. Most roads between cities can be traveled in both directions, so the
+   relationship "there's a road that goes from `this` city to `that` city"
+   will almost certainly be reciprocal. If at least one of the roads was
+   one way only, the network would be directed instead.
+
+4. The question is vague on purpose, as the answer depends on the exact
+   definition of the relationship. If the relationship is "device `x`
+   connects to the Internet through device `y`", then it won't be
+   reciprocal (as my cell phone connects to the Internet through my router
+   but not the other way around). If the relationship is "devices `x` and
+   `y` share online data" then it must be reciprocal and the graph
+   undirected.
