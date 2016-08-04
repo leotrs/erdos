@@ -11,12 +11,12 @@ When we study a real-life network, we usually refer to an underlying
 mathematical object, called a *graph*. We use the terms *network* and
 *graph* interchangeably throughout the problem sets.
 
-Graph[](#graph)
+Graph
 : A **graph** is defined as a set of **nodes**, defining the locations,
 entities or elements of the graph, and a set of **edges**, representing the
 relationships between two nodes.
 
-Graph Theory[](#graph-theory)
+Graph Theory
 : The field of mathematics concerned with the study of graphs is called
 **graph theory**. Network Science relies heavily on graph theory, as every
 network is represented by a graph.
@@ -32,11 +32,11 @@ node. This gives a rough measure of importance, size, or
 connectedness. These concepts will become clearer as we delve deeper into
 Network Science and Graph Theory.
 
-Degree[](#degree)
+Degree
 : The number of edges connecting to a node `u` is called the **degree** of
 `u`.
 
-Adjacent / Neighbors[](#neighbors)
+Adjacent or Neighbors
 : If two nodes `u` and `v` are connected by an edge, they are called
 **adjacent** or **neighbors**. If `u` and `v` are adjacent, we write `u ~
 v`.
