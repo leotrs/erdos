@@ -264,7 +264,8 @@ information about the graph.</p>
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
                     data-disqus-identifier="2dae387f-measures-help-describe-a-network"
-                href="http://erdosnet.work/challenges/graph-measures.html#disqus_thread">
+                href="http://erdosnet.work/challenges/graph-measures.html#disqus_thread"
+                id="disqus-accordion-toggle">
                 Comments
             </a>
         </div>
@@ -373,13 +374,14 @@ window.onhashchange=function(){
 </script>
 <script>
 $('#disqus_thread').on('shown', function () {
-    var link = document.getElementsByClassName('accordion-toggle');
-    var old_innerHTML = link[0].innerHTML;
-    $(link[0]).fadeOut(500, function() {
+    console.log('foobar')
+    var link = document.getElementById('disqus-accordion-toggle');
+    var old_innerHTML = link.innerHTML;
+    $(link).fadeOut(500, function() {
         $(this).text('Click here to hide comments').fadeIn(500);
     });
     $('#disqus_thread').on('hidden', function () {
-        $(link[0]).fadeOut(500, function() {
+        $(link).fadeOut(500, function() {
             $(this).text(old_innerHTML).fadeIn(500);
         });
     })
