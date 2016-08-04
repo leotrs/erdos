@@ -150,10 +150,10 @@ nodes into target nodes.</p>
 <p><em>A graph with four nodes and five directed edges.</em></p>
 </div><a name="outdegree"></a><a name="indegree"></a>
 <dl>
-<dt>Outdegree<a href="#Outdegree"></a></dt>
+<dt>Outdegree</dt>
 <dd>For a given node <code>u</code>, the number of outgoing edges from <code>u</code> is called
 <strong>outdegree</strong> of <code>u</code>.</dd>
-<dt>Indegree<a href="#Indegree"></a></dt>
+<dt>Indegree</dt>
 <dd>The number of incoming edges to <code>u</code> is the <strong>indgree</strong> of <code>u</code>.</dd>
 </dl>
 <p><button class="btn btn-large btn-default erdos-fadein-challenge" type="button">
@@ -188,9 +188,7 @@ highest indegree.</p>
 </pre></div>
 <h2>Expansion Questions</h2>
 <ol>
-<li>For the following networks, decide if they are simple or multigraphs. If
-   they are not simple, explain what would self-loops or multiedges
-   represent.<ul>
+<li>For the following networks, decide if they are directed or undirected.<ol>
 <li>The social network of your immediate Facebook friends. In this graph,
   every node stands in for one of your friends, and there is an edge
   between two nodes if the corresponding persons are friends with each
@@ -205,7 +203,7 @@ highest indegree.</p>
   (computers, routers, cell phones, etc), where every node represents a
   device and every edge represents physical or wireless connections
   to network devices.</li>
-</ul>
+</ol>
 </li>
 </ol>
 <p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
@@ -217,7 +215,36 @@ highest indegree.</p>
 <div class="erdos-solutions">
 <hr/>
 <h2>Solution</h2>
-<p><a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/directed.py">Solution</a>.</p>
+<p>The solution to this challenge is hosted on
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/directed.py">Github</a>.</p>
+<h2>Answers</h2>
+<ol>
+<li>
+<p>The relationship "<code>x</code> is friends with <code>y</code>" on Facebook is always
+   symmetrical: it always implies that "<code>y</code> is friends with <code>x</code>" too. This
+   is an undirected network.</p>
+</li>
+<li>
+<p>In contrast, "<code>x</code> follows <code>y</code>" on Twitter doesn't imply that "<code>y</code>
+   follows <code>x</code>" back. This relationship is asymmetrical, and the graph is
+   directed.</p>
+</li>
+<li>
+<p>Most roads between cities can be traveled in both directions, so the
+   relationship "there's a road that goes from <code>this</code> city to <code>that</code> city"
+   will almost certainly be reciprocal. If at least one of the roads was
+   one way only, the network would be directed instead.</p>
+</li>
+<li>
+<p>The question is vague on purpose, as the answer depends on the exact
+   definition of the relationship. If the relationship is "device <code>x</code>
+   connects to the Internet through device <code>y</code>", then it won't be
+   reciprocal (as my cell phone connects to the Internet through my router
+   but not the other way around). If the relationship is "devices <code>x</code> and
+   <code>y</code> share online data" then it must be reciprocal and the graph
+   undirected.</p>
+</li>
+</ol>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
