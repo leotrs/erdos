@@ -13,14 +13,14 @@ and a set of edges allows for many different possibilities, including some
 that might be undesirable in certain cases. For this reason, there's a
 stricter definition that we introduce next.
 
-Simple graph[](#simple-graph)
+Simple graph
 : A **simple graph** is a graph whose edges never join the same node and any
 pair of nodes is joined by at most one edge.
 
-Self-loop[](#self-loop)
+Self-loop
 : An edge that has the same node as both endpoints is called a **self-loop**.
 
-Multigraph[](#multigraph)
+Multigraph
 : A graph that is not a simple graph is called **multigraph**.
 
 {% from 'img_desc.html' import img_desc %}
@@ -70,17 +70,17 @@ NO
 1. For the following networks, decide if they are simple or multigraphs. If
    they are not simple, explain what would self-loops or multiedges
    represent.
-    + The social network of your immediate Facebook friends. In this graph,
+    1. The social network of your immediate Facebook friends. In this graph,
       every node stands in for one of your friends, and there is an edge
       between two nodes if the corresponding persons are friends with each
       other.
-    + The social network of your followers on Twitter. In this graph, every
+    2. The social network of your followers on Twitter. In this graph, every
       node stands for one user, and each edge between users A and B
       represents the relationship "A follows B".
-    + The transportation network of roads between cities in a country. In
+    3. The transportation network of roads between cities in a country. In
       this graph, every node represents a city and there is one edge
       between any two cities for each road connecting them.
-    + The information network of devices connected to the internet
+    4. The information network of devices connected to the internet
       (computers, routers, cell phones, etc), where every node represents a
       device and every edge represents physical or wireless connections
       to network devices.
@@ -88,4 +88,27 @@ NO
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/graphs/simple.py).
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/simple.py).
+
+
+{% include "answers_header.md" %}
+
+1. On Facebook, no one can be friends with themselves, so there are no
+   self-loops. Also, two people can't be friends more than once, therefore
+   there are no parallel edges. This is a simple graph.
+
+2. The main difference between the social graphs defined by Facebook and
+   Twitter is that Facebook's *friendships* area a reciprocal relationship:
+   if person `x` is friends with `y`, then `y` must be friends with `x`. On
+   the other hand, Twitter's *follows* is not reciprocal: if `x` follows
+   `y`, it does not imply that `y` follows `x`. This is an important
+   difference which will be studied in further challenges. Moreover, if
+   both `x` and `y` follow each other on Twitter, it means there are two
+   edges joining them. This makes Twitter a multigraph.
+
+3. Any two cities may have more than one road connecting them. In that
+   case, this graph isn't simple.
+
+4. If a device has more than one way to connect to the Internet, and both
+   can be active at the same time, then it would establish a parallel edge.
