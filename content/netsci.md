@@ -9,7 +9,7 @@ a diverse set of **complex systems** that are organized in a networked
 fashion. Some examples include computers interconnected to form the
 Internet, social networks of friendships and acquaintances, academic
 networks of co-authorship and collaboration, utility networks of the energy
-grid, transportation networks of cities and roads, the list goes on. What
+grid, transportation networks of cities and roads. The list goes on. What
 all of these systems have in common is that they are all formed by a set of
 **interconnected entities**, to form a distributed, scattered system that
 is, in many cases, more than just the sum of its parts.
