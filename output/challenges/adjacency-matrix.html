@@ -133,10 +133,9 @@ algebra to manipulate them.</p>
 <p>Consider the graph in the picture and assume we were trying to write down
 all of the edges in the graph.</p>
 <div class="img-desc">
-  <p><img src="/images/adjmatrix.png" title="Example graph."></p>
-  <p><em>Example graph.</em></p>
+<p><img src="/images/adjmatrix.png" title="Example graph."/></p>
+<p><em>Example graph.</em></p>
 </div>
-
 <p>If all we had was this drawing (instead of, say, an adjacency list
 representation of the network), we would need to examine node by node and
 write down each of the node's neighbors. Thus, we start at the node labeled
@@ -146,8 +145,6 @@ connected to <code>2</code>?', and so on and so forth, while we write down our a
 as follows.</p>
 <div class="highlight"><pre><span></span>NO YES YES YES
 </pre></div>
-
-
 <p>We repeat the same process for every other node, asking if <code>1</code> is connected
 to each node in turn, if <code>2</code> is connected to each node in turn, and so on,
 to get the following set of answers,</p>
@@ -155,9 +152,7 @@ to get the following set of answers,</p>
 YES NO  NO  YES
 YES NO  NO  NO
 YES YES NO  NO
-</pre></div>
-
-
+</pre></div><a name="hint"></a>
 <dl>
 <dt>Hint</dt>
 <dd>When you consider a node <code>u</code> and go through every node, remember to ask
@@ -183,16 +178,14 @@ the graph.</p><a name="adjacency-matrix"></a>
 whose element at the <span class="math">\(i\)</span>-th row and <span class="math">\(j\)</span>-th column indicates whether nodes
 <code>i</code> and <code>j</code> are adjacent or not.</dd>
 </dl>
-<p><button type="button" class="btn btn-large btn-default erdos-fadein-challenge">
+<p><button class="btn btn-large btn-default erdos-fadein-challenge" type="button">
   Show challenge
 </button>
 </p>
 </div>
 <!-- erdos-context -->
-
 <div class="erdos-challenge">
-<hr />
-
+<hr/>
 <h2>Challenge</h2>
 <p>To solve this challenge, you will need to read a file in adjacency list
 form, and output its adjacency matrix.</p>
@@ -211,16 +204,12 @@ adjacencies of node <code>1</code>, etc.</p>
 0
 0 1
 </pre></div>
-
-
 <h3>Sample Output</h3>
 <div class="highlight"><pre><span></span>0 1 1 1
 1 0 0 1
 1 0 0 0
 1 1 0 0
 </pre></div>
-
-
 <h2>Expansion Questions</h2>
 <ol>
 <li>Consider the adjacency matrix of an undirected graph.<ol>
@@ -237,16 +226,14 @@ adjacencies of node <code>1</code>, etc.</p>
    matrix.</li>
 <li>Can you construct the adjacency matrix of multigraph? Why or why not?</li>
 </ol>
-<p><button type="button" class="btn btn-large btn-default erdos-fadein-solutions">
+<p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
   Show solutions
 </button>
 </p>
 </div>
 <!-- erdos-challenge -->
-
 <div class="erdos-solutions">
-<hr />
-
+<hr/>
 <h2>Solution</h2>
 <p><a href="https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjmatrix.py">Solution</a>.</p>
 </div>
