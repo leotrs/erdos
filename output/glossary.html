@@ -190,12 +190,28 @@ and the second, the <em>target</em>.</p>
           </dd>
 	</dl>
 	<dl>
+          <a name="directed-path"></a>
+	  <dt><h4>Directed Path</h4></dt>
+	  <dd>
+            <p>A <strong>directed path</strong> is an ordered set of nodes <code>(u₁, u₂, ..., uₙ)</code> in
+which every consecutive pair <code>uᵢ</code>, <code>uᵢ₊₁</code> are such that there is an
+edge <em>from</em> <code>uᵢ</code> <em>to</em> <code>uᵢ₊₁</code>. If there is a directed path from <code>u</code> to
+<code>v</code>, we say <code>v</code> is <strong>reachable</strong> from <code>u</code>.</p>
+            <p><i>
+              <span>Defined in: <a href="challenges/paths-and-components.html#directed-path">Paths and Components</a>.</span>
+              <span> See also: </span>
+              <span><a href="glossary.html#strongly-connected-component">Strongly Connected Component</a>.</span>
+            </i></p>
+          </dd>
+	</dl>
+	<dl>
           <a name="graph"></a>
 	  <dt><h4>Graph</h4></dt>
 	  <dd>
             <p>A <strong>graph</strong> is defined as a set of <strong>nodes</strong>, defining the locations,
 entities or elements of the graph, and a set of <strong>edges</strong>, representing the
-relationships between two nodes.</p>
+relationships between two nodes. Nodes are also called <strong>vertices</strong>, and
+edges are sometimes called <strong>links</strong>.</p>
             <p><i>
               <span>Defined in: <a href="challenges/nodes-and-edges.html#graph">Nodes and Edges</a>.</span>
               <span> See also: </span>
@@ -340,6 +356,19 @@ pair of nodes is joined by at most one edge.</p>
               <span> See also: </span>
               <span><a href="glossary.html#self-loop">Self-loop</a>, </span>
               <span><a href="glossary.html#multigraph">Multigraph</a>.</span>
+            </i></p>
+          </dd>
+	</dl>
+	<dl>
+          <a name="strongly-connected-component"></a>
+	  <dt><h4>Strongly Connected Component</h4></dt>
+	  <dd>
+            <p>In a directed graph, a <strong>strongly connected component</strong> is a subset
+of nodes in which every node is reachable from all the others.</p>
+            <p><i>
+              <span>Defined in: <a href="challenges/paths-and-components.html#strongly-connected-component">Paths and Components</a>.</span>
+              <span> See also: </span>
+              <span><a href="glossary.html#directed-path">Directed Path</a>.</span>
             </i></p>
           </dd>
 	</dl>

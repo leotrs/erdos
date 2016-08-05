@@ -134,15 +134,15 @@ nodes and edges.</p>
 <p>However, there are many other elements that we can identify which are also
 of interest when trying to describe a network.</p><a name="walk"></a><a name="path"></a><a name="connected-component"></a>
 <dl>
-<dt>Walk<a href="#walk"></a></dt>
+<dt>Walk</dt>
 <dd>A <strong>walk</strong> is an ordered sequence of nodes <code>(u₁, u₂, ..., uₙ)</code> where
 every consecutive pair of nodes are adjacent. That is, each can be reached
 from the previous one by following an edge in the graph.</dd>
-<dt>Path<a href="#path"></a></dt>
+<dt>Path</dt>
 <dd>A <strong>path</strong> is a walk in which every node is unique. This means the walk
 does not loop around into itself: it does not self-cross. If there exists a
 path from <code>u</code> to <code>v</code>, we say <code>u</code> and <code>v</code> are <strong>connected</strong>.</dd>
-<dt>Connected Component<a href="#component"></a></dt>
+<dt>Connected Component</dt>
 <dd>A <strong>connected component</strong>, or simply <strong>component</strong>, is a set of nodes in
 which any two are connected by a path. A graph that only has one component
 is called <strong>connected graph</strong></dd>
@@ -183,21 +183,25 @@ an edge. Assume undirected edges.</p>
 <hr/>
 <h2>Expansion Questions</h2>
 <ol>
-<li>In directed graphs, it is necessary to distinguish between nodes <code>u</code> and
-   <code>v</code> being <em>connected</em> and <code>v</code> being <em>reachable</em> from <code>u</code> and vice
+<li>
+<p>In directed graphs, it is necessary to distinguish between nodes <code>u</code> and
+   <code>v</code> being <em>connected</em>, and <code>v</code> being <em>reachable</em> from <code>u</code> and vice
    versa. Discuss why this is necessary and how this distinction affects
-   the number of components in a directed graph.</li>
-<li>Consider the network of the World Wide Web. In this network, a node
+   the number of components in a directed graph.</p>
+</li>
+<li>
+<p>Consider the network of the World Wide Web. In this network, a node
    represents one website, and nodes <code>u</code> and <code>v</code> are joined by a <em>directed</em>
-   edge from <code>u</code> to <code>v</code> if the former contains a link to the latter.<ul>
+   edge from <code>u</code> to <code>v</code> if the former contains a link to the latter.</p>
+<ol>
 <li>For this network, estimate the number of nodes and edges.</li>
 <li>Imagine you are writing a new search engine for the WWW. Your
-  objective is to index (catalogue) <em>every</em> website online. Given
-  enough resources, can you achieve this goal? Discuss in terms of
-  connected components, as well as the possibility of there being nodes
-  with no incoming or outgoing edges (websites with no incoming or
-  outgoing links).</li>
-</ul>
+  objective is to index (catalogue) every website online. Given enough
+  resources, can you achieve this goal? Discuss in terms of connected
+  components, as well as the possibility of there being nodes with no
+  incoming or outgoing edges (websites with no incoming or outgoing
+  links).</li>
+</ol>
 </li>
 </ol>
 <p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
@@ -209,7 +213,85 @@ an edge. Assume undirected edges.</p>
 <div class="erdos-solutions">
 <hr/>
 <h2>Solution</h2>
-<p><a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/paths.py">Solution</a>.</p>
+<p>The solution to this challenge is hosted on
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/paths.py">Github</a>.</p>
+<h2>Answers</h2>
+<ol>
+<li>
+<p>In an undirected graph, if node <code>u</code> is reachable from <code>v</code>, then <code>v</code> is
+   also reachable from <code>u</code>, because every edge can be traversed in both
+   directions.  However, in a directed graph, since edges have an
+   orientation and can only be traversed in one direction, we need to
+   modify our definition of path and connected component.</p><a name="directed-path"></a><a name="strongly-connected-component"></a>
+<dl>
+<dt>Directed Path</dt>
+<dd>A <strong>directed path</strong> is an ordered set of nodes <code>(u₁, u₂, ..., uₙ)</code> in
+which every consecutive pair <code>uᵢ</code>, <code>uᵢ₊₁</code> are such that there is an
+edge <em>from</em> <code>uᵢ</code> <em>to</em> <code>uᵢ₊₁</code>. If there is a directed path from <code>u</code> to
+<code>v</code>, we say <code>v</code> is <strong>reachable</strong> from <code>u</code>.</dd>
+<dt>Strongly Connected Component</dt>
+<dd>In a directed graph, a <strong>strongly connected component</strong> is a subset
+of nodes in which every node is reachable from all the others.</dd>
+</dl>
+</li>
+<li>
+<p>Estimating the size of the WWW is not a simple task.  Different
+   sources<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup> agree that there are billions of webpages and tens
+   if not hundreds of billions of hyperlinks, but the exact number seems
+   elusive.  Why is it so hard?  Part of it is because the size is so large
+   that the time and space it takes to go through the whole graph are
+   massive, and we require complex indexing<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup> algorithms to do it
+   correctly.  Another problem is one that arises from the structure of the
+   strongly connected components of the WWW graph.  Consider a website
+   called "my-site" that contains links to different outside domains, but
+   no website links directly to "my-site".  This means that if we start at
+   an arbitrary website (say, google.com) and try to <em>crawl</em> to all others,
+   indexing them as we see them, we are never going to reach "my-site".  In
+   other words, "my-site" doesn't belong to the strongly connected
+   component of websites that includes google.com.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup></p>
+<p>In fact, there's a popular term for websites that aren't indexed by
+search engines: the <em>deep web</em><sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">6</a></sup>.  Contrary to popular belief, not
+all websites in the deep web are related to criminal or otherwise
+nefarious activities.  It's just a name for the websites that haven't
+yet been reached by search engines. (A related but different term is
+<em>dark net</em>, more closely related to illegal activities.)</p>
+<p>With such complicated structure, we need a useful way of visualizing
+the structure of this graph.  One such way is by using a <em>bow tie</em>
+diagram.  By using algorithms to crawl path of the WWW and determine
+its components, websites can be arranged in such a way that the overall
+structure resembles a bow
+tie. <a href="http://www.nature.com/nature/journal/v405/n6783/fig_tab/405113a0_F1.html">Here</a>
+is an example.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup></p>
+</li>
+</ol>
+</div>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="http://www.dailymail.co.uk/sciencetech/article-2759636/Number-websites-hits-BILLION-counting-Tracker-reveals-new-site-registered-SECOND.html">Number of websites hits a BILLION</a>. <a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p><a href="http://webdatacommons.org/hyperlinkgraph/">Hyperlink Graphs</a>. <a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://en.wikipedia.org/wiki/World_Wide_Web#Statistics">Wikipedia: World Wide Web - Statistics</a>. <a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://www.google.com/insidesearch/howsearchworks/crawling-indexing.html">Google: Crawling and Indexing</a>. <a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:5">
+<p>We are assuming the only way to index a website is by navigating to
+it from another one. This is not entirely true, but we have simplified the
+indexing process for illustration purposes. <a class="footnote-backref" href="#fnref:5" rev="footnote" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://en.wikipedia.org/wiki/Deep_web">Deep Web</a>. <a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:7">
+<p><a href="http://www.nature.com/nature/journal/v405/n6783/full/405113a0.html">The web is a bow tie</a>. <a class="footnote-backref" href="#fnref:7" rev="footnote" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+</ol>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
