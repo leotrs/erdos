@@ -14,7 +14,8 @@ mathematical object, called a *graph*. We use the terms *network* and
 Graph
 : A **graph** is defined as a set of **nodes**, defining the locations,
 entities or elements of the graph, and a set of **edges**, representing the
-relationships between two nodes.
+relationships between two nodes. Nodes are also called **vertices**, and
+edges are sometimes called **links**.
 
 Graph Theory
 : The field of mathematics concerned with the study of graphs is called
