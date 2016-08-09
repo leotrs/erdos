@@ -182,6 +182,8 @@ The solution to this challenge is hosted on
     Weighted graphs will be covered in a future challenge.
 
 
+{% include 'footnote_header.md' %}
+
 [^1]: [Symmetric matrix properties](https://en.wikipedia.org/wiki/Symmetric_matrix#Properties).
 
 [^2]: [Adjacency matrix properties](https://en.wikipedia.org/wiki/Adjacency_matrix#Properties).
