@@ -67,4 +67,5 @@ etc. Print each adjacency list in ascending order.
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjlist.py).
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjlist.py).
