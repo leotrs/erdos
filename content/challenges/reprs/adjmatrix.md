@@ -107,15 +107,74 @@ Output the adjacency matrix of the graph.
 1. Consider the adjacency matrix of an undirected graph.
     1. What can you say about the entry at row $i$, column $j$, as compared
        to the entry at row $j$, column $i$?
-    2. What if the graph is undirected?
-    3. How might your answer to 1.1 affect the solution to the above
-       problem, assuming that the graph is undirected?
+    2. What if the graph is directed?
 2. For a given node `u` in the example network, compute the degree of `u`
    using only the adjacency matrix.
 3. Compute the density of the example network using only its adjacency
    matrix.
-4. Can you construct the adjacency matrix of multigraph? Why or why not?
+4. Can you construct the adjacency matrix of a multigraph? Why or why not?
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjmatrix.py).
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjmatrix.py).
+
+
+{% include "answers_header.md" %}
+
+1. If the graph is undirected and node `u` is connected to node `v` means
+   the entry $a_{uv}$ is equal to $1$.  But the connection is reciprocal,
+   which means that `v` is also connected to `u`, and $a_{vu}$ is also
+   equal to $1$. A matrix whose entries all hold this property is called a
+   *symmetric* matrix.
+
+    Symmetric Matrix
+    : The matrix $A$ is **symmetric** when $a_{ij} = a_{ji}$ for every
+    possible value of $i$ and $j$.
+
+    A graph is undirected *if and only if* its adjacency matrix is
+    symmetric. If a graph is undirected, its matrix is not symmetric.
+
+    Symmetric matrices have various useful properties[^1], many of which are
+    directly used in graph theory and Network Science[^2].
+
+2. The degree of `u` is just the number of nodes adjacent to it. If we look
+   at the row corresponding to `u` in the adjacency matrix of an undirected
+   graph, we see there's a $1$ in exactly those nodes that are adjacent to
+   `u`.  Thus, we need only count the number of occurrences of $1$, or just
+   add them up which yields the same result.  If $G$ is our graph, $A$ is
+   its adjacency matrix, and we write $v \in G$ to mean `v` is a node of
+   $G$, we have
+
+    $$ deg(u) = \sum_{v\in G} a_{uv} $$
+
+    We can perform the sum over all entries of the row since the ones we're
+    not interested in all contain zeroes.
+
+3. Because of the above remarks, every edge in the network generates two
+   entries equal to $1$ in the adjacency matrix.  Thus, if we want the
+   total number of edges, we can add up all the $1$'s present in the matrix
+   and divide by two.  Then we just need to divide by the maximum number of
+   edges the graph could support.
+
+    $$\begin{align*}
+    density(G) &= \frac{1}{\text{total edges}} \times \text{present edges} \\
+               &= \frac{2}{n(n-1)}\:\:\:\, \times \frac{1}{2}\sum_{u \in G} \sum_{v \in G}a_{uv} \\
+               &= \frac{1}{n(n-1)}\:\:\:\, \times \sum_{u \in G} deg(u) \\
+    \end{align*}
+    $$
+
+4. A graph with self-loops has non-zero diagonal entries (the entries of
+   the form $a_{ii}$), and poses no trouble for adjacency matrices.
+
+    A non-simple graph with parallel edges calls for a way of signaling the
+    number of edges joining any pair of nodes.  One could replace the $1$
+    in the entries for a natural number equal to the amount of edges
+    joining the corresponding nodes, but using numbers different to $1$ in
+    adjacency matrices is reserved for matrices of *weighted graphs*.
+    Weighted graphs will be covered in a future challenge.
+
+
+[^1]: [Symmetric matrix properties](https://en.wikipedia.org/wiki/Symmetric_matrix#Properties).
+
+[^2]: [Adjacency matrix properties](https://en.wikipedia.org/wiki/Adjacency_matrix#Properties).

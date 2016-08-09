@@ -215,16 +215,14 @@ adjacencies of node <code>1</code>, etc.</p>
 <li>Consider the adjacency matrix of an undirected graph.<ol>
 <li>What can you say about the entry at row <span class="math">\(i\)</span>, column <span class="math">\(j\)</span>, as compared
    to the entry at row <span class="math">\(j\)</span>, column <span class="math">\(i\)</span>?</li>
-<li>What if the graph is undirected?</li>
-<li>How might your answer to 1.1 affect the solution to the above
-   problem, assuming that the graph is undirected?</li>
+<li>What if the graph is directed?</li>
 </ol>
 </li>
 <li>For a given node <code>u</code> in the example network, compute the degree of <code>u</code>
    using only the adjacency matrix.</li>
 <li>Compute the density of the example network using only its adjacency
    matrix.</li>
-<li>Can you construct the adjacency matrix of multigraph? Why or why not?</li>
+<li>Can you construct the adjacency matrix of a multigraph? Why or why not?</li>
 </ol>
 <p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
   Show solutions
@@ -235,7 +233,77 @@ adjacencies of node <code>1</code>, etc.</p>
 <div class="erdos-solutions">
 <hr/>
 <h2>Solution</h2>
-<p><a href="https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjmatrix.py">Solution</a>.</p>
+<p>The solution to this challenge is hosted on
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjmatrix.py">Github</a>.</p>
+<h2>Answers</h2>
+<ol>
+<li>
+<p>If the graph is undirected and node <code>u</code> is connected to node <code>v</code> means
+   the entry <span class="math">\(a_{uv}\)</span> is equal to <span class="math">\(1\)</span>.  But the connection is reciprocal,
+   which means that <code>v</code> is also connected to <code>u</code>, and <span class="math">\(a_{vu}\)</span> is also
+   equal to <span class="math">\(1\)</span>. A matrix whose entries all hold this property is called a
+   <em>symmetric</em> matrix.</p><a name="symmetric-matrix"></a>
+<dl>
+<dt>Symmetric Matrix</dt>
+<dd>The matrix <span class="math">\(A\)</span> is <strong>symmetric</strong> when <span class="math">\(a_{ij} = a_{ji}\)</span> for every
+possible value of <span class="math">\(i\)</span> and <span class="math">\(j\)</span>.</dd>
+</dl>
+<p>A graph is undirected <em>if and only if</em> its adjacency matrix is
+symmetric. If a graph is undirected, its matrix is not symmetric.</p>
+<p>Symmetric matrices have various useful properties<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, many of which are
+directly used in graph theory and Network Science<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>.</p>
+</li>
+<li>
+<p>The degree of <code>u</code> is just the number of nodes adjacent to it. If we look
+   at the row corresponding to <code>u</code> in the adjacency matrix of an undirected
+   graph, we see there's a <span class="math">\(1\)</span> in exactly those nodes that are adjacent to
+   <code>u</code>.  Thus, we need only count the number of occurrences of <span class="math">\(1\)</span>, or just
+   add them up which yields the same result.  If <span class="math">\(G\)</span> is our graph, <span class="math">\(A\)</span> is
+   its adjacency matrix, and we write <span class="math">\(v \in G\)</span> to mean <code>v</code> is a node of
+   <span class="math">\(G\)</span>, we have</p>
+<p>
+<div class="math">$$ deg(u) = \sum_{v\in G} a_{uv} $$</div>
+</p>
+<p>We can perform the sum over all entries of the row since the ones we're
+not interested in all contain zeroes.</p>
+</li>
+<li>
+<p>Because of the above remarks, every edge in the network generates two
+   entries equal to <span class="math">\(1\)</span> in the adjacency matrix.  Thus, if we want the
+   total number of edges, we can add up all the <span class="math">\(1\)</span>'s present in the matrix
+   and divide by two.  Then we just need to divide by the maximum number of
+   edges the graph could support.</p>
+<p>
+<div class="math">$$\begin{align*}
+density(G) &amp;= \frac{1}{\text{total edges}} \times \text{present edges} \\
+           &amp;= \frac{2}{n(n-1)}\:\:\:\, \times \frac{1}{2}\sum_{u \in G} \sum_{v \in G}a_{uv} \\
+           &amp;= \frac{1}{n(n-1)}\:\:\:\, \times \sum_{u \in G} deg(u) \\
+\end{align*}
+$$</div>
+</p>
+</li>
+<li>
+<p>A graph with self-loops has non-zero diagonal entries (the entries of
+   the form <span class="math">\(a_{ii}\)</span>), and poses no trouble for adjacency matrices.</p>
+<p>A non-simple graph with parallel edges calls for a way of signaling the
+number of edges joining any pair of nodes.  One could replace the <span class="math">\(1\)</span>
+in the entries for a natural number equal to the amount of edges
+joining the corresponding nodes, but using numbers different to <span class="math">\(1\)</span> in
+adjacency matrices is reserved for matrices of <em>weighted graphs</em>.
+Weighted graphs will be covered in a future challenge.</p>
+</li>
+</ol>
+</div>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="https://en.wikipedia.org/wiki/Symmetric_matrix#Properties">Symmetric matrix properties</a>. <a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://en.wikipedia.org/wiki/Adjacency_matrix#Properties">Adjacency matrix properties</a>. <a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
