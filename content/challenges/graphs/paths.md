@@ -148,6 +148,8 @@ The solution to this challenge is hosted on
     is an example.[^7]
 
 
+{% include 'footnote_header.md' %}
+
 [^1]: [Number of websites hits a BILLION](http://www.dailymail.co.uk/sciencetech/article-2759636/Number-websites-hits-BILLION-counting-Tracker-reveals-new-site-registered-SECOND.html).
 
 [^2]: [Hyperlink Graphs](http://webdatacommons.org/hyperlinkgraph/).
