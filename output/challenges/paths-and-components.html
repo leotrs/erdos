@@ -124,7 +124,16 @@
 </div>    </div>
     <div class="span8 article-content">
       
-      <div class="erdos-context">
+
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#erdos-context">Context</a></li>
+        <li><a data-toggle="tab" href="#erdos-challenge">Challenge</a></li>
+        <li><a data-toggle="tab" data-target="#erdos-solutions, #erdos-footnote" href="#erdos-solutions">Solutions</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="erdos-context">
 <h1>Context</h1>
 <p>Networks come in all shapes and sizes, presenting many different properties
 and structures. We've already seen how the degree describes the importance
@@ -151,15 +160,10 @@ is called <strong>connected graph</strong></dd>
 <p><img src="/images/paths.png" title="A graph with three components."/></p>
 <p><em>A graph with three components. Note a sole node counts as one more component.</em></p>
 </div>
-<p><button class="btn btn-large btn-default erdos-fadein-challenge" type="button">
-  Show challenge
-</button>
-</p>
 </div>
 <!-- erdos-context -->
-<div class="erdos-challenge">
-<hr/>
-<h2>Challenge</h2>
+<div class="tab-pane fade" id="erdos-challenge">
+<h1>Challenge</h1>
 <p>In this challenge, you are asked to compute the number of components in a
 graph.</p>
 <p>The input is a file where the first line contains two integers, <span class="math">\(n\)</span> and
@@ -181,7 +185,7 @@ an edge. Assume undirected edges.</p>
 <div class="highlight"><pre><span></span>3
 </pre></div>
 <hr/>
-<h2>Expansion Questions</h2>
+<h1>Expansion Questions</h1>
 <ol>
 <li>
 <p>In directed graphs, it is necessary to distinguish between nodes <code>u</code> and
@@ -204,18 +208,13 @@ an edge. Assume undirected edges.</p>
 </ol>
 </li>
 </ol>
-<p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
-  Show solutions
-</button>
-</p>
 </div>
 <!-- erdos-challenge -->
-<div class="erdos-solutions">
-<hr/>
-<h2>Solution</h2>
+<div class="tab-pane fade" id="erdos-solutions">
+<h1>Solution</h1>
 <p>The solution to this challenge is hosted on
 <a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/paths.py">Github</a>.</p>
-<h2>Answers</h2>
+<h1>Answers</h1>
 <ol>
 <li>
 <p>In an undirected graph, if node <code>u</code> is reachable from <code>v</code>, then <code>v</code> is
@@ -350,6 +349,8 @@ indexing process for illustration purposes. <a class="footnote-backref" href="#
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
+      </div>
+
       
       <section>
 <div class="accordion" id="accordion2">
@@ -428,21 +429,7 @@ indexing process for illustration purposes. <a class="footnote-backref" href="#
       }
     </script>
 
-<script type="text/javascript">
- $(document).ready(function () {
-     $('.erdos-context').fadeIn('slow');
-
-     $('.erdos-fadein-challenge').click(function () {
-    	 $('.erdos-challenge').fadeIn('slow');
-         $('.erdos-fadein-challenge').prop('disabled', true);
-     });
-     $('.erdos-fadein-solutions').click(function () {
-    	 $('.erdos-solutions').fadeIn('slow');
-         $('.footnote').fadeIn('slow');
-         $('.erdos-fadein-solutions').prop('disabled', true);
-     });
- });
-</script>            <script type="text/javascript">
+            <script type="text/javascript">
 var disqus_shortname = 'erdos';
 (function () {
     var s = document.createElement('script'); s.async = true;

@@ -157,6 +157,8 @@ The solution to this challenge is hosted on
    are many ways to measure edge centrality[^9]$^,$[^10]$^,$[^11].
 
 
+{% include 'footnote_header.md' %}
+
 [^1]: [Betweenness centrality](https://en.wikipedia.org/wiki/Betweenness_centrality)
 [^2]: [Closeness centrality](https://en.wikipedia.org/wiki/Centrality#Closeness_centrality)
 [^3]: [Eigenvector centrality](https://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality)
