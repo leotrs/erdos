@@ -124,7 +124,16 @@
 </div>    </div>
     <div class="span8 article-content">
       
-      <div class="erdos-context">
+
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#erdos-context">Context</a></li>
+        <li><a data-toggle="tab" href="#erdos-challenge">Challenge</a></li>
+        <li><a data-toggle="tab" data-target="#erdos-solutions, #erdos-footnote" href="#erdos-solutions">Solutions</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="erdos-context">
 <h1>Context</h1>
 <p>When two nodes in a network are joined by an edge, we think of them as
 sharing a relationship of some sort. Two people on a social network are
@@ -162,15 +171,10 @@ are called a <strong>connected triad</strong>.</dd>
 <dd>A <strong>triangle</strong> in a graph is a triad of nodes where each one is
 connected to the other two. Every triangle is a connected triad.</dd>
 </dl>
-<p><button class="btn btn-large btn-default erdos-fadein-challenge" type="button">
-  Show challenge
-</button>
-</p>
 </div>
 <!-- erdos-context -->
-<div class="erdos-challenge">
-<hr/>
-<h2>Challenge</h2>
+<div class="tab-pane fade" id="erdos-challenge">
+<h1>Challenge</h1>
 <p>For this challenge, you need to count the number of triangles in a network.</p>
 <p>The input is a file which contains one line with a single integer <span class="math">\(n\)</span>, the
 number of nodes in the network. The following <span class="math">\(n\)</span> lines each contain one
@@ -201,7 +205,7 @@ matrix?</dd>
 <div class="highlight"><pre><span></span>2
 </pre></div>
 <hr/>
-<h2>Expansion Questions</h2>
+<h1>Expansion Questions</h1>
 <ol>
 <li>In an undirected network, a triad of nodes can only have one, two or
    three edges among them. What patterns can a triad form in a directed
@@ -214,15 +218,10 @@ matrix?</dd>
    network? Would counting the occurrence of these patterns also be useful
    as a measure for network transitivity?</li>
 </ol>
-<p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
-  Show solutions
-</button>
-</p>
 </div>
 <!-- erdos-challenge -->
-<div class="erdos-solutions">
-<hr/>
-<h2>Solution</h2>
+<div class="tab-pane fade" id="erdos-solutions">
+<h1>Solution</h1>
 <p><a href="https://github.com/leotrs/erdos/blob/master/solutions/measures/triangles.py">Solution</a>.</p>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -282,6 +281,8 @@ matrix?</dd>
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
+      </div>
+
       
       <section>
 <div class="accordion" id="accordion2">
@@ -360,21 +361,7 @@ matrix?</dd>
       }
     </script>
 
-<script type="text/javascript">
- $(document).ready(function () {
-     $('.erdos-context').fadeIn('slow');
-
-     $('.erdos-fadein-challenge').click(function () {
-    	 $('.erdos-challenge').fadeIn('slow');
-         $('.erdos-fadein-challenge').prop('disabled', true);
-     });
-     $('.erdos-fadein-solutions').click(function () {
-    	 $('.erdos-solutions').fadeIn('slow');
-         $('.footnote').fadeIn('slow');
-         $('.erdos-fadein-solutions').prop('disabled', true);
-     });
- });
-</script>            <script type="text/javascript">
+            <script type="text/javascript">
 var disqus_shortname = 'erdos';
 (function () {
     var s = document.createElement('script'); s.async = true;

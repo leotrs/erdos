@@ -124,7 +124,16 @@
 </div>    </div>
     <div class="span8 article-content">
       
-      <div class="erdos-context">
+
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#erdos-context">Context</a></li>
+        <li><a data-toggle="tab" href="#erdos-challenge">Challenge</a></li>
+        <li><a data-toggle="tab" data-target="#erdos-solutions, #erdos-footnote" href="#erdos-solutions">Solutions</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="erdos-context">
 <h1>Context</h1>
 <p>The incidence matrix is another matrix representation of a graph. It stores
 the same information as other representations, but in a different way.</p>
@@ -166,15 +175,10 @@ we write it like so</p>
 edges. The entry in the <span class="math">\(i\)</span>-th row and <span class="math">\(j\)</span>-th column indicates whether edge
 <code>j</code> is incident to node <code>i</code>.</dd>
 </dl>
-<p><button class="btn btn-large btn-default erdos-fadein-challenge" type="button">
-  Show challenge
-</button>
-</p>
 </div>
 <!-- erdos-context -->
-<div class="erdos-challenge">
-<hr/>
-<h2>Challenge</h2>
+<div class="tab-pane fade" id="erdos-challenge">
+<h1>Challenge</h1>
 <p>To solve this challenge, you will need to read a file in adjacency list
 form, and output its incidence matrix.</p>
 <p>The input will be a file where the first line contains just one integer,
@@ -198,7 +202,7 @@ adjacencies of node <code>1</code>, etc.</p>
 0 0 1 0 1
 0 1 0 1 1
 </pre></div>
-<h2>Expansion Questions</h2>
+<h1>Expansion Questions</h1>
 <ol>
 <li>For a network with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges, how many <span class="math">\(1\)</span>s will the
    incidence matrix have?</li>
@@ -209,18 +213,13 @@ adjacencies of node <code>1</code>, etc.</p>
 <li>Can you build the incidence matrix for a directed graph following the
    same procedure as in this challenge? Why or why not?</li>
 </ol>
-<p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
-  Show solutions
-</button>
-</p>
 </div>
 <!-- erdos-challenge -->
-<div class="erdos-solutions">
-<hr/>
-<h2>Solution</h2>
+<div class="tab-pane fade" id="erdos-solutions">
+<h1>Solution</h1>
 <p>The solution to this challenge is hosted on
 <a href="https://github.com/leotrs/erdos/blob/master/solutions/reprs/incmatrix.py">Github</a>.</p>
-<h2>Answers</h2>
+<h1>Answers</h1>
 <ol>
 <li>
 <p>There will be <span class="math">\(m\)</span> columns in the incidence matrix, one for each edge,
@@ -317,6 +316,8 @@ sparse graphs.</p>
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
+      </div>
+
       
       <section>
 <div class="accordion" id="accordion2">
@@ -395,21 +396,7 @@ sparse graphs.</p>
       }
     </script>
 
-<script type="text/javascript">
- $(document).ready(function () {
-     $('.erdos-context').fadeIn('slow');
-
-     $('.erdos-fadein-challenge').click(function () {
-    	 $('.erdos-challenge').fadeIn('slow');
-         $('.erdos-fadein-challenge').prop('disabled', true);
-     });
-     $('.erdos-fadein-solutions').click(function () {
-    	 $('.erdos-solutions').fadeIn('slow');
-         $('.footnote').fadeIn('slow');
-         $('.erdos-fadein-solutions').prop('disabled', true);
-     });
- });
-</script>            <script type="text/javascript">
+            <script type="text/javascript">
 var disqus_shortname = 'erdos';
 (function () {
     var s = document.createElement('script'); s.async = true;

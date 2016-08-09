@@ -124,7 +124,16 @@
 </div>    </div>
     <div class="span8 article-content">
       
-      <div class="erdos-context">
+
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#erdos-context">Context</a></li>
+        <li><a data-toggle="tab" href="#erdos-challenge">Challenge</a></li>
+        <li><a data-toggle="tab" data-target="#erdos-solutions, #erdos-footnote" href="#erdos-solutions">Solutions</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="erdos-context">
 <h1>Context</h1>
 <p>When we study a real-life network, we usually refer to an underlying
 mathematical object, called a <em>graph</em>. We use the terms <em>network</em> and
@@ -158,15 +167,10 @@ Network Science and Graph Theory.</p><a name="degree"></a><a name="adjacent-or-n
 <strong>adjacent</strong> or <strong>neighbors</strong>. If <code>u</code> and <code>v</code> are adjacent, we write <code>u ~
 v</code>.</dd>
 </dl>
-<p><button class="btn btn-large btn-default erdos-fadein-challenge" type="button">
-  Show challenge
-</button>
-</p>
 </div>
 <!-- erdos-context -->
-<div class="erdos-challenge">
-<hr/>
-<h2>Challenge</h2>
+<div class="tab-pane fade" id="erdos-challenge">
+<h1>Challenge</h1>
 <p>There are many ways to represent a graph, for now, we choose the simplest
 possible way to do it, where each node is represented by a single integer,
 and each edge by a pair of two nodes. In this way, we can represent a graph
@@ -190,7 +194,7 @@ assumed to be labeled by the integers from <code>0</code> to <code>n - 1</code>.
 <h3>Sample Output</h3>
 <div class="highlight"><pre><span></span>0
 </pre></div>
-<h2>Expansion Questions</h2>
+<h1>Expansion Questions</h1>
 <ol>
 <li>We've defined one measurement of the "importance" of a node, its
    degree. What might be other ways of measuring the importance of a node
@@ -208,18 +212,13 @@ assumed to be labeled by the integers from <code>0</code> to <code>n - 1</code>.
 <li>Discuss the possibility of measuring the "importance" of an edge in a
    network. Can you come up with a proposal for how to measure it?</li>
 </ol>
-<p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
-  Show solutions
-</button>
-</p>
 </div>
 <!-- erdos-challenge -->
-<div class="erdos-solutions">
-<hr/>
-<h2>Solution</h2>
+<div class="tab-pane fade" id="erdos-solutions">
+<h1>Solution</h1>
 <p>The solution to this challenge is hosted on
 <a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py">Github</a>.</p>
-<h2>Answers</h2>
+<h1>Answers</h1>
 <ol>
 <li>
 <p>Roughly speaking, the importance of a node is called <em>centrality</em>. There
@@ -274,6 +273,7 @@ edges in the tens of billions.</p>
 </li>
 </ol>
 </div>
+<div class="tab-pane fade" id="erdos-footnote">
 <div class="footnote">
 <hr/>
 <ol>
@@ -311,6 +311,7 @@ edges in the tens of billions.</p>
 <p><a href="https://reference.wolfram.com/language/ref/EdgeBetweennessCentrality.html">Edge betweenness centrality</a> <a class="footnote-backref" href="#fnref:11" rev="footnote" title="Jump back to footnote 11 in the text">↩</a></p>
 </li>
 </ol>
+</div>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
@@ -369,6 +370,8 @@ edges in the tens of billions.</p>
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
+      </div>
+
       
       <section>
 <div class="accordion" id="accordion2">
@@ -447,21 +450,7 @@ edges in the tens of billions.</p>
       }
     </script>
 
-<script type="text/javascript">
- $(document).ready(function () {
-     $('.erdos-context').fadeIn('slow');
-
-     $('.erdos-fadein-challenge').click(function () {
-    	 $('.erdos-challenge').fadeIn('slow');
-         $('.erdos-fadein-challenge').prop('disabled', true);
-     });
-     $('.erdos-fadein-solutions').click(function () {
-    	 $('.erdos-solutions').fadeIn('slow');
-         $('.footnote').fadeIn('slow');
-         $('.erdos-fadein-solutions').prop('disabled', true);
-     });
- });
-</script>            <script type="text/javascript">
+            <script type="text/javascript">
 var disqus_shortname = 'erdos';
 (function () {
     var s = document.createElement('script'); s.async = true;
