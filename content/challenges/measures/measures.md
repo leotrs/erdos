@@ -62,7 +62,6 @@ information about the graph.
 0.667
 ```
 
-----------------------------------------
 
 {% include "question_header.md" %}
 
