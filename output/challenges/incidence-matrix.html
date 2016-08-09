@@ -204,12 +204,10 @@ adjacencies of node <code>1</code>, etc.</p>
    incidence matrix have?</li>
 <li>Compare the memory usage of adjacency lists, adjacency matrix and
    incidence matrix for a given network with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges.</li>
-<li>Compute the incidence matrix for a graph equal to the one in the
-   example, but whose edges are labeled in a different order. How are these
-   two matrices related?</li>
+<li>Compute the incidence matrix for the example graph, but whose edges are
+   labeled in a different order. How are these two matrices related?</li>
 <li>Can you build the incidence matrix for a directed graph following the
-   same procedure as in this page? Why or why not?</li>
-<li>Propose a better way to build incidence matrices for directed graphs.</li>
+   same procedure as in this challenge? Why or why not?</li>
 </ol>
 <p><button class="btn btn-large btn-default erdos-fadein-solutions" type="button">
   Show solutions
@@ -220,7 +218,47 @@ adjacencies of node <code>1</code>, etc.</p>
 <div class="erdos-solutions">
 <hr/>
 <h2>Solution</h2>
-<p><a href="https://github.com/leotrs/erdos/blob/master/solutions/reprs/incmatrix.py">Solution</a>.</p>
+<p>The solution to this challenge is hosted on
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/reprs/incmatrix.py">Github</a>.</p>
+<h2>Answers</h2>
+<ol>
+<li>
+<p>There will be <span class="math">\(m\)</span> columns in the incidence matrix, one for each edge,
+   and two <span class="math">\(1\)</span>s in each column, for a total of <span class="math">\(2m\)</span>.</p>
+</li>
+<li>
+<p>The adjacency list representation needs <span class="math">\(n\)</span> lists, each of length equal
+   to the degree of the node.  In total, we are using <span class="math">\(\sum_{u \in G}
+   deg(u) = 2m\)</span> slots.  Each slot in the adjacency lists holds a label of
+   one node, so the memory usage is <span class="math">\(2m \times L\)</span>, where <span class="math">\(L\)</span> is the amount
+   of space that a node label takes.</p>
+<p>Adjacency matrices are of size <span class="math">\(n \times n\)</span> and they hold a single
+number in each entry, for a total memory usage of <span class="math">\(n^2 \times N\)</span>, where
+<span class="math">\(N\)</span> is the memory usage of a single number.</p>
+<p>Incidence matrices take <span class="math">\(m \times n \times N\)</span>.</p>
+<p>The choice of representation will depend on the nature of node labels
+(they can be single numbers, in which case <span class="math">\(L\)</span> = <span class="math">\(N\)</span>, or strings of
+characters, in which case their size will depend on their length), and
+on the graph being sparse or dense.  However, sometimes representations
+are chosen because of how easy it is to manipulate them, not their
+memory usage.</p>
+<p>Another representation that will be covered later is the sparse array,
+which saves much memory compared to these ones, specifically for
+sparse graphs.</p>
+</li>
+<li>
+<p>Since the nodes have the same labels, the rows of the new matrix will be
+   in the same order.  However, the columns will represent the same edges
+   but in a different order, ultimately yielding the same matrix but with
+   permuted columns.</p>
+</li>
+<li>
+<p>Incidence matrices as we have built them don't carry information
+   regarding the direction of edges, since in directed graphs there isn't
+   such a thing.  For directed graphs, we could write a <span class="math">\(-1\)</span> for the source
+   node and <span class="math">\(+1\)</span> for the target node of each edge.</p>
+</li>
+</ol>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",

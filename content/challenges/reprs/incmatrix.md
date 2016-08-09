@@ -92,13 +92,51 @@ Output the incidence matrix of the graph.
    incidence matrix have?
 2. Compare the memory usage of adjacency lists, adjacency matrix and
    incidence matrix for a given network with $n$ nodes and $m$ edges.
-3. Compute the incidence matrix for a graph equal to the one in the
-   example, but whose edges are labeled in a different order. How are these
-   two matrices related?
+3. Compute the incidence matrix for the example graph, but whose edges are
+   labeled in a different order. How are these two matrices related?
 4. Can you build the incidence matrix for a directed graph following the
-   same procedure as in this page? Why or why not?
-   1. Propose a better way to build incidence matrices for directed graphs.
+   same procedure as in this challenge? Why or why not?
+
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/reprs/incmatrix.py).
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/reprs/incmatrix.py).
+
+{% include "answers_header.md" %}
+
+1. There will be $m$ columns in the incidence matrix, one for each edge,
+   and two $1$s in each column, for a total of $2m$.
+
+2. The adjacency list representation needs $n$ lists, each of length equal
+   to the degree of the node.  In total, we are using $\sum_{u \in G}
+   deg(u) = 2m$ slots.  Each slot in the adjacency lists holds a label of
+   one node, so the memory usage is $2m \times L$, where $L$ is the amount
+   of space that a node label takes.
+
+    Adjacency matrices are of size $n \times n$ and they hold a single
+    number in each entry, for a total memory usage of $n^2 \times N$, where
+    $N$ is the memory usage of a single number.
+
+    Incidence matrices take $m \times n \times N$.
+
+    The choice of representation will depend on the nature of node labels
+    (they can be single numbers, in which case $L$ = $N$, or strings of
+    characters, in which case their size will depend on their length), and
+    on the graph being sparse or dense.  However, sometimes representations
+    are chosen because of how easy it is to manipulate them, not their
+    memory usage.
+
+    Another representation that will be covered later is the sparse array,
+    which saves much memory compared to these ones, specifically for
+    sparse graphs.
+
+3. Since the nodes have the same labels, the rows of the new matrix will be
+   in the same order.  However, the columns will represent the same edges
+   but in a different order, ultimately yielding the same matrix but with
+   permuted columns.
+
+4. Incidence matrices as we have built them don't carry information
+   regarding the direction of edges, since in directed graphs there isn't
+   such a thing.  For directed graphs, we could write a $-1$ for the source
+   node and $+1$ for the target node of each edge.
