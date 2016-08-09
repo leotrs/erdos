@@ -218,6 +218,8 @@ adjacencies of node <code>1</code>, etc.</p>
 <li>What if the graph is directed?</li>
 </ol>
 </li>
+<li>What happens to the adjacency matrix of a graph if its nodes are labeled
+   in a different order?</li>
 <li>For a given node <code>u</code> in the example network, compute the degree of <code>u</code>
    using only the adjacency matrix.</li>
 <li>Compute the density of the example network using only its adjacency
@@ -252,6 +254,12 @@ possible value of <span class="math">\(i\)</span> and <span class="math">\(j\)</
 symmetric. If a graph is undirected, its matrix is not symmetric.</p>
 <p>Symmetric matrices have various useful properties<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, many of which are
 directly used in graph theory and Network Science<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>.</p>
+</li>
+<li>
+<p>The adjacency matrix will include the same information, with each row
+   marking the neighbors of each node.  However, since each row represents
+   one node, the rows will be the same, but in different order than the
+   original matrix.</p>
 </li>
 <li>
 <p>The degree of <code>u</code> is just the number of nodes adjacent to it. If we look

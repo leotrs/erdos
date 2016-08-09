@@ -108,6 +108,8 @@ Output the adjacency matrix of the graph.
     1. What can you say about the entry at row $i$, column $j$, as compared
        to the entry at row $j$, column $i$?
     2. What if the graph is directed?
+3. What happens to the adjacency matrix of a graph if its nodes are labeled
+   in a different order?
 2. For a given node `u` in the example network, compute the degree of `u`
    using only the adjacency matrix.
 3. Compute the density of the example network using only its adjacency
@@ -137,6 +139,11 @@ The solution to this challenge is hosted on
 
     Symmetric matrices have various useful properties[^1], many of which are
     directly used in graph theory and Network Science[^2].
+
+2. The adjacency matrix will include the same information, with each row
+   marking the neighbors of each node.  However, since each row represents
+   one node, the rows will be the same, but in different order than the
+   original matrix.
 
 2. The degree of `u` is just the number of nodes adjacent to it. If we look
    at the row corresponding to `u` in the adjacency matrix of an undirected
