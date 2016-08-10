@@ -31,7 +31,7 @@ ARTICLE_SAVE_AS = 'challenges/{slug}.html'
 PAGE_PATHS = ['']
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
-
+PAGE_EXCLUDES = ['images', 'templates']
 
 # Choose theme
 THEME = os.path.join(THEME_PATH, 'elegant')
@@ -116,3 +116,4 @@ CATEGORIES_POS = {
 PLUGIN_PATHS = ['../pelican/pelican-plugins/']
 PLUGINS = ['jinja2content', 'render_math', 'glossary']
 GLOSSARY_EXCLUDE = ['Hint']
+JINJA2CONTENT_TEMPLATES = 'templates'
