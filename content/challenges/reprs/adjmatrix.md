@@ -105,15 +105,19 @@ Output the adjacency matrix of the graph.
 {% include "question_header.md" %}
 
 1. Consider the adjacency matrix of an undirected graph.
-    1. What can you say about the entry at row $i$, column $j$, as compared
+    + What can you say about the entry at row $i$, column $j$, as compared
        to the entry at row $j$, column $i$?
-    2. What if the graph is directed?
+    + What if the graph is directed?
+
 3. What happens to the adjacency matrix of a graph if its nodes are labeled
    in a different order?
+
 2. For a given node `u` in the example network, compute the degree of `u`
    using only the adjacency matrix.
+
 3. Compute the density of the example network using only its adjacency
    matrix.
+
 4. Can you construct the adjacency matrix of a multigraph? Why or why not?
 
 {% include "solutions_header.md" %}

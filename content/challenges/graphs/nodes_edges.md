@@ -85,14 +85,16 @@ Output the node with the highest degree.
 1. We've defined one measurement of the "importance" of a node, its
    degree. What might be other ways of measuring the importance of a node
    in a network?
+
 2. Consider the social network of your immediate Facebook friends. In this
    graph, every node stands in for one of your friends, and there is an
    edge between two nodes if the corresponding persons are friends with
    each other.
-    1. Estimate the number of nodes and edges in this network.
-    2. What is your degree in this network?
-    3. Consider the extended network of all Facebook users. Estimate the
+    + Estimate the number of nodes and edges in this network.
+    + What is your degree in this network?
+    + Consider the extended network of all Facebook users. Estimate the
       number of nodes and edges. (Doesn't have to be an exact number.)
+
 3. Discuss the possibility of measuring the "importance" of an edge in a
    network. Can you come up with a proposal for how to measure it?
 

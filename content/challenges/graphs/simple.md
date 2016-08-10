@@ -67,23 +67,26 @@ NO
 
 {% include "question_header.md" %}
 
-1. For the following networks, decide if they are simple or multigraphs. If
-   they are not simple, explain what would self-loops or multiedges
-   represent.
-    1. The social network of your immediate Facebook friends. In this graph,
-      every node stands in for one of your friends, and there is an edge
-      between two nodes if the corresponding persons are friends with each
-      other.
-    2. The social network of your followers on Twitter. In this graph, every
-      node stands for one user, and each edge between users A and B
-      represents the relationship "A follows B".
-    3. The transportation network of roads between cities in a country. In
-      this graph, every node represents a city and there is one edge
-      between any two cities for each road connecting them.
-    4. The information network of devices connected to the internet
-      (computers, routers, cell phones, etc), where every node represents a
-      device and every edge represents physical or wireless connections
-      to network devices.
+For the following networks, decide if they are simple or multigraphs. If
+they are not simple, explain what would self-loops or multiedges represent.
+
+1. The social network of your immediate Facebook friends. In this graph,
+  every node stands in for one of your friends, and there is an edge
+  between two nodes if the corresponding persons are friends with each
+  other.
+
+2. The social network of your followers on Twitter. In this graph, every
+  node stands for one user, and each edge between users A and B represents
+  the relationship "A follows B".
+
+3. The transportation network of roads between cities in a country. In this
+  graph, every node represents a city and there is one edge between any two
+  cities for each road connecting them.
+
+4. The information network of devices connected to the internet (computers,
+  routers, cell phones, etc), where every node represents a device and
+  every edge represents physical or wireless connections to network
+  devices.
 
 
 {% include "solutions_header.md" %}

@@ -94,9 +94,9 @@ matrix?
 
 1. In an undirected network, a triad of nodes can only have one, two or
    three edges among them. What patterns can a triad form in a directed
-   network? Discuss the meaning of these patterns in:
-     + a directed social network (like Twitter),
-     + the WWW.
+   network? Discuss the meaning of these patterns in a directed social
+   network (like Twitter), and the WWW.
+
 2. How many patterns can four nodes form in a directed or undirected
    network? Would counting the occurrence of these patterns also be useful
    as a measure for network transitivity?

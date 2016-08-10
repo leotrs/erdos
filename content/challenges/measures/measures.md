@@ -71,10 +71,13 @@ information about the graph.
    [degree](http://erdosnet.work/nodes-and-edges.html) and
    [graph density](http://erdosnet.work/graph-density.html)). Was it more
    or less difficult?
+
 2. The degree of a node is simply the sum of all entries in the
    corresponding row in the adjacency matrix. Why?
+
 3. How can you compute the indegree and outdegree of a node in a directed
    graph from its adjacency matrix?
+
 
 {% include "solutions_header.md" %}
 

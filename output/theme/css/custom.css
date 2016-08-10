@@ -26,3 +26,7 @@ a.challenge-link.active {
 .article-content ul.nav.nav-tabs {
     list-style-type: none;
 }
+
+.tab-content {
+    margin-bottom: 50px;
+}
