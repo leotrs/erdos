@@ -90,10 +90,13 @@ Output the incidence matrix of the graph.
 
 1. For a network with $n$ nodes and $m$ edges, how many $1$s will the
    incidence matrix have?
+
 2. Compare the memory usage of adjacency lists, adjacency matrix and
    incidence matrix for a given network with $n$ nodes and $m$ edges.
+
 3. Compute the incidence matrix for the example graph, but whose edges are
    labeled in a different order. How are these two matrices related?
+
 4. Can you build the incidence matrix for a directed graph following the
    same procedure as in this challenge? Why or why not?
 
