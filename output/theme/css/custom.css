@@ -30,3 +30,21 @@ a.challenge-link.active {
 .tab-content {
     margin-bottom: 50px;
 }
+
+
+/* SVG elements */
+svg {
+    display: block;
+    margin: auto;
+}
+
+line {
+    stroke: #aaa;
+    stroke-width: 3;
+}
+
+circle {
+    stroke: #fff;
+    stroke-width: 3;
+    fill: #8B0000;
+}
