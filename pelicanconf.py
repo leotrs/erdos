@@ -116,4 +116,4 @@ CATEGORIES_POS = {
 PLUGIN_PATHS = ['../pelican/pelican-plugins/']
 PLUGINS = ['jinja2content', 'render_math', 'glossary']
 GLOSSARY_EXCLUDE = ['Hint']
-JINJA2CONTENT_TEMPLATES = 'templates'
+JINJA2CONTENT_TEMPLATES = ['templates', 'images']
