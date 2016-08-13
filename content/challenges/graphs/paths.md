@@ -33,9 +33,8 @@ which any two are connected by a path. A graph that only has one component
 is called **connected graph**
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/paths.png",
-            "A graph with three components.",
-            "A graph with three components. Note a sole node counts as one more component.")}}
+{{ img_desc("paths.svg",
+    "A graph with three components. Note a sole node counts as one more component.")}}
 
 
 {% include "problem_header.md" %}

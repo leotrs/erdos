@@ -29,8 +29,7 @@ whereas, for directed graphs, we draw them with arrows stemming from source
 nodes into target nodes.
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/directed_example.png",
-            "A graph with four nodes and five directed edges.",
+{{ img_desc("directed.svg",
             "A graph with four nodes and five directed edges.")}}
 
 Outdegree

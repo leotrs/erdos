@@ -24,13 +24,8 @@ Multigraph
 : A graph that is not a simple graph is called **multigraph**.
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/simple1.png",
-            "A multigraph with one self-edge and two parallel edges.",
+{{ img_desc("simple.svg",
             "A multigraph with one self-edge and two parallel edges.")}}
-
-{{ img_desc("/images/simple2.png",
-            "A simple graph similar to the previous multigraph.",
-            "A simple graph similar to the previous multigraph.")}}
 
 From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.

@@ -1,0 +1,38 @@
+<svg class="chart" width="220" height="220">
+  <g class="links">
+    <g>
+      <line class="link" x1="126.7712154149886" y1="61.55281962015166" x2="57.86353017672007" y2="100.38380508279546"/>
+      <text class="edge-label" x="92.31737279585434" y="80.96831235147356">0</text>
+    </g>
+    <g>
+      <line class="link" x1="126.7712154149886" y1="61.55281962015166" x2="25.966465995892243" y2="14.08247581709249"/>
+      <text class="edge-label" x="76.36884070544042" y="37.81764771862208">1</text>
+    </g>
+    <g>
+      <line class="link" x1="126.7712154149886" y1="61.55281962015166" x2="188.63654884921303" y2="107.45748940256993"/>
+      <text class="edge-label" x="157.70388213210083" y="84.5051545113608">2</text>
+    </g>
+    <g>
+      <line class="link" x1="57.86353017672007" y1="100.38380508279546" x2="25.966465995892243" y2="14.08247581709249"/>
+      <text class="edge-label" x="41.914998086306156" y="57.233140449943974">3</text>
+    </g>
+  </g>
+  <g class="nodes">
+    <g transform="translate(126.7712154149886,61.55281962015166)">
+      <circle class="node" r="10"/>
+      <text class="node-label" x="12" dy=".35em">0</text>
+    </g>
+    <g transform="translate(57.86353017672007,100.38380508279546)">
+      <circle class="node" r="10"/>
+      <text class="node-label" x="12" dy=".35em">1</text>
+    </g>
+    <g transform="translate(25.966465995892243,14.08247581709249)">
+      <circle class="node" r="10"/>
+      <text class="node-label" x="12" dy=".35em">2</text>
+    </g>
+    <g transform="translate(188.63654884921303,107.45748940256993)">
+      <circle class="node" r="10"/>
+      <text class="node-label" x="12" dy=".35em">3</text>
+    </g>
+  </g>
+</svg>

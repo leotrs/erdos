@@ -11,9 +11,7 @@ The incidence matrix is another matrix representation of a graph. It stores
 the same information as other representations, but in a different way.
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/incmatrix.png",
-            "Example graph.",
-            "Exampld graph.")}}
+{{ img_desc("incmatrix.svg", "Exampld graph.") }}
 
 To construct the incidence matrix of the example graph, we first need to
 order its edges, not just the nodes. The matrix will have one row for each

@@ -25,9 +25,7 @@ Complete graph
 i.e., its density is equal to $1$.
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/density.png",
-            "Graphs with different densities.",
-            "Graphs with different densities.")}}
+{{ img_desc("density.svg", "Graphs with different densities.")}}
 
 {% include "problem_header.md" %}
 
