@@ -42,11 +42,10 @@ v`.
 
 {% include "problem_header.md" %}
 
-There are many ways to represent a graph, for now, we choose the simplest
-possible way to do it, where each node is represented by a single integer,
-and each edge by a pair of two nodes. In this way, we can represent a graph
-in a file by defining the number of nodes, edges, and each edge in a
-separate line.
+For now, we choose the simplest possible way to represent a graph, where
+each node is represented by a single integer, and each edge by a pair of
+two nodes. In this way, we can represent a graph in a file by defining the
+number of nodes, edges, and each edge in a separate line.
 
 For this challenge, you need to read a file in this format and find the
 node with the most edges (or highest degree).
