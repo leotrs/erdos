@@ -16,9 +16,7 @@ Consider the graph in the picture and assume we were trying to write down
 all of the edges in the graph.
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/adjmatrix.png",
-            "Example graph.",
-            "Example graph.")}}
+{{ img_desc("adjmatrix.svg", "Example graph.")}}
 
 If all we had was this drawing (instead of, say, an adjacency list
 representation of the network), we would need to examine node by node and

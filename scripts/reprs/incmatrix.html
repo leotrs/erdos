@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta charset="UTF-8">
+    <title>erdos d3 visualizations</title>
+  </head>
+  <body>
+    <svg class="chart"></svg>
+    <script type="text/javascript">
+
+      var width = 220,
+          height = 220,
+          padding = 10,
+          nodeRadius = 10;
+
+      function randCoord(limit) { return Math.random() * (limit - 2 * padding) + padding; }
+
+     var graph = {
+         "nodes": [...Array(4).keys()].map(
+             function(id) {
+                 return {"id": id,
+                         "x": randCoord(width),
+                         "y": randCoord(height)};
+             }),
+         "edges": [{"id": 0, "source": 0, "target": 1},
+                   {"id": 1, "source": 0, "target": 2},
+                   {"id": 2, "source": 0, "target": 3},
+                   {"id": 3, "source": 1, "target": 2}]
+     }
+
+      var chart = d3.select(".chart")
+          .attr("width", width)
+          .attr("height", height);
+
+      var arcs = chart.append('g')
+          .attr("class", "links")
+          .selectAll('line')
+          .data(graph.edges)
+          .enter().append('g')
+
+      arcs.append('line')
+          .attr("x1", function(d) { return graph.nodes[d.source].x; })
+          .attr("y1", function(d) { return graph.nodes[d.source].y; })
+          .attr("x2", function(d) { return graph.nodes[d.target].x; })
+          .attr("y2", function(d) { return graph.nodes[d.target].y; });
+
+      arcs.append("text")
+          .attr("class", "edge-label")
+          .attr("x", function(d) { return (graph.nodes[d.source].x + graph.nodes[d.target].x)/2 ; })
+          .attr("y", function(d) { return (graph.nodes[d.source].y + graph.nodes[d.target].y)/2 ; })
+          .text(function(d) {return d.id; });
+
+      var nodes = chart.append('g')
+          .attr("class", "nodes")
+          .selectAll('g')
+          .data(graph.nodes)
+          .enter().append('g')
+          .attr("transform", function(d) { return "translate(" + d.x.toString() + "," + d.y.toString() + ")"; });
+
+      nodes.append('circle')
+           .attr("r", nodeRadius)
+
+      nodes.append("text")
+           .attr("class", "node-label")
+           .attr("x", nodeRadius + 2)
+           .attr("dy", ".35em")
+           .text(function(d) { return d.id; });
+
+    </script>
+
+    <script type="text/javascript">
+     $('body').append(
+         $('<a>')
+             .attr('href-lang', 'image/svg+xml')
+             .attr('href', 'data:image/svg+xml;utf8,' +  unescape($('svg')[0].outerHTML))
+             .text('Download')
+     );
+    </script>
+
+  </body>
+</html>

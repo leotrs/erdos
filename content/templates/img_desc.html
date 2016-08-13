@@ -1,8 +1,6 @@
-{% macro img_desc(src, title='', desc='') -%}
+{% macro img_desc(src, desc='') -%}
 <div class="img-desc">
-  <p><img src="{{ src }}" title="{{ title }}"></p>
-  {% if desc %}
+  <p>{% include src %}</p>
   <p><em>{{ desc }}</em></p>
-  {% endif %}
 </div>
 {%- endmacro %}

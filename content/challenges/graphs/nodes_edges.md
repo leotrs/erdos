@@ -23,9 +23,7 @@ Graph Theory
 network is represented by a graph.
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/nodes_edges_example.png",
-            "A graph with four nodes and four edges.",
-            "A graph with four nodes and four edges.")}}
+{{ img_desc("nodes_edges.svg", "A graph with four nodes and four edges.")}}
 
 Both nodes and edges can have many different properties. One of the most
 fundamental properties of graphs is the number of edges connecting to each

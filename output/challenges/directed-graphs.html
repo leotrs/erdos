@@ -155,7 +155,28 @@ nodes: <code>{u, v}</code>.</dd>
 whereas, for directed graphs, we draw them with arrows stemming from source
 nodes into target nodes.</p>
 <div class="img-desc">
-<p><img src="/images/directed_example.png" title="A graph with four nodes and five directed edges."/></p>
+<p><svg class="chart" height="220" width="220">
+<defs>
+<marker id="arrowhead" markerheight="4" markerunits="strokeWidth" markerwidth="6" orient="auto" refx="9" refy="2">
+<path d="M0,0 L0,4 L6,2 z"></path>
+</marker>
+</defs>
+<g id="graph">
+<g class="links">
+<line class="link" marker-end="url(#arrowhead)" x1="74.51371705890021" x2="21.66035836770054" y1="161.13519909854324" y2="157.80899101156407"></line>
+<line class="link" marker-end="url(#arrowhead)" x1="74.51371705890021" x2="176.62997841531336" y1="161.13519909854324" y2="140.3742756862298"></line>
+<line class="link" marker-end="url(#arrowhead)" x1="74.51371705890021" x2="59.78459931408472" y1="161.13519909854324" y2="34.73920508413401"></line>
+<line class="link" marker-end="url(#arrowhead)" x1="21.66035836770054" x2="59.78459931408472" y1="157.80899101156407" y2="34.73920508413401"></line>
+<line class="link" marker-end="url(#arrowhead)" x1="59.78459931408472" x2="74.51371705890021" y1="34.73920508413401" y2="161.13519909854324"></line>
+</g>
+<g class="nodes">
+<circle class="node" cx="74.51371705890021" cy="161.13519909854324" r="10"></circle>
+<circle class="node" cx="21.66035836770054" cy="157.80899101156407" r="10"></circle>
+<circle class="node" cx="176.62997841531336" cy="140.3742756862298" r="10"></circle>
+<circle class="node" cx="59.78459931408472" cy="34.73920508413401" r="10"></circle>
+</g>
+</g>
+</svg></p>
 <p><em>A graph with four nodes and five directed edges.</em></p>
 </div><a name="outdegree"></a><a name="indegree"></a>
 <dl>

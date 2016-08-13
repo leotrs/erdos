@@ -1,0 +1,25 @@
+<svg class="chart" width="360" height="180">
+  <g id="graph1">
+    <g class="links">
+      <line class="link" x1="160" y1="90" x2="55.000000000000014" y2="29.37822173508929"/>
+      <line class="link" x1="55.000000000000014" y1="29.37822173508929" x2="54.99999999999997" y2="150.6217782649107"/>
+    </g>
+    <g class="nodes">
+      <circle class="node" r="10" cx="160" cy="90"/>
+      <circle class="node" r="10" cx="55.000000000000014" cy="29.37822173508929"/>
+      <circle class="node" r="10" cx="54.99999999999997" cy="150.6217782649107"/>
+    </g>
+  </g>
+  <g id="graph2">
+    <g class="links">
+      <line class="link" x1="340" y1="90" x2="235" y2="29.37822173508929"/>
+      <line class="link" x1="340" y1="90" x2="234.99999999999997" y2="150.6217782649107"/>
+      <line class="link" x1="235" y1="29.37822173508929" x2="234.99999999999997" y2="150.6217782649107"/>
+    </g>
+    <g class="nodes">
+      <circle class="node" r="10" cx="340" cy="90"/>
+      <circle class="node" r="10" cx="235" cy="29.37822173508929"/>
+      <circle class="node" r="10" cx="234.99999999999997" cy="150.6217782649107"/>
+    </g>
+  </g>
+</svg>

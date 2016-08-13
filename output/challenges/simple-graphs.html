@@ -150,12 +150,40 @@ pair of nodes is joined by at most one edge.</dd>
 <dd>A graph that is not a simple graph is called <strong>multigraph</strong>.</dd>
 </dl>
 <div class="img-desc">
-<p><img src="/images/simple1.png" title="A multigraph with one self-edge and two parallel edges."/></p>
+<p><svg class="chart" height="180" width="380">
+<g id="graph1">
+<g class="links">
+<path class="link" d="M145.2, 126 A79.28177596396287,79.28177596396287 0 0,1141.6, 46.8"></path>
+<path class="link" d="M141.6, 46.8 A79.28177596396287,79.28177596396287 0 0,1145.2, 126"></path>
+</g>
+<g class="links">
+<line class="link" x1="145.2" x2="54.8" y1="126" y2="76"></line>
+<line class="link" x1="145.2" x2="86.3" y1="126" y2="162.7"></line>
+<line class="link" x1="54.8" x2="141.6" y1="76" y2="46.8"></line>
+</g>
+<g class="nodes">
+<circle cx="145.2" cy="126" r="10"></circle>
+<circle cx="141.6" cy="46.8" r="10"></circle>
+<circle cx="54.8" cy="76" r="10"></circle>
+<circle cx="86.3" cy="162.7" r="10"></circle>
+</g>
+</g>
+<g id="graph2">
+<g class="links">
+<line class="link" x1="335.2" x2="331.6" y1="126" y2="46.8"></line>
+<line class="link" x1="335.2" x2="244.8" y1="126" y2="76"></line>
+<line class="link" x1="335.2" x2="276.3" y1="126" y2="162.7"></line>
+<line class="link" x1="331.6" x2="244.8" y1="46.8" y2="76"></line>
+</g>
+<g class="nodes">
+<circle cx="335.2" cy="126" r="10"></circle>
+<circle cx="331.6" cy="46.8" r="10"></circle>
+<circle cx="244.8" cy="76" r="10"></circle>
+<circle cx="276.3" cy="162.7" r="10"></circle>
+</g>
+</g>
+</svg></p>
 <p><em>A multigraph with one self-edge and two parallel edges.</em></p>
-</div>
-<div class="img-desc">
-<p><img src="/images/simple2.png" title="A simple graph similar to the previous multigraph."/></p>
-<p><em>A simple graph similar to the previous multigraph.</em></p>
 </div>
 <p>From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.</p>

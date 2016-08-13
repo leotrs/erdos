@@ -1,0 +1,22 @@
+<svg class="chart" width="220" height="220">
+  <defs>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="9" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,4 L6,2 z"/>
+    </marker>
+  </defs>
+  <g id="graph">
+    <g class="links">
+      <line class="link" x1="74.51371705890021" y1="161.13519909854324" x2="21.66035836770054" y2="157.80899101156407" marker-end="url(#arrowhead)"/>
+      <line class="link" x1="74.51371705890021" y1="161.13519909854324" x2="176.62997841531336" y2="140.3742756862298" marker-end="url(#arrowhead)"/>
+      <line class="link" x1="74.51371705890021" y1="161.13519909854324" x2="59.78459931408472" y2="34.73920508413401" marker-end="url(#arrowhead)"/>
+      <line class="link" x1="21.66035836770054" y1="157.80899101156407" x2="59.78459931408472" y2="34.73920508413401" marker-end="url(#arrowhead)"/>
+      <line class="link" x1="59.78459931408472" y1="34.73920508413401" x2="74.51371705890021" y2="161.13519909854324" marker-end="url(#arrowhead)"/>
+    </g>
+    <g class="nodes">
+      <circle class="node" r="10" cx="74.51371705890021" cy="161.13519909854324"/>
+      <circle class="node" r="10" cx="21.66035836770054" cy="157.80899101156407"/>
+      <circle class="node" r="10" cx="176.62997841531336" cy="140.3742756862298"/>
+      <circle class="node" r="10" cx="59.78459931408472" cy="34.73920508413401"/>
+    </g>
+  </g>
+</svg>

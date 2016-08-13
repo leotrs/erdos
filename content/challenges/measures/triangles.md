@@ -32,9 +32,7 @@ friendships. Therefore, network transitivity in a social network measures
 the cases when one person's friends are also friends to each other.
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/triangles.png",
-            "Are my friends themselves friends?",
-            "Are my friends themselves friends?")}}
+{{ img_desc("triangles.svg", "Are my friends themselves friends?")}}
 
 As the picture should make clear, transitivity simply measures the
 occurrence of triangles in a network. If the network relation is highly
