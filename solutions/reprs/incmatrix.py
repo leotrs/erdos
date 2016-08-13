@@ -45,7 +45,6 @@ def inc_matrix():
     return matrix[:, 1:]
 
 
-
 if __name__ == '__main__':
     for row in inc_matrix():
         print(" ".join([str(i) for i in row]))

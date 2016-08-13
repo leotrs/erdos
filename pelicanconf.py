@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import re
 import os
-import markdown as md
 
 
 #############################################################################
-### Tweaks to defaults
+# Tweaks to defaults
 #############################################################################
 
 # Basic stuff
@@ -65,7 +63,7 @@ TAG_SAVE_AS = ''
 
 
 #############################################################################
-### Landing page config
+# Landing page config
 #############################################################################
 
 LANDING_PAGE_DETAILS = """
@@ -93,14 +91,14 @@ LANDING_PAGE_ABOUT = {'title': 'Erdos', 'subtitle': SITESUBTITLE,
 
 
 #############################################################################
-### Custom filters
+# Custom filters
 #############################################################################
 
 JINJA_FILTERS = {}
 
 
 #############################################################################
-### Define positions for categories
+# Define positions for categories
 #############################################################################
 
 CATEGORIES_POS = {
@@ -111,7 +109,7 @@ CATEGORIES_POS = {
 
 
 #############################################################################
-### Pelican plugins
+# Pelican plugins
 #############################################################################
 PLUGIN_PATHS = ['../pelican/pelican-plugins/']
 PLUGINS = ['jinja2content', 'render_math', 'glossary']
