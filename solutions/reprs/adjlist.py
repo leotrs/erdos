@@ -6,6 +6,7 @@ Solutions for /content/adjlist.md.
 
 """
 
+
 def adjlist():
     """Read a file edge by edge and output the adjacency list of each node."""
     num_nodes, num_edges = [int(i) for i in input().split(" ")]
@@ -24,7 +25,6 @@ def adjlist():
     # print the lines and the lists in order
     for node in sorted(neighbors.keys()):
         print(" ".join([str(n) for n in sorted(neighbors[node])]))
-
 
 
 if __name__ == '__main__':
