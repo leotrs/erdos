@@ -25,7 +25,7 @@ Multigraph
 
 {% from 'img_desc.html' import img_desc %}
 {{ img_desc("simple.svg",
-            "A multigraph with one self-edge and two parallel edges.")}}
+            "A multigraph with one self-edge and two parallel edges, alongside a simple graph.")}}
 
 From now on, we will work exclusively with simple graphs, unless explicitly
 stated otherwise.
