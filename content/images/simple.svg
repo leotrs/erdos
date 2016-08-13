@@ -10,10 +10,10 @@
       <line class="link" x1="54.8" y1="76" x2="141.6" y2="46.8"/>
     </g>
     <g class="nodes">
-      <circle r="10" cx="145.2" cy="126"/>
-      <circle r="10" cx="141.6" cy="46.8"/>
-      <circle r="10" cx="54.8" cy="76"/>
-      <circle r="10" cx="86.3" cy="162.7"/>
+      <circle class="node" r="10" cx="145.2" cy="126"/>
+      <circle class="node" r="10" cx="141.6" cy="46.8"/>
+      <circle class="node" r="10" cx="54.8" cy="76"/>
+      <circle class="node" r="10" cx="86.3" cy="162.7"/>
     </g>
   </g>
   <g id="graph2">
@@ -24,10 +24,10 @@
       <line class="link" x1="331.6" y1="46.8" x2="244.8" y2="76"/>
     </g>
     <g class="nodes">
-      <circle r="10" cx="335.2" cy="126"/>
-      <circle r="10" cx="331.6" cy="46.8"/>
-      <circle r="10" cx="244.8" cy="76"/>
-      <circle r="10" cx="276.3" cy="162.7"/>
+      <circle class="node" r="10" cx="335.2" cy="126"/>
+      <circle class="node" r="10" cx="331.6" cy="46.8"/>
+      <circle class="node" r="10" cx="244.8" cy="76"/>
+      <circle class="node" r="10" cx="276.3" cy="162.7"/>
     </g>
   </g>
 </svg>
