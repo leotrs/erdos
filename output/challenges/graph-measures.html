@@ -203,7 +203,36 @@ information about the graph.</p>
 <!-- erdos-challenge -->
 <div class="tab-pane fade" id="erdos-solutions">
 <h1>Solution</h1>
-<p><a href="https://github.com/leotrs/erdos/blob/master/solutions/measures/measures.py">Solution</a>.</p>
+<p>The solution to this challenge is hosted on
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/measures/measures.py">Github</a>.</p>
+<h1>Answers</h1>
+<ol>
+<li>
+<p>Difficulty is subjective and the answer might very well go one way or
+   the other.  Nevertheless, the adjacency matrix is the preferred way of
+   dealing with graph data when performing calculations such as graph
+   measures, because of the ease of representing graph data based on the
+   entries <span class="math">\(a_{ij}\)</span>.  Moreoever, by using the adjacency matrix we can take
+   advantage of powerful methods from linear algebra.</p>
+</li>
+<li>
+<p>The <span class="math">\(i\)</span>-th row of the adjacency matrix has a <span class="math">\(1\)</span> at position <span class="math">\(j\)</span> if and
+   only if <span class="math">\(i\)</span> is adjacent to <span class="math">\(j\)</span>.  By adding up all <span class="math">\(1\)</span>s in this row, we
+   obtain the number of neighbors, or the degree of vertex <span class="math">\(i\)</span>.</p>
+</li>
+<li>
+<p>Entry <span class="math">\(a_{ij}\)</span> of a directed adjacency matrix is equal to <span class="math">\(1\)</span> if there's
+   a link from <span class="math">\(i\)</span> to <span class="math">\(j\)</span>.  We now have</p>
+<p>
+<div class="math">$$
+indeg(i) = \sum_{j \in G} a_{ji} \\
+outdeg(i) = \sum_{j \in G} a_{ij}
+$$</div>
+</p>
+<p>In other words, the indegree is computed by summing all the entries of
+the <span class="math">\(i\)</span>-th column, while the outdegree is the sum of the <span class="math">\(i\)</span>-th row.</p>
+</li>
+</ol>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
