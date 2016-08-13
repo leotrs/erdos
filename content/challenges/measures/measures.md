@@ -81,4 +81,30 @@ information about the graph.
 
 {% include "solutions_header.md" %}
 
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/measures/measures.py).
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/measures/measures.py).
+
+
+{% include "answers_header.md" %}
+
+1. Difficulty is subjective and the answer might very well go one way or
+   the other.  Nevertheless, the adjacency matrix is the preferred way of
+   dealing with graph data when performing calculations such as graph
+   measures, because of the ease of representing graph data based on the
+   entries $a_{ij}$.  Moreoever, by using the adjacency matrix we can take
+   advantage of powerful methods from linear algebra.
+
+2. The $i$-th row of the adjacency matrix has a $1$ at position $j$ if and
+   only if $i$ is adjacent to $j$.  By adding up all $1$s in this row, we
+   obtain the number of neighbors, or the degree of vertex $i$.
+
+3. Entry $a_{ij}$ of a directed adjacency matrix is equal to $1$ if there's
+   a link from $i$ to $j$.  We now have
+
+    $$
+    indeg(i) = \sum_{j \in G} a_{ji} \\
+    outdeg(i) = \sum_{j \in G} a_{ij}
+    $$
+
+    In other words, the indegree is computed by summing all the entries of
+    the $i$-th column, while the outdegree is the sum of the $i$-th row.
