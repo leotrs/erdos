@@ -88,6 +88,11 @@ matrix?
 ```
 
 
+{% include "solutions_header.md" %}
+
+[Solution](https://github.com/leotrs/erdos/blob/master/solutions/measures/triangles.py).
+
+
 {% include "question_header.md" %}
 
 1. In an undirected network, a triad of nodes can only have one, two or
@@ -98,8 +103,3 @@ matrix?
 2. How many patterns can four nodes form in a directed or undirected
    network? Would counting the occurrence of these patterns also be useful
    as a measure for network transitivity?
-
-
-{% include "solutions_header.md" %}
-
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/measures/triangles.py).

@@ -5,6 +5,7 @@ Position: 3
 Summary: Graphs can be represented by a matrix
 Disqus_identifier: d7c72056-graphs-can-be-represented-by-a-matrix
 
+
 {% include "context_header.md" %}
 
 The incidence matrix is another matrix representation of a graph. It stores
@@ -84,6 +85,12 @@ Output the incidence matrix of the graph.
 0 1 0 1 1
 ```
 
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/reprs/incmatrix.py).
+
+
 {% include "question_header.md" %}
 
 1. For a network with $n$ nodes and $m$ edges, how many $1$s will the
@@ -98,11 +105,6 @@ Output the incidence matrix of the graph.
 4. Can you build the incidence matrix for a directed graph following the
    same procedure as in this challenge? Why or why not?
 
-
-{% include "solutions_header.md" %}
-
-The solution to this challenge is hosted on
-[Github](https://github.com/leotrs/erdos/blob/master/solutions/reprs/incmatrix.py).
 
 {% include "answers_header.md" %}
 

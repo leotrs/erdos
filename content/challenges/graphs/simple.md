@@ -60,6 +60,12 @@ Output 'YES' or 'NO', depending on whether or not the graph is simple.
 NO
 ```
 
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/simple.py).
+
+
 {% include "question_header.md" %}
 
 For the following networks, decide if they are simple or multigraphs. If
@@ -82,12 +88,6 @@ they are not simple, explain what would self-loops or multiedges represent.
   routers, cell phones, etc), where every node represents a device and
   every edge represents physical or wireless connections to network
   devices.
-
-
-{% include "solutions_header.md" %}
-
-The solution to this challenge is hosted on
-[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/simple.py).
 
 
 {% include "answers_header.md" %}

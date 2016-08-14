@@ -100,6 +100,13 @@ Output the adjacency matrix of the graph.
 1 1 0 0
 ```
 
+
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjmatrix.py).
+
+
 {% include "question_header.md" %}
 
 1. Consider the adjacency matrix of an undirected graph.
@@ -117,11 +124,6 @@ Output the adjacency matrix of the graph.
    matrix.
 
 4. Can you construct the adjacency matrix of a multigraph? Why or why not?
-
-{% include "solutions_header.md" %}
-
-The solution to this challenge is hosted on
-[Github](https://github.com/leotrs/erdos/blob/master/solutions/reprs/adjmatrix.py).
 
 
 {% include "answers_header.md" %}

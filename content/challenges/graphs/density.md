@@ -65,6 +65,13 @@ marked as 'done'. Keep a running count and finally output the total.
 0.667
 ```
 
+
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/density.py).
+
+
 {% include "question_header.md" %}
 
 1. If you followed the hint to solve the problem above, then you might have
@@ -73,11 +80,6 @@ marked as 'done'. Keep a running count and finally output the total.
    sum, without needing to add up all the numbers every time? This is a
    very important fact that will be used throughout future problem sets.
 
-
-{% include "solutions_header.md" %}
-
-The solution to this challenge is hosted on
-[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/density.py).
 
 {% include "answers_header.md" %}
 

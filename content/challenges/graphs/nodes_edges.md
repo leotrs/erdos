@@ -76,8 +76,14 @@ Output the node with the highest degree.
 0
 ```
 
-{% include "question_header.md" %}
 
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py).
+
+
+{% include "question_header.md" %}
 
 1. We've defined one measurement of the "importance" of a node, its
    degree. What might be other ways of measuring the importance of a node
@@ -94,12 +100,6 @@ Output the node with the highest degree.
 
 3. Discuss the possibility of measuring the "importance" of an edge in a
    network. Can you come up with a proposal for how to measure it?
-
-
-{% include "solutions_header.md" %}
-
-The solution to this challenge is hosted on
-[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py).
 
 
 {% include "answers_header.md" %}

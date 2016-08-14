@@ -72,6 +72,13 @@ highest indegree.
 0 3
 ```
 
+
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/directed.py).
+
+
 {% include "question_header.md" %}
 
 For the following networks, decide if they are directed or undirected.
@@ -93,12 +100,6 @@ For the following networks, decide if they are directed or undirected.
   (computers, routers, cell phones, etc), where every node represents a
   device and every edge represents physical or wireless connections
   to network devices.
-
-
-{% include "solutions_header.md" %}
-
-The solution to this challenge is hosted on
-[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/directed.py).
 
 
 {% include "answers_header.md" %}
