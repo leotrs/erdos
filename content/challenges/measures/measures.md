@@ -63,6 +63,12 @@ information about the graph.
 ```
 
 
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/measures/measures.py).
+
+
 {% include "question_header.md" %}
 
 1. Compare the difficulty of computing these graph measures using the
@@ -77,12 +83,6 @@ information about the graph.
 
 3. How can you compute the indegree and outdegree of a node in a directed
    graph from its adjacency matrix?
-
-
-{% include "solutions_header.md" %}
-
-The solution to this challenge is hosted on
-[Github](https://github.com/leotrs/erdos/blob/master/solutions/measures/measures.py).
 
 
 {% include "answers_header.md" %}

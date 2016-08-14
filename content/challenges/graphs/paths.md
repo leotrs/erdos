@@ -69,8 +69,14 @@ Print out the number of connected components in the graph.
 3
 ```
 
-{% include "question_header.md" %}
 
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/paths.py).
+
+
+{% include "question_header.md" %}
 
 1. In directed graphs, it is necessary to distinguish between nodes `u` and
    `v` being *connected*, and `v` being *reachable* from `u` and vice
@@ -87,12 +93,6 @@ Print out the number of connected components in the graph.
       components, as well as the possibility of there being nodes with no
       incoming or outgoing edges (websites with no incoming or outgoing
       links).
-
-
-{% include "solutions_header.md" %}
-
-The solution to this challenge is hosted on
-[Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/paths.py).
 
 
 {% include "answers_header.md" %}
