@@ -5,8 +5,9 @@ Position:
 Summary: {{ summary }}
 Disqus_identifier: {{ disqus_id }}
 
-
+{% raw %}
 {% include "context_header.md" %}
+
 
 Context goes here.
 
@@ -44,12 +45,14 @@ example output
 
 
 {% include "solutions_header.md" %}
+{% endraw %}
 
 The solution to this challenge is hosted on
 [Github](https://github.com/leotrs/erdos/blob/master/solutions/{{ path.split('.')[0]}}.py).
-
+{% raw %}
 
 {% include "question_header.md" %}
+
 
 1. Make sure these are actually questions,
 2. Or at the very least, explain exactly
@@ -70,3 +73,4 @@ The solution to this challenge is hosted on
 [^1]: [footnote 1]()
 [^2]: [footnote 2]()
 [^3]: [footnote 3]()
+{% endraw %}
