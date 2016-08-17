@@ -30,6 +30,8 @@ PAGE_PATHS = ['']
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
 PAGE_EXCLUDES = ['images', 'templates']
+STATIC_PATHS = ['images', 'theme/images']
+USE_SHORTCUT_ICONS = True
 
 # Choose theme
 THEME = os.path.join(THEME_PATH, 'elegant')
