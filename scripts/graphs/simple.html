@@ -34,9 +34,12 @@
              {"id": 2, "x": 54.8, "y": 76.0},
              {"id": 3, "x": 86.3, "y": 162.7}
          ],
+         "loops" : [
+             1
+         ],
          "multiedges": [
              {"source": 0, "target": 1},
-             {"source": 1, "target": 0}
+             {"source": 1, "target": 0},
          ],
          "edges": [
              {"source": 0, "target": 2},
@@ -45,6 +48,17 @@
          ]};
 
      chart.append('g').attr("id", "graph1");
+
+     var loops = chart.select('#graph1')
+                      .append('g')
+                      .attr("class", "links")
+                      .selectAll('circle')
+                      .data(graph1.loops)
+                      .enter().append('circle')
+                      .attr("class", "link")
+                      .attr("r", 10)
+                      .attr("cx", function(d) { return graph1.nodes[d].x; })
+                      .attr("cy", function(d) { return graph1.nodes[d].y - 15; });
 
      var arcs = chart.select('#graph1')
                      .append('g')
@@ -63,7 +77,6 @@
                          var path = "M" + src_x + ", " + src_y +
                                     " A" + radius + "," + radius + " 0 0,1" +
                                     tgt_x + ", " + tgt_y;
-                         console.log(path);
                          return path; });
 
      var links = chart.select('#graph1')

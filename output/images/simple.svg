@@ -1,6 +1,9 @@
 <svg class="chart" width="380" height="180">
   <g id="graph1">
     <g class="links">
+      <circle class="link" r="10" cx="141.6" cy="31.799999999999997"/>
+    </g>
+    <g class="links">
       <path class="link" d="M145.2, 126 A79.28177596396287,79.28177596396287 0 0,1141.6, 46.8"/>
       <path class="link" d="M141.6, 46.8 A79.28177596396287,79.28177596396287 0 0,1145.2, 126"/>
     </g>
