@@ -1,6 +1,8 @@
 Title: Resources
 Position: 2
 Side: right
+Summary: Online and print resources on NetSci
+
 
 ## Online
 

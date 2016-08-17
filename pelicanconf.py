@@ -9,9 +9,10 @@ import os
 #############################################################################
 
 # Basic stuff
-AUTHOR = 'leotorr'
+AUTHOR = 'leotrs'
 SITENAME = 'erdos'
 SITESUBTITLE = 'Problem-based NetSci'
+SITE_DESCRIPTION = SITESUBTITLE
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
 DISQUS_SITENAME = "erdos"

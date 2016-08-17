@@ -1,6 +1,8 @@
 Title: How To
 Position: 2
 Side: left
+Summary: How to use this site
+
 
 Erdos is an educational site for learning about and practicing
 [Network Science](https://en.wikipedia.org/wiki/Network_science) through programming exercises, problem solving, and open-ended questions that introduce and teach the fundamentals of this field.

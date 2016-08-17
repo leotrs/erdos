@@ -1,6 +1,8 @@
 Title: About
 Position: 1
 Side: right
+Summary: About erdos
+
 
 Erdos has been inspired by projects like
 [Project Euler](https://projecteuler.net/) for math and programming,

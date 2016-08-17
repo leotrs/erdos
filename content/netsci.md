@@ -1,6 +1,7 @@
 Title: Network Science
 Position: 1
 Side: left
+Summary: NetSci in ten minutes (or a little more)
 
 
 ## NetSci in 1 minute
