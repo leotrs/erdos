@@ -10,19 +10,18 @@ Disqus_identifier: {{ disqus_id }}
 
 Context goes here.
 
-Example definition[](#example-def)
+Example definition
 : This text defines *example definition*. It could be short, or a few lines
 long. Try not to make it too long, though.
 
 More context could go here. And for example, an image:
 
 {% from 'img_desc.html' import img_desc %}
-{{ img_desc("/images/path_to_image.png",
-            "Title text",
-            "Description text.")}}
+{{ img_desc("path_to_image.svg", "Description text.") }}
 
 
 {% include "problem_header.md" %}
+
 
 Introduce the challenge, and state the goal precisely.
 
@@ -43,7 +42,11 @@ example input
 example output
 ```
 
-----------------------------------------
+
+{% include "solutions_header.md" %}
+
+The solution to this challenge is hosted on
+[Github](https://github.com/leotrs/erdos/blob/master/solutions/{{ path.split('.')[0]}}.py).
 
 
 {% include "question_header.md" %}
@@ -53,6 +56,17 @@ example output
 3. What it is to be discussed
 
 
-{% include "solutions_header.md" %}
+{% include "answers_header.md" %}
 
-[Solution](https://github.com/leotrs/erdos/blob/master/solutions/{{ path.split('.')[0]}}.py).
+
+1. Make sure these are actually questions,
+2. Or at the very least, explain exactly
+3. What it is to be discussed
+
+
+{% include 'footnote_header.md' %}
+
+
+[^1]: [footnote 1]()
+[^2]: [footnote 2]()
+[^3]: [footnote 3]()

@@ -5,6 +5,7 @@ Position: 10
 Summary: Graphs are made of nodes and edges
 Disqus_identifier: 81be0b7a-graphs-are-made-of-nodes-and-edges
 
+
 {% include "context_header.md" %}
 
 When we study a real-life network, we usually refer to an underlying
@@ -40,7 +41,9 @@ Adjacent or Neighbors
 **adjacent** or **neighbors**. If `u` and `v` are adjacent, we write `u ~
 v`.
 
+
 {% include "problem_header.md" %}
+
 
 For now, we choose the simplest possible way to represent a graph, where
 each node is represented by a single integer, and each edge by a pair of
@@ -79,11 +82,13 @@ Output the node with the highest degree.
 
 {% include "solutions_header.md" %}
 
+
 The solution to this challenge is hosted on
 [Github](https://github.com/leotrs/erdos/blob/master/solutions/graphs/nodes_edges.py).
 
 
 {% include "question_header.md" %}
+
 
 1. We've defined one measurement of the "importance" of a node, its
    degree. What might be other ways of measuring the importance of a node
@@ -103,6 +108,7 @@ The solution to this challenge is hosted on
 
 
 {% include "answers_header.md" %}
+
 
 1. Roughly speaking, the importance of a node is called *centrality*. There
    are many ways to measure centrality, such as *betweenness
@@ -157,6 +163,7 @@ The solution to this challenge is hosted on
 
 
 {% include 'footnote_header.md' %}
+
 
 [^1]: [Betweenness centrality](https://en.wikipedia.org/wiki/Betweenness_centrality)
 [^2]: [Closeness centrality](https://en.wikipedia.org/wiki/Centrality#Closeness_centrality)
