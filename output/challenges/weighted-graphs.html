@@ -7,7 +7,7 @@
     <meta name="author" content="leotrs" />
     <meta name="copyright" content="leotrs" />
 
-    <meta name="description" content="Density is a global graph property.
+    <meta name="description" content="Edges can have associated weights.
 " />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary">
@@ -15,16 +15,16 @@
 
 <meta name="keywords" content=", Graphs, " />
 
-<meta property="og:title" content="Graph Density "/>
-<meta property="og:url" content="http://erdosnet.work/challenges/graph-density.html" />
-<meta property="og:description" content="Density is a global graph property." />
+<meta property="og:title" content="Weighted Graphs "/>
+<meta property="og:url" content="http://erdosnet.work/challenges/weighted-graphs.html" />
+<meta property="og:description" content="Edges can have associated weights." />
 <meta property="og:site_name" content="erdos" />
 <meta property="og:article:author" content="leotrs" />
-<meta property="og:article:published_time" content="2016-06-26T00:00:00-04:00" />
-<meta name="twitter:title" content="Graph Density ">
-<meta name="twitter:description" content="Density is a global graph property.">
+<meta property="og:article:published_time" content="2016-08-17T00:00:00-04:00" />
+<meta name="twitter:title" content="Weighted Graphs ">
+<meta name="twitter:description" content="Edges can have associated weights.">
 
-    <title>Graph Density  · erdos
+    <title>Weighted Graphs  · erdos
 </title>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -67,7 +67,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://erdosnet.work/challenges/graph-density.html"> Graph Density  </a></h1>
+    <h1><a href="http://erdosnet.work/challenges/weighted-graphs.html"> Weighted Graphs  </a></h1>
     </header>
 </div>
 
@@ -86,8 +86,8 @@
           <li><a href="http://erdosnet.work/challenges/nodes-and-edges.html">Nodes and Edges</a></li>
           <li><a href="http://erdosnet.work/challenges/simple-graphs.html">Simple Graphs</a></li>
           <li><a href="http://erdosnet.work/challenges/directed-graphs.html">Directed Graphs</a></li>
-          <li><a href="http://erdosnet.work/challenges/weighted-graphs.html">Weighted Graphs</a></li>
-          <li class="active" ><a href="http://erdosnet.work/challenges/graph-density.html">Graph Density</a></li>
+          <li class="active" ><a href="http://erdosnet.work/challenges/weighted-graphs.html">Weighted Graphs</a></li>
+          <li><a href="http://erdosnet.work/challenges/graph-density.html">Graph Density</a></li>
           <li><a href="http://erdosnet.work/challenges/paths-and-components.html">Paths and Components</a></li>
         </ul>
       </div>
@@ -135,196 +135,170 @@
       <div class="tab-content">
         <div class="tab-pane fade in active" id="erdos-context">
 <h1>Context</h1>
-<p>We have seen one property of nodes, the degree, and one property of edges,
-whether or not they are directed. These are called local properties,
-because they describe the properties of just one element of a network.</p>
-<p>We can also study the network as a whole, and describe the properties that
-do not depend on just one node or edge, but on a collection of elements
-within the network. One of the simplest global measures is the <em>edge
-density</em>.</p><a name="density"></a><a name="complete-graph"></a>
+<p>With an undirected graph we represent reciprocal relationships, while with
+a directed graph we can study asymmetric ones.  With a weighted graph, we
+can represent the <em>intensity</em> of each relationship.</p>
+<p>In a social network, we represent acquaintances with the presence or
+absence of edges.  However, we may also be interested in the <em>frequency</em>
+with which two people interact with one another.  Two nodes in a social
+network may represent two people who only speak every once in a while, or
+two best friends who can't stop talking to each other.  Since the presence
+or absence of a link doesn't provide frequency or intensity data, we must
+add a further feature to our graph.</p><a name="weighted-graph"></a>
 <dl>
-<dt>Density</dt>
-<dd>The <strong>density</strong> of a network is the the number of edges present in the
-network divided by the total number of possible edges.</dd>
-<dt>Complete graph</dt>
-<dd>A <strong>complete graph</strong> is a graph that has all possible edges present,
-i.e., its density is equal to <span class="math">\(1\)</span>.</dd>
+<dt>Weighted Graph</dt>
+<dd>A graph <span class="math">\(G\)</span> is a <strong>weighted graph</strong> when there is a real number
+associated to each of its edges.  If nodes <span class="math">\(i\)</span> and <span class="math">\(j\)</span> are connected by an
+edge, then its <strong>weight</strong> is denoted by <span class="math">\(w_{ij}\)</span>.</dd>
 </dl>
 <div class="img-desc">
-<p><svg class="chart" height="180" width="360">
-<g id="graph1">
+<p><svg class="chart" height="220" width="220">
 <g class="links">
-<line class="link" x1="160" x2="146.63118960624632" y1="90" y2="48.85503233952688"></line>
-<line class="link" x1="160" x2="111.63118960624632" y1="90" y2="23.42604385933926"></line>
-<line class="link" x1="160" x2="68.36881039375369" y1="90" y2="23.426043859339245"></line>
-<line class="link" x1="160" x2="33.36881039375368" y1="90" y2="48.85503233952687"></line>
-<line class="link" x1="160" x2="20" y1="90" y2="89.99999999999999"></line>
-<line class="link" x1="160" x2="33.36881039375368" y1="90" y2="131.14496766047313"></line>
-<line class="link" x1="160" x2="68.36881039375368" y1="90" y2="156.57395614066075"></line>
-<line class="link" x1="160" x2="111.63118960624631" y1="90" y2="156.57395614066075"></line>
-<line class="link" x1="160" x2="146.63118960624632" y1="90" y2="131.14496766047313"></line>
-<line class="link" x1="146.63118960624632" x2="111.63118960624632" y1="48.85503233952688" y2="23.42604385933926"></line>
-<line class="link" x1="146.63118960624632" x2="68.36881039375369" y1="48.85503233952688" y2="23.426043859339245"></line>
-<line class="link" x1="146.63118960624632" x2="33.36881039375368" y1="48.85503233952688" y2="48.85503233952687"></line>
-<line class="link" x1="146.63118960624632" x2="20" y1="48.85503233952688" y2="89.99999999999999"></line>
-<line class="link" x1="146.63118960624632" x2="33.36881039375368" y1="48.85503233952688" y2="131.14496766047313"></line>
-<line class="link" x1="146.63118960624632" x2="68.36881039375368" y1="48.85503233952688" y2="156.57395614066075"></line>
-<line class="link" x1="146.63118960624632" x2="111.63118960624631" y1="48.85503233952688" y2="156.57395614066075"></line>
-<line class="link" x1="146.63118960624632" x2="146.63118960624632" y1="48.85503233952688" y2="131.14496766047313"></line>
-<line class="link" x1="111.63118960624632" x2="68.36881039375369" y1="23.42604385933926" y2="23.426043859339245"></line>
-<line class="link" x1="111.63118960624632" x2="33.36881039375368" y1="23.42604385933926" y2="48.85503233952687"></line>
-<line class="link" x1="111.63118960624632" x2="20" y1="23.42604385933926" y2="89.99999999999999"></line>
-<line class="link" x1="111.63118960624632" x2="33.36881039375368" y1="23.42604385933926" y2="131.14496766047313"></line>
-<line class="link" x1="111.63118960624632" x2="68.36881039375368" y1="23.42604385933926" y2="156.57395614066075"></line>
-<line class="link" x1="111.63118960624632" x2="111.63118960624631" y1="23.42604385933926" y2="156.57395614066075"></line>
-<line class="link" x1="111.63118960624632" x2="146.63118960624632" y1="23.42604385933926" y2="131.14496766047313"></line>
-<line class="link" x1="68.36881039375369" x2="33.36881039375368" y1="23.426043859339245" y2="48.85503233952687"></line>
-<line class="link" x1="68.36881039375369" x2="20" y1="23.426043859339245" y2="89.99999999999999"></line>
-<line class="link" x1="68.36881039375369" x2="33.36881039375368" y1="23.426043859339245" y2="131.14496766047313"></line>
-<line class="link" x1="68.36881039375369" x2="68.36881039375368" y1="23.426043859339245" y2="156.57395614066075"></line>
-<line class="link" x1="68.36881039375369" x2="111.63118960624631" y1="23.426043859339245" y2="156.57395614066075"></line>
-<line class="link" x1="68.36881039375369" x2="146.63118960624632" y1="23.426043859339245" y2="131.14496766047313"></line>
-<line class="link" x1="33.36881039375368" x2="20" y1="48.85503233952687" y2="89.99999999999999"></line>
-<line class="link" x1="33.36881039375368" x2="33.36881039375368" y1="48.85503233952687" y2="131.14496766047313"></line>
-<line class="link" x1="33.36881039375368" x2="68.36881039375368" y1="48.85503233952687" y2="156.57395614066075"></line>
-<line class="link" x1="33.36881039375368" x2="111.63118960624631" y1="48.85503233952687" y2="156.57395614066075"></line>
-<line class="link" x1="33.36881039375368" x2="146.63118960624632" y1="48.85503233952687" y2="131.14496766047313"></line>
-<line class="link" x1="20" x2="33.36881039375368" y1="89.99999999999999" y2="131.14496766047313"></line>
-<line class="link" x1="20" x2="68.36881039375368" y1="89.99999999999999" y2="156.57395614066075"></line>
-<line class="link" x1="20" x2="111.63118960624631" y1="89.99999999999999" y2="156.57395614066075"></line>
-<line class="link" x1="20" x2="146.63118960624632" y1="89.99999999999999" y2="131.14496766047313"></line>
-<line class="link" x1="33.36881039375368" x2="68.36881039375368" y1="131.14496766047313" y2="156.57395614066075"></line>
-<line class="link" x1="33.36881039375368" x2="111.63118960624631" y1="131.14496766047313" y2="156.57395614066075"></line>
-<line class="link" x1="33.36881039375368" x2="146.63118960624632" y1="131.14496766047313" y2="131.14496766047313"></line>
-<line class="link" x1="68.36881039375368" x2="111.63118960624631" y1="156.57395614066075" y2="156.57395614066075"></line>
-<line class="link" x1="68.36881039375368" x2="146.63118960624632" y1="156.57395614066075" y2="131.14496766047313"></line>
-<line class="link" x1="111.63118960624631" x2="146.63118960624632" y1="156.57395614066075" y2="131.14496766047313"></line>
+<g>
+<line class="link" x1="149.82132246253323" x2="157.50336259777822" y1="12.674191446604235" y2="207.71787494553422"></line>
+<text class="edge-label" x="153.66234253015574" y="110.19603319606922">0.5</text>
+</g>
+<g>
+<line class="link" x1="157.50336259777822" x2="96.95417460692103" y1="207.71787494553422" y2="127.0263391041241"></line>
+<text class="edge-label" x="127.22876860234962" y="167.37210702482918">3.3</text>
+</g>
+<g>
+<line class="link" x1="30.28658782243138" x2="149.82132246253323" y1="49.64846096133989" y2="12.674191446604235"></line>
+<text class="edge-label" x="90.05395514248231" y="31.161326203972063">3.1</text>
+</g>
+<g>
+<line class="link" x1="96.95417460692103" x2="30.28658782243138" y1="127.0263391041241" y2="49.64846096133989"></line>
+<text class="edge-label" x="63.6203812146762" y="88.337400032732">0.7</text>
+</g>
+<g>
+<line class="link" x1="96.95417460692103" x2="149.82132246253323" y1="127.0263391041241" y2="12.674191446604235"></line>
+<text class="edge-label" x="123.38774853472714" y="69.85026527536417">2.4</text>
+</g>
 </g>
 <g class="nodes">
-<circle class="node" cx="160" cy="90" r="10"></circle>
-<circle class="node" cx="146.63118960624632" cy="48.85503233952688" r="10"></circle>
-<circle class="node" cx="111.63118960624632" cy="23.42604385933926" r="10"></circle>
-<circle class="node" cx="68.36881039375369" cy="23.426043859339245" r="10"></circle>
-<circle class="node" cx="33.36881039375368" cy="48.85503233952687" r="10"></circle>
-<circle class="node" cx="20" cy="89.99999999999999" r="10"></circle>
-<circle class="node" cx="33.36881039375368" cy="131.14496766047313" r="10"></circle>
-<circle class="node" cx="68.36881039375368" cy="156.57395614066075" r="10"></circle>
-<circle class="node" cx="111.63118960624631" cy="156.57395614066075" r="10"></circle>
-<circle class="node" cx="146.63118960624632" cy="131.14496766047313" r="10"></circle>
+<g transform="translate(149.82132246253323,12.674191446604235)">
+<circle class="node" r="10"></circle>
+<text class="node-label" dy=".35em" x="12">0</text>
 </g>
+<g transform="translate(157.50336259777822,207.71787494553422)">
+<circle class="node" r="10"></circle>
+<text class="node-label" dy=".35em" x="12">1</text>
 </g>
-<g id="graph2">
-<g class="links">
-<line class="link" x1="340" x2="326.6311896062463" y1="90" y2="48.85503233952688"></line>
-<line class="link" x1="248.36881039375368" x2="291.6311896062463" y1="23.426043859339245" y2="23.42604385933926"></line>
-<line class="link" x1="248.36881039375368" x2="200" y1="23.426043859339245" y2="89.99999999999999"></line>
-<line class="link" x1="213.36881039375368" x2="213.36881039375368" y1="48.85503233952687" y2="48.85503233952687"></line>
-<line class="link" x1="213.36881039375368" x2="340" y1="48.85503233952687" y2="90"></line>
-<line class="link" x1="200" x2="291.6311896062463" y1="89.99999999999999" y2="23.42604385933926"></line>
-<line class="link" x1="213.36881039375368" x2="213.36881039375368" y1="131.14496766047313" y2="131.14496766047313"></line>
-<line class="link" x1="248.36881039375368" x2="291.6311896062463" y1="156.57395614066075" y2="23.42604385933926"></line>
+<g transform="translate(30.28658782243138,49.64846096133989)">
+<circle class="node" r="10"></circle>
+<text class="node-label" dy=".35em" x="12">2</text>
 </g>
-<g class="nodes">
-<circle class="node" cx="340" cy="90" r="10"></circle>
-<circle class="node" cx="326.6311896062463" cy="48.85503233952688" r="10"></circle>
-<circle class="node" cx="291.6311896062463" cy="23.42604385933926" r="10"></circle>
-<circle class="node" cx="248.36881039375368" cy="23.426043859339245" r="10"></circle>
-<circle class="node" cx="213.36881039375368" cy="48.85503233952687" r="10"></circle>
-<circle class="node" cx="200" cy="89.99999999999999" r="10"></circle>
-<circle class="node" cx="213.36881039375368" cy="131.14496766047313" r="10"></circle>
-<circle class="node" cx="248.36881039375368" cy="156.57395614066075" r="10"></circle>
-<circle class="node" cx="291.6311896062463" cy="156.57395614066075" r="10"></circle>
-<circle class="node" cx="326.6311896062463" cy="131.14496766047313" r="10"></circle>
+<g transform="translate(96.95417460692103,127.0263391041241)">
+<circle class="node" r="10"></circle>
+<text class="node-label" dy=".35em" x="12">3</text>
 </g>
 </g>
 </svg></p>
-<p><em>Graphs with different densities.</em></p>
+<p><em>Weights are usually displayed as labels accompanying each edge.</em></p>
 </div>
+<p>If one needs to assign arbitrary weights to an unweighted graph, all
+present edges receive a weight of <span class="math">\(1\)</span>, while all absent edges are assigned
+a weight of <span class="math">\(0\)</span>.  If, on the contrary, one needs to convert a weighted
+graph into an unweighted graph, all edges with weight less than a
+predefined value are cut off and removed from the graph, and all edges with
+weight greater than the threshold are assigned the same weight of <span class="math">\(1\)</span>.
+This process is sometimes called <strong>binarization</strong> of a weighted network.</p>
+<p>For weighted networks, we need to extend the definition of degree, as we
+can't simply count the number of incident edges for each node.</p><a name="node-strength"></a>
+<dl>
+<dt>Node Strength</dt>
+<dd>For a given node <code>i</code>, its <strong>strength</strong> is the sum of the weights of all
+edges that connect to <code>i</code>.</dd>
+</dl>
 </div>
 <!-- erdos-context -->
 <div class="tab-pane fade" id="erdos-challenge">
 <h1>Challenge</h1>
-<p>For this challenge, you need to read a file representing a graph, and
-compute the density of the network.</p>
-<p>The input is a file where the first line contains two integers, <span class="math">\(n\)</span> and
-<span class="math">\(m\)</span>, defining the number of nodes and edges, respectively. The next <span class="math">\(m\)</span>
-lines each contain two integers, representing two nodes that are joined by
-an edge. Assume undirected edges.</p>
-<p>Output the density of the network as a single floating point number,
-rounded to three decimal places,</p>
-<dl>
-<dt>Hint</dt>
-<dd>First, you will need to figure out the maximum possible number of edges
-in a graph with <span class="math">\(n\)</span> nodes. You can compute it in the following way. First,
-start with a graph with <span class="math">\(n\)</span> nodes and no edges. Pick one arbitrary node and
-count all the edges connecting it to all others, and mark that edge as
-'done'. Proceed the same way with all other nodes, picking one unmarked
-node and connecting it to all other unmarked nodes, until they are all
-marked as 'done'. Keep a running count and finally output the total.</dd>
-</dl>
+<p>For this challenge, you need to read a file and output the node with
+highest strength.</p>
+<p>The input is a file in which the first line contains two integers, <span class="math">\(n\)</span> and
+<span class="math">\(m\)</span>, defining the number of nodes and edges, respectively.  The next <span class="math">\(m\)</span>
+lines each contain three integers, <code>u</code>, <code>v</code> and <code>w</code>, representing two
+nodes, <code>u</code> and <code>v</code>, joined by an edge with weight <code>w</code>.</p>
+<p>Output one integers, representing the node with the highest strength.</p>
 <h3>Sample Input</h3>
-<div class="highlight"><pre><span></span>4 4
-0 1
-0 2
-1 3
-3 0
+<div class="highlight"><pre><span></span>4 5
+0 1 0.5
+1 3 3.3
+2 0 3.1
+3 2 0.7
+3 0 2.4
 </pre></div>
 <h3>Sample Output</h3>
-<div class="highlight"><pre><span></span>0.667
+<div class="highlight"><pre><span></span>3
 </pre></div>
 <hr/>
 <h1>Solution</h1>
 <p>The solution to this challenge is hosted on
-<a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/density.py">Github</a>.</p>
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/challenges/graphs/weighted.py">Github</a>.</p>
 </div>
 <!-- erdos-challenge -->
 <div class="tab-pane fade" id="erdos-questions">
 <h1>Expansion Questions</h1>
+<p>For the following networks, discuss the possible meaning of edge weights.</p>
 <ol>
-<li>If you followed the hint to solve the problem above, then you might have
-   found yourself computing a sum of numbers like the following: <span class="math">\((n - 1) +
-   (n - 2) + (n - 3) +\; ...\; + 2 + 1\)</span>. Can you find a formula for this
-   sum, without needing to add up all the numbers every time? This is a
-   very important fact that will be used throughout future problem sets.</li>
+<li>
+<p>The social network of your immediate Facebook friends. In this graph,
+  every node stands in for one of your friends, and there is an edge
+  between two nodes if the corresponding persons are friends with each
+  other.</p>
+</li>
+<li>
+<p>The social network of your followers on Twitter. In this graph, every
+  node stands for one user, and each edge between users A and B
+  represents the relationship "A follows B".</p>
+</li>
+<li>
+<p>The transportation network of roads between cities in a country. In
+  this graph, every node represents a city and there is one edge
+  between any two cities for each road connecting them.</p>
+</li>
+<li>
+<p>The information network of devices connected to the internet
+  (computers, routers, cell phones, etc), where every node represents a
+  device and every edge represents physical or wireless connections
+  to network devices.</p>
+</li>
 </ol>
 <hr/>
 <h1>Answers</h1>
 <ol>
 <li>
-<p>If you followed the hint, you might have realized that the first
-    unmarked node allows <span class="math">\(n - 1\)</span> edges, the second one allows <span class="math">\(n - 2\)</span> and so
-    on until the last one only allows <span class="math">\(1\)</span> more edge. We need the sum of all
-    of these nodes, or <span class="math">\((n - 1) +(n - 2) + (n - 3) +\; ...\; + 3 + 2 + 1\)</span>.</p>
-<p>The sum of the first <span class="math">\(n\)</span> numbers is well-known and was rediscovered by
-Gauss when he was five years old (or so the story goes). The procedure
-involves reordering the terms to find a constant partial sum. Say we are
-trying to compute the sum of the first <span class="math">\(n\)</span> natural numbers.  Then we
-have:</p>
-<p>
-<div class="math">$$\begin{align*}
-s(n) &amp;= n + (n - 1) +(n - 2) + (n - 3) +\; ...\; + 3 + 2 + 1 \\
-     &amp;= n + 1 + (n - 1) + 2 + (n - 2) + 3 +\; ... \\
-     &amp;= n + 1 + (n + 1)\:\:\:\:\:\:\:\;\! +(n + 1)\quad\quad\;\;\, ... \\
-\end{align*}
-$$</div>
-</p>
-<p>As you can see, we are adding up <span class="math">\((n + 1)\)</span> repeatedly. Since we took
-two original terms in the sum to form one instance of <span class="math">\(n + 1\)</span>, it
-appears a number of times equal to half the original number of terms.
-But there were <span class="math">\(n\)</span> terms originally, therefore:</p>
-<p>
-<div class="math">$$\begin{align*}
-s(n) &amp;= n + 1 + (n + 1) + (n + 1)\; ... \\
-     &amp;= (n + 1) \times (n/2)
-\end{align*}
-$$</div>
-</p>
-<p>Now, we were looking for the sum of the first <span class="math">\(n - 1\)</span> natural numbers,
-ie, we want <span class="math">\(s(n - 1)\)</span>. Substituting in our formula gives
-<span class="math">\(n\times(n-1)/2\)</span>.  This is the maximum number of edges in a graph with
-<span class="math">\(n\)</span> nodes.</p>
+<p>As was discussed, edge weights in social networks can indicate the
+   frequency of communication between two people, such as, for example,
+   average number of interactions per day.</p>
+</li>
+<li>
+<p>Similar to the previous network, edge weights can measure average number
+   of interactions per day, in this case @-mentions.  Since @-mentions have
+   a source and a target, they preserve the directedness on the network.</p>
+</li>
+<li>
+<p>In road networks, edge weights usually represent geographical distance:
+   a link between edges <code>i</code> and <code>j</code> with weight <code>w</code> means there's a road
+   between places <code>i</code> and <code>j</code> that is <code>w</code> kilometers long.</p>
+</li>
+<li>
+<p>There are many choices for the meaning of edge weights in this network.
+   One of them is the average time in milliseconds it takes a message to
+   arrive from one device to the next.</p>
 </li>
 </ol>
+<dl>
+<dt>Remark</dt>
+<dd>In the first and second examples, edge weights represent similar concepts
+both in directed and undirected networks.</dd>
+<dt>Remark</dt>
+<dd>In the first two examples, higher weights represent a stronger connection
+(more frequent interaction), while in the last two, smaller weights
+represent a stronger connection (closer entities, either geographically, or
+temporally).</dd>
+</dl>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
@@ -390,8 +364,8 @@ ie, we want <span class="math">\(s(n - 1)\)</span>. Substituting in our formula 
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                    data-disqus-identifier="8675fa49-density-is-a-global-graph-property"
-                href="http://erdosnet.work/challenges/graph-density.html#disqus_thread",
+                    data-disqus-identifier="cddbbede-edges-can-have-associated-weights"
+                href="http://erdosnet.work/challenges/weighted-graphs.html#disqus_thread",
                 id="disqus-accordion-toggle">
                 Comments
             </a>
@@ -402,8 +376,8 @@ ie, we want <span class="math">\(s(n - 1)\)</span>. Substituting in our formula 
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'erdos';
-        var disqus_identifier = '8675fa49-density-is-a-global-graph-property';
-    var disqus_url = 'http://erdosnet.work/challenges/graph-density.html';
+        var disqus_identifier = 'cddbbede-edges-can-have-associated-weights';
+    var disqus_url = 'http://erdosnet.work/challenges/weighted-graphs.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

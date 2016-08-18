@@ -31,7 +31,7 @@ def nodes_edges():
               for node in nodes}
 
     # sort nodes by degree and get out desired node
-    highest = sorted(nodes, key=degree.get)[-1]
+    highest = max(nodes, key=degree.get)
 
     return highest
 
