@@ -1,7 +1,7 @@
 Title: Directed Graphs
 Category: Graphs
 Date: 2016-06-26
-Position: 30
+Position: 20
 Summary: Edges can have a direction
 Disqus_identifier: fd6d2c66-edges-can-have-a-direction
 
@@ -81,6 +81,7 @@ The solution to this challenge is hosted on
 
 
 {% include "question_header.md" %}
+
 
 For the following networks, decide if they are directed or undirected.
 

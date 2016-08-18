@@ -1,7 +1,7 @@
 Title: Simple Graphs
 Category: Graphs
 Date: 2016-06-26
-Position: 20
+Position: 40
 Summary: The most common type of graph.
 Disqus_identifier: 64bd8458-the-most-common-type-of-graph
 

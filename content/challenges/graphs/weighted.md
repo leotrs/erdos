@@ -1,7 +1,7 @@
 Title: Weighted Graphs
 Category: Graphs
 Date: 08/17/2016
-Position: 35
+Position: 30
 Summary: Edges can have associated weights.
 Disqus_identifier: cddbbede-edges-can-have-associated-weights
 
