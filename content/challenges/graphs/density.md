@@ -76,8 +76,8 @@ The solution to this challenge is hosted on
 
 1. If you followed the hint to solve the problem above, then you might have
    found yourself computing a sum of numbers like the following: $(n - 1) +
-   (n - 2) + (n - 3) +\; ...\; + 2 + 1$. Can you find a formula for this
-   sum, without needing to add up all the numbers every time? This is a
+   (n - 2) + (n - 3) +\; ...\; + 2 + 1$.  Can you find a formula for this
+   sum, without needing to add up all the numbers every time?  This is a
    very important fact that will be used throughout future problem sets.
 
 
@@ -114,5 +114,5 @@ The solution to this challenge is hosted on
 
     Now, we were looking for the sum of the first $n - 1$ natural numbers,
     ie, we want $s(n - 1)$. Substituting in our formula gives
-    $n\times(n-1)/2$.  This is the maximum number of edges in a graph with
-    $n$ nodes.
+    $n\times(n-1)/2$.  This is the maximum number of edges in an undirected
+    graph with $n$ nodes.

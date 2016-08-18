@@ -24,10 +24,11 @@ and edges, $n$ and $m$, and one line for each edge, $m + 1$ lines in
 total. In the new representation, our file will still need one line for $m$
 and $n$, but only $n$ lines will follow, one for each node's adjacencies.
 
-As we saw before, a graph can hold up to $n(n+1)/2$ edges in total. This
-means that, if the graph is moderately dense, we will have $n < m \approx
-n(n+1)/2$, and therefore, our new graph representation will in general
-have fewer lines than the previous one.
+As we [saw before]({filename}/challenges/graphs/density.md), an undirected
+graph can hold up to $n(n+1)/2$ edges in total. This means that, if the
+graph is moderately dense, we will have $n < m \approx n(n+1)/2$, and
+therefore, our new graph representation will in general have fewer lines
+than the previous one.
 
 {% include "problem_header.md" %}
 
