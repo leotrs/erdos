@@ -131,6 +131,7 @@ is called <strong>connected graph</strong></p>
               <span>Defined in: <a href="challenges/paths-and-components.html#connected-component">Paths and Components</a>.</span>
               <span> See also: </span>
               <span><a href="glossary.html#walk">Walk</a>, </span>
+              <span><a href="glossary.html#cycle">Cycle</a>, </span>
               <span><a href="glossary.html#path">Path</a>.</span>
             </i></p>
           </dd>
@@ -145,6 +146,21 @@ are called a <strong>connected triad</strong>.</p>
               <span>Defined in: <a href="challenges/triangles-and-transitivity.html#connected-triad">Triangles and Transitivity</a>.</span>
               <span> See also: </span>
               <span><a href="glossary.html#triangle">Triangle</a>.</span>
+            </i></p>
+          </dd>
+	</dl>
+	<dl>
+          <a name="cycle"></a>
+	  <dt><h4>Cycle</h4></dt>
+	  <dd>
+            <p>A <strong>cycle</strong> is a walk whose starting and ending nodes are the same.  It
+is also called a <strong>closed walk</strong>.</p>
+            <p><i>
+              <span>Defined in: <a href="challenges/paths-and-components.html#cycle">Paths and Components</a>.</span>
+              <span> See also: </span>
+              <span><a href="glossary.html#walk">Walk</a>, </span>
+              <span><a href="glossary.html#path">Path</a>, </span>
+              <span><a href="glossary.html#connected-component">Connected Component</a>.</span>
             </i></p>
           </dd>
 	</dl>
@@ -332,13 +348,14 @@ edges that connect to <code>i</code>.</p>
           <a name="path"></a>
 	  <dt><h4>Path</h4></dt>
 	  <dd>
-            <p>A <strong>path</strong> is a walk in which every node is unique. This means the walk
-does not loop around into itself: it does not self-cross. If there exists a
-path from <code>u</code> to <code>v</code>, we say <code>u</code> and <code>v</code> are <strong>connected</strong>.</p>
+            <p>A <strong>path</strong> is a walk in which every node is unique.  This means the walk
+does not loop around into itself: it does not self-cross.  If there exists
+a path from <code>u</code> to <code>v</code>, we say <code>u</code> and <code>v</code> are <strong>connected</strong>.</p>
             <p><i>
               <span>Defined in: <a href="challenges/paths-and-components.html#path">Paths and Components</a>.</span>
               <span> See also: </span>
               <span><a href="glossary.html#walk">Walk</a>, </span>
+              <span><a href="glossary.html#cycle">Cycle</a>, </span>
               <span><a href="glossary.html#connected-component">Connected Component</a>.</span>
             </i></p>
           </dd>
@@ -426,11 +443,12 @@ nodes: <code>{u, v}</code>.</p>
 	  <dt><h4>Walk</h4></dt>
 	  <dd>
             <p>A <strong>walk</strong> is an ordered sequence of nodes <code>(u₁, u₂, ..., uₙ)</code> where
-every consecutive pair of nodes are adjacent. That is, each can be reached
+every consecutive pair of nodes are adjacent.  That is, each can be reached
 from the previous one by following an edge in the graph.</p>
             <p><i>
               <span>Defined in: <a href="challenges/paths-and-components.html#walk">Paths and Components</a>.</span>
               <span> See also: </span>
+              <span><a href="glossary.html#cycle">Cycle</a>, </span>
               <span><a href="glossary.html#path">Path</a>, </span>
               <span><a href="glossary.html#connected-component">Connected Component</a>.</span>
             </i></p>

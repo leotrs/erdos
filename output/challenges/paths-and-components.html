@@ -141,16 +141,19 @@ of nodes, and how density quantifies the sparseness of a graph. These two
 indicators are calculated from the most basic elements of a graph: its
 nodes and edges.</p>
 <p>However, there are many other elements that we can identify which are also
-of interest when trying to describe a network.</p><a name="walk"></a><a name="path"></a><a name="connected-component"></a>
+of interest when trying to describe a network.</p><a name="walk"></a><a name="cycle"></a><a name="path"></a><a name="connected-component"></a>
 <dl>
 <dt>Walk</dt>
 <dd>A <strong>walk</strong> is an ordered sequence of nodes <code>(u₁, u₂, ..., uₙ)</code> where
-every consecutive pair of nodes are adjacent. That is, each can be reached
+every consecutive pair of nodes are adjacent.  That is, each can be reached
 from the previous one by following an edge in the graph.</dd>
+<dt>Cycle</dt>
+<dd>A <strong>cycle</strong> is a walk whose starting and ending nodes are the same.  It
+is also called a <strong>closed walk</strong>.</dd>
 <dt>Path</dt>
-<dd>A <strong>path</strong> is a walk in which every node is unique. This means the walk
-does not loop around into itself: it does not self-cross. If there exists a
-path from <code>u</code> to <code>v</code>, we say <code>u</code> and <code>v</code> are <strong>connected</strong>.</dd>
+<dd>A <strong>path</strong> is a walk in which every node is unique.  This means the walk
+does not loop around into itself: it does not self-cross.  If there exists
+a path from <code>u</code> to <code>v</code>, we say <code>u</code> and <code>v</code> are <strong>connected</strong>.</dd>
 <dt>Connected Component</dt>
 <dd>A <strong>connected component</strong>, or simply <strong>component</strong>, is a set of nodes in
 which any two are connected by a path. A graph that only has one component

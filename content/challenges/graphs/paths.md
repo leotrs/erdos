@@ -19,13 +19,17 @@ of interest when trying to describe a network.
 
 Walk
 : A **walk** is an ordered sequence of nodes `(u₁, u₂, ..., uₙ)` where
-every consecutive pair of nodes are adjacent. That is, each can be reached
+every consecutive pair of nodes are adjacent.  That is, each can be reached
 from the previous one by following an edge in the graph.
 
+Cycle
+: A **cycle** is a walk whose starting and ending nodes are the same.  It
+is also called a **closed walk**.
+
 Path
-: A **path** is a walk in which every node is unique. This means the walk
-does not loop around into itself: it does not self-cross. If there exists a
-path from `u` to `v`, we say `u` and `v` are **connected**.
+: A **path** is a walk in which every node is unique.  This means the walk
+does not loop around into itself: it does not self-cross.  If there exists
+a path from `u` to `v`, we say `u` and `v` are **connected**.
 
 Connected Component
 : A **connected component**, or simply **component**, is a set of nodes in
