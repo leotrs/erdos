@@ -8,6 +8,7 @@ Disqus_identifier: d2615dde-triangles-describe-network-transitivity
 
 {% include "context_header.md" %}
 
+
 When two nodes in a network are joined by an edge, we think of them as
 sharing a relationship of some sort. Two people on a social network are
 joined by an edge if there is a friendship between them. Two websites on
@@ -48,6 +49,7 @@ connected to the other two. Every triangle is a connected triad.
 
 
 {% include "problem_header.md" %}
+
 
 For this challenge, you need to count the number of triangles in a network.
 
@@ -90,10 +92,12 @@ matrix?
 
 {% include "solutions_header.md" %}
 
+
 [Solution](https://github.com/leotrs/erdos/blob/master/solutions/measures/triangles.py).
 
 
 {% include "question_header.md" %}
+
 
 1. In an undirected network, a triad of nodes can only have one, two or
    three edges among them. What patterns can a triad form in a directed
@@ -103,3 +107,28 @@ matrix?
 2. How many patterns can four nodes form in a directed or undirected
    network? Would counting the occurrence of these patterns also be useful
    as a measure for network transitivity?
+
+
+{% include "answers_header.md" %}
+
+The *patterns* formed by *undirected* graphs with three and four nodes can be
+found [here](https://oeis.org/A000088/a000088a.gif).
+
+The *patterns* formed by *directed* graphs with three nodes are
+[here](http://mathworld.wolfram.com/SimpleDirectedGraph.html).
+
+The *number* of *undirected* graphs with $n$ nodes can be found
+[here](https://oeis.org/A000088).
+
+The *number* of *directed* graphs with $n$ nodes can be found
+[here](https://oeis.org/A000273).
+
+
+1. The patterns formed by three nodes in a directed social network
+   represent all the possible distinct ways that three people can follow
+   each other, without taking into account who follows whom.
+
+2. The occurrence of 4-vertex patterns is less useful for measuring
+   transitivity, as its definition as a measure involves three nodes, not
+   four.  The occurrences of these patterns might or might not be useful in
+   measuring other graph properties.
