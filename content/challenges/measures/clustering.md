@@ -133,10 +133,10 @@ The solution to this challenge is hosted on
    relative to the maximum possible number of said triangles (either
    locally, or globally).
 
-2. If one node has clustering coefficient equal to 1.0, it means that all
+2. If one node has clustering coefficient equal to $1.0$, it means that all
    its neighbors are connected to each other.  If all nodes have clustering
-   coefficient equal to 1.0, it means that all nodes are connected to each
-   other.  This means that the network is a complete graph.
+   coefficient equal to $1.0$, it means that all nodes are connected to
+   each other.  This means that the network is a complete graph.
 
 3. It is highly more likely that your college friends know each other than
    it is for them to know your other acquaintances.  In other words, the
