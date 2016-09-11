@@ -1,0 +1,36 @@
+<svg class="chart" width="360" height="180">
+  <g id="graph1">
+    <g class="links">
+      <line class="link" x1="60" y1="70" x2="120" y2="10"/>
+      <line class="link" x1="60" y1="70" x2="120" y2="50"/>
+      <line class="link" x1="60" y1="70" x2="120" y2="90"/>
+      <line class="link" x1="60" y1="70" x2="120" y2="130"/>
+      <line class="link" x1="120" y1="10" x2="120" y2="50"/>
+    </g>
+    <g class="nodes">
+      <circle class="node" r="10" cx="60" cy="70"/>
+      <circle class="node" r="10" cx="120" cy="10"/>
+      <circle class="node" r="10" cx="120" cy="50"/>
+      <circle class="node" r="10" cx="120" cy="90"/>
+      <circle class="node" r="10" cx="120" cy="130"/>
+    </g>
+  </g>
+  <g id="graph2">
+    <g class="links">
+      <line class="link" x1="240" y1="70" x2="300" y2="10"/>
+      <line class="link" x1="240" y1="70" x2="300" y2="50"/>
+      <line class="link" x1="240" y1="70" x2="300" y2="90"/>
+      <line class="link" x1="240" y1="70" x2="300" y2="130"/>
+      <line class="link" x1="300" y1="10" x2="300" y2="50"/>
+      <line class="link" x1="300" y1="50" x2="300" y2="90"/>
+      <line class="link" x1="300" y1="90" x2="300" y2="130"/>
+    </g>
+    <g class="nodes">
+      <circle class="node" r="10" cx="240" cy="70"/>
+      <circle class="node" r="10" cx="300" cy="10"/>
+      <circle class="node" r="10" cx="300" cy="50"/>
+      <circle class="node" r="10" cx="300" cy="90"/>
+      <circle class="node" r="10" cx="300" cy="130"/>
+    </g>
+  </g>
+</svg>

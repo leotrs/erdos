@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta charset="UTF-8">
+    <title>erdos d3 visualizations</title>
+  </head>
+  <body>
+    <svg class="chart"></svg>
+    <script type="text/javascript">
+
+     var width = 360,
+         height = 180,
+         num_nodes = 6,
+         padding = 10;
+
+     var indices = [...Array(num_nodes).keys()];
+     var chart = d3.select(".chart")
+                   .attr("width", width)
+                   .attr("height", height);
+
+     var x_sixth = width / 6;
+     var graph1 = {
+         "nodes": [
+             {"id": 0, "x": x_sixth, "y": (height - 2*padding) / 2 - padding},
+             {"id": 1, "x": x_sixth * 2, "y": padding},
+             {"id": 2, "x": x_sixth * 2, "y": padding + (height - 2*padding)/4},
+             {"id": 3, "x": x_sixth * 2, "y": padding + (height - 2*padding)/4 * 2},
+             {"id": 4, "x": x_sixth * 2, "y": padding + (height - 2*padding)/4 * 3},
+         ],
+         "edges":  [{"source": 0, "target": 1},
+                    {"source": 0, "target": 2},
+                    {"source": 0, "target": 3},
+                    {"source": 0, "target": 4},
+                    {"source": 1, "target": 2}
+         ]
+     };
+
+     chart.append('g').attr("id", "graph1");
+
+     var arcs = chart.select('#graph1')
+                     .append('g')
+                     .attr("class", "links")
+                     .selectAll('line')
+                     .data(graph1.edges)
+                     .enter().append('line')
+                     .attr("class", "link")
+                     .attr("x1", function(d) { return graph1.nodes[d.source].x; })
+                     .attr("y1", function(d) { return graph1.nodes[d.source].y; })
+                     .attr("x2", function(d) { return graph1.nodes[d.target].x; })
+                     .attr("y2", function(d) { return graph1.nodes[d.target].y; });
+
+     var nodes = chart.select('#graph1')
+                      .append('g')
+                      .attr("class", "nodes")
+                      .selectAll('circle')
+                      .data(graph1.nodes)
+                      .enter().append('circle')
+                      .attr("class", "node")
+                      .attr("r", 10)
+                      .attr("cx", function(d) { return d.x; })
+                      .attr("cy", function(d) { return d.y; });
+
+
+     var graph2 = {
+         "nodes": [
+             {"id": 0, "x": x_sixth * 4, "y": (height - 2*padding) / 2 - padding},
+             {"id": 1, "x": x_sixth * 5, "y": padding},
+             {"id": 2, "x": x_sixth * 5, "y": padding + (height - 2*padding)/4},
+             {"id": 3, "x": x_sixth * 5, "y": padding + (height - 2*padding)/4 * 2},
+             {"id": 4, "x": x_sixth * 5, "y": padding + (height - 2*padding)/4 * 3},
+         ],
+         "edges":  [{"source": 0, "target": 1},
+                    {"source": 0, "target": 2},
+                    {"source": 0, "target": 3},
+                    {"source": 0, "target": 4},
+                    {"source": 1, "target": 2},
+                    {"source": 2, "target": 3},
+                    {"source": 3, "target": 4}
+         ]
+     };
+
+     chart.append('g').attr("id", "graph2");
+
+     var arcs = chart.select('#graph2')
+                     .append('g')
+                     .attr("class", "links")
+                     .selectAll('line')
+                     .data(graph2.edges)
+                     .enter().append('line')
+                     .attr("class", "link")
+                     .attr("x1", function(d) { return graph2.nodes[d.source].x; })
+                     .attr("y1", function(d) { return graph2.nodes[d.source].y; })
+                     .attr("x2", function(d) { return graph2.nodes[d.target].x; })
+                     .attr("y2", function(d) { return graph2.nodes[d.target].y; });
+
+     var nodes = chart.select('#graph2')
+                      .append('g')
+                      .attr("class", "nodes")
+                      .selectAll('circle')
+                      .data(graph2.nodes)
+                      .enter().append('circle')
+                      .attr("class", "node")
+                      .attr("r", 10)
+                      .attr("cx", function(d) { return d.x; })
+                      .attr("cy", function(d) { return d.y; });
+
+    </script>
+
+    <script type="text/javascript">
+     $('body').append(
+         $('<a>')
+             .attr('href-lang', 'image/svg+xml')
+             .attr('href', 'data:image/svg+xml;utf8,' +  unescape($('svg')[0].outerHTML))
+             .text('Download')
+     );
+    </script>
+
+  </body>
+</html>

@@ -7,7 +7,7 @@
     <meta name="author" content="leotrs" />
     <meta name="copyright" content="leotrs" />
 
-    <meta name="description" content="Triangles describe network transitivity.
+    <meta name="description" content="How tightly-knit are a node&#39;s neighbors
 " />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary">
@@ -15,16 +15,16 @@
 
 <meta name="keywords" content=", Measures, " />
 
-<meta property="og:title" content="Triangles and Transitivity "/>
-<meta property="og:url" content="http://erdosnet.work/challenges/triangles-and-transitivity.html" />
-<meta property="og:description" content="Triangles describe network transitivity." />
+<meta property="og:title" content="Clustering Coeficient "/>
+<meta property="og:url" content="http://erdosnet.work/challenges/clustering-coeficient.html" />
+<meta property="og:description" content="How tightly-knit are a node&#39;s neighbors" />
 <meta property="og:site_name" content="erdos" />
 <meta property="og:article:author" content="leotrs" />
-<meta property="og:article:published_time" content="2016-07-25T00:00:00-04:00" />
-<meta name="twitter:title" content="Triangles and Transitivity ">
-<meta name="twitter:description" content="Triangles describe network transitivity.">
+<meta property="og:article:published_time" content="2016-09-10T00:00:00-04:00" />
+<meta name="twitter:title" content="Clustering Coeficient ">
+<meta name="twitter:description" content="How tightly-knit are a node&#39;s neighbors">
 
-    <title>Triangles and Transitivity  · erdos
+    <title>Clustering Coeficient  · erdos
 </title>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -67,7 +67,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://erdosnet.work/challenges/triangles-and-transitivity.html"> Triangles and Transitivity  </a></h1>
+    <h1><a href="http://erdosnet.work/challenges/clustering-coeficient.html"> Clustering Coeficient  </a></h1>
     </header>
 </div>
 
@@ -119,8 +119,8 @@
       <div class="accordion-inner">
         <ul class="list-articles-category">
           <li><a href="http://erdosnet.work/challenges/graph-measures.html">Graph Measures</a></li>
-          <li class="active" ><a href="http://erdosnet.work/challenges/triangles-and-transitivity.html">Triangles and Transitivity</a></li>
-          <li><a href="http://erdosnet.work/challenges/clustering-coeficient.html">Clustering Coeficient</a></li>
+          <li><a href="http://erdosnet.work/challenges/triangles-and-transitivity.html">Triangles and Transitivity</a></li>
+          <li class="active" ><a href="http://erdosnet.work/challenges/clustering-coeficient.html">Clustering Coeficient</a></li>
         </ul>
       </div>
     </div>
@@ -136,83 +136,88 @@
       <div class="tab-content">
         <div class="tab-pane fade in active" id="erdos-context">
 <h1>Context</h1>
-<p>When two nodes in a network are joined by an edge, we think of them as
-sharing a relationship of some sort. Two people on a social network are
-joined by an edge if there is a friendship between them. Two websites on
-the WWW are joined by an edge if one of them links to the other. This
-relationship is in fact what defines the graph, as it dictates which edges
-are present.</p>
-<p>Just as we study the concrete objects that make up the graph, its nodes and
-edges, we can study this relationship too. One way to do it is by measuring
-its level of transitivity. In the following, we write <code>u ~ v</code> to mean that
-nodes <code>u</code> and <code>v</code> are adjacent.</p><a name="network-transitivity"></a>
+<p>Last time, we saw how counting triangles gives us a measure of
+transitivity.  This time, we introduce a related measure: clustering.</p><a name="clustering"></a>
 <dl>
-<dt>Network Transitivity<a href="#network-transitivity"></a></dt>
-<dd>Network <strong>transitivity</strong> measures the extent to which <code>u ~ v</code> and <code>v ~ w</code>
-imply <code>u ~ w</code>.</dd>
+<dt>Clustering</dt>
+<dd><em>Clustering</em> refers to the extent to which nodes in a network are
+tightly-knit.</dd>
 </dl>
-<p>Read out loud, transitivity keeps track of the cases when, for three nodes
-<code>u</code>, <code>v</code>, and <code>w</code>, if there are at least two edges among them, then there
-is also a third one. In the social network example, three nodes with two
-edges among them means three different people with two
-friendships. Therefore, network transitivity in a social network measures
-the cases when one person's friends are also friends to each other.</p>
+<p>For example, if a triad of nodes form a triangle, we intuitively think of
+them as more tightly-knit (or <em>clustered</em>) than three nodes with fewer or
+no links between them.</p>
+<p>There are many ways one could quantify this intuitive notion.  Locally
+speaking, we might want to look at one particular node, <code>u</code>, and see how
+clustered are its neighbors around it.  One way of doing this is by
+counting how many of <code>u</code>'s neighbors are connected to each other.  If this
+reminds you of transitivity, it's because we're counting exactly how many
+triangles have a vertex in <code>u</code>.</p>
 <div class="img-desc">
 <p><svg class="chart" height="180" width="360">
 <g id="graph1">
 <g class="links">
-<line class="link" x1="160" x2="55.000000000000014" y1="90" y2="29.37822173508929"></line>
-<line class="link" x1="55.000000000000014" x2="54.99999999999997" y1="29.37822173508929" y2="150.6217782649107"></line>
+<line class="link" x1="60" x2="120" y1="70" y2="10"></line>
+<line class="link" x1="60" x2="120" y1="70" y2="50"></line>
+<line class="link" x1="60" x2="120" y1="70" y2="90"></line>
+<line class="link" x1="60" x2="120" y1="70" y2="130"></line>
+<line class="link" x1="120" x2="120" y1="10" y2="50"></line>
 </g>
 <g class="nodes">
-<circle class="node" cx="160" cy="90" r="10"></circle>
-<circle class="node" cx="55.000000000000014" cy="29.37822173508929" r="10"></circle>
-<circle class="node" cx="54.99999999999997" cy="150.6217782649107" r="10"></circle>
+<circle class="node" cx="60" cy="70" r="10"></circle>
+<circle class="node" cx="120" cy="10" r="10"></circle>
+<circle class="node" cx="120" cy="50" r="10"></circle>
+<circle class="node" cx="120" cy="90" r="10"></circle>
+<circle class="node" cx="120" cy="130" r="10"></circle>
 </g>
 </g>
 <g id="graph2">
 <g class="links">
-<line class="link" x1="340" x2="235" y1="90" y2="29.37822173508929"></line>
-<line class="link" x1="340" x2="234.99999999999997" y1="90" y2="150.6217782649107"></line>
-<line class="link" x1="235" x2="234.99999999999997" y1="29.37822173508929" y2="150.6217782649107"></line>
+<line class="link" x1="240" x2="300" y1="70" y2="10"></line>
+<line class="link" x1="240" x2="300" y1="70" y2="50"></line>
+<line class="link" x1="240" x2="300" y1="70" y2="90"></line>
+<line class="link" x1="240" x2="300" y1="70" y2="130"></line>
+<line class="link" x1="300" x2="300" y1="10" y2="50"></line>
+<line class="link" x1="300" x2="300" y1="50" y2="90"></line>
+<line class="link" x1="300" x2="300" y1="90" y2="130"></line>
 </g>
 <g class="nodes">
-<circle class="node" cx="340" cy="90" r="10"></circle>
-<circle class="node" cx="235" cy="29.37822173508929" r="10"></circle>
-<circle class="node" cx="234.99999999999997" cy="150.6217782649107" r="10"></circle>
+<circle class="node" cx="240" cy="70" r="10"></circle>
+<circle class="node" cx="300" cy="10" r="10"></circle>
+<circle class="node" cx="300" cy="50" r="10"></circle>
+<circle class="node" cx="300" cy="90" r="10"></circle>
+<circle class="node" cx="300" cy="130" r="10"></circle>
 </g>
 </g>
 </svg></p>
-<p><em>Are my friends themselves friends?</em></p>
+<p><em>Neighbors can be more or less clustered around a node.</em></p>
 </div>
-<p>As the picture should make clear, transitivity simply measures the
-occurrence of triangles in a network. If the network relation is highly
-transitive, then many of its <em>connected triads</em> will form <em>triangles</em>.</p><a name="connected-triad"></a><a name="triangle"></a>
+<p>To be able to compare clustering across nodes, however, we need to
+normalize this value by the total number of possible triangles.  For every
+two nodes adjacent to <code>u</code>, they could, potentially, form a triangle.
+Therefore, we need to count the number of <em>pairs</em> of vertices adjacent to
+<code>u</code>.  With this, we can formally define the local clustering coefficient of
+<code>u</code>.</p><a name="local-clustering-coefficient"></a>
 <dl>
-<dt>Connected triad<a href="#connected-triad"></a></dt>
-<dd>If three nodes <code>u</code>, <code>v</code>, and <code>w</code> have at least two edges among them, they
-are called a <strong>connected triad</strong>.</dd>
-<dt>Triangle<a href="#triangle"></a></dt>
-<dd>A <strong>triangle</strong> in a graph is a triad of nodes where each one is
-connected to the other two. Every triangle is a connected triad.</dd>
+<dt>Local Clustering Coefficient</dt>
+<dd>The <em>local clustering coefficient</em> of node <code>u</code>, denoted <span class="math">\(c_u\)</span>, is defined
+by the ratio
+    <div class="math">$$c_u = \frac{\text{triangles on }u}{\text{pairs adjacent to }u}$$</div>
+</dd>
 </dl>
+<p>Observe that, since the numerator is never grater than the denominator, we
+have <span class="math">\(c_u \in [0, 1]\)</span>.</p>
 </div>
 <!-- erdos-context -->
 <div class="tab-pane fade" id="erdos-challenge">
 <h1>Challenge</h1>
-<p>For this challenge, you need to count the number of triangles in a network.</p>
+<p>Compute the local clustering coefficient of each node.</p>
 <p>The input is a file which contains one line with a single integer <span class="math">\(n\)</span>, the
-number of nodes in the network. The following <span class="math">\(n\)</span> lines each contain one
+number of nodes in the network.  The following <span class="math">\(n\)</span> lines each contain one
 row of the adjacency matrix of the network, where each entry is separated
 by a space.</p>
-<p>Output the number of triangles in the network.</p>
-<dl>
-<dt>Hint</dt>
-<dd>Since you will be given the adjacency matrix, think how it would reflect
-the presence of a triangle. If <code>u</code>, <code>v</code> and <code>w</code> form a triangle, what can
-be said about the entries <span class="math">\(a_{uv}\)</span>, <span class="math">\(a_{vw}\)</span>, <span class="math">\(a_{wu}\)</span> of the adjacency
-matrix?</dd>
-</dl>
+<p>Output a list of numbers, the clustering coefficients of each node, on a
+single line, separated by a space.  Print the numbers with three decimal
+places.</p>
 <h3>Sample Input</h3>
 <div class="highlight"><pre><span></span>10
 0 1 1 0 1 0 0 1 0 0
@@ -227,49 +232,155 @@ matrix?</dd>
 0 0 0 1 0 1 0 0 0 0
 </pre></div>
 <h3>Sample Output</h3>
-<div class="highlight"><pre><span></span>2
+<div class="highlight"><pre><span></span>0.167 0.167 0.333 0.167 0.000 0.000 0.000 1.000 0.167 0.000
 </pre></div>
 <hr/>
 <h1>Solution</h1>
-<p><a href="https://github.com/leotrs/erdos/blob/master/solutions/measures/triangles.py">Solution</a>.</p>
+<p>The solution to this challenge is hosted on
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/measures/clustering.py">Github</a>.</p>
 </div>
 <!-- erdos-challenge -->
 <div class="tab-pane fade" id="erdos-questions">
 <h1>Expansion Questions</h1>
 <ol>
 <li>
-<p>In an undirected network, a triad of nodes can only have one, two or
-   three edges among them. What patterns can a triad form in a directed
-   network? Discuss the meaning of these patterns in a directed social
-   network (like Twitter), and the WWW.</p>
+<p>Compare the concepts of density, transitivity, and clustering.</p>
 </li>
 <li>
-<p>How many patterns can four nodes form in a directed or undirected
-   network? Would counting the occurrence of these patterns also be useful
-   as a measure for network transitivity?</p>
+<p>What can you say about a network all of whose nodes have local
+   clustering coefficients equal to 1?</p>
+</li>
+<li>
+<p>Consider the social network of your Facebook friends.  What can you say
+   about your college friends as opposed to all of your acquaintances in
+   terms of clustering?  Are they more or less clustered together than on
+   average?</p>
+</li>
+<li>
+<p>There are two other popular measures of clustering in a network.</p><a name="global-clustering-coefficient"></a><a name="average-clustering-coefficient"></a>
+<dl>
+<dt>Global Clustering Coefficient</dt>
+<dd>Often written as just <span class="math">\(C\)</span>, it is defined by the following ratio.
+<div class="math">$$ C = \frac{\text{3 \(\times\) triangles}}{\text{connected triads}}$$</div>
+We count each triangle three times because they each contain three
+connected triads.</dd>
+<dt>Average Clustering Coefficient</dt>
+<dd>It's the average of all local clustering coefficients.
+<div class="math">$$ \bar{c} = \frac{1}{n} \sum_{u}{c_u}$$</div>
+</dd>
+</dl>
+<p>Compute the global clustering coefficient and the average clustering
+coefficient for the two following networks.</p>
+<p><div class="img-desc">
+<p><svg class="chart" height="180" width="360">
+<g id="graph1">
+<g class="links">
+<line class="link" x1="160" x2="146.63118960624632" y1="90" y2="48.85503233952688"></line>
+<line class="link" x1="160" x2="111.63118960624632" y1="90" y2="23.42604385933926"></line>
+<line class="link" x1="146.63118960624632" x2="111.63118960624632" y1="48.85503233952688" y2="23.42604385933926"></line>
+<line class="link" x1="146.63118960624632" x2="68.36881039375369" y1="48.85503233952688" y2="23.426043859339245"></line>
+<line class="link" x1="111.63118960624632" x2="68.36881039375369" y1="23.42604385933926" y2="23.426043859339245"></line>
+<line class="link" x1="111.63118960624632" x2="33.368810393753684" y1="23.42604385933926" y2="48.85503233952687"></line>
+<line class="link" x1="68.36881039375369" x2="33.368810393753684" y1="23.426043859339245" y2="48.85503233952687"></line>
+<line class="link" x1="68.36881039375369" x2="20" y1="23.426043859339245" y2="89.99999999999999"></line>
+<line class="link" x1="33.368810393753684" x2="20" y1="48.85503233952687" y2="89.99999999999999"></line>
+<line class="link" x1="33.368810393753684" x2="33.36881039375368" y1="48.85503233952687" y2="131.14496766047313"></line>
+<line class="link" x1="20" x2="33.36881039375368" y1="89.99999999999999" y2="131.14496766047313"></line>
+<line class="link" x1="20" x2="68.36881039375368" y1="89.99999999999999" y2="156.57395614066075"></line>
+<line class="link" x1="33.36881039375368" x2="68.36881039375368" y1="131.14496766047313" y2="156.57395614066075"></line>
+<line class="link" x1="33.36881039375368" x2="111.63118960624631" y1="131.14496766047313" y2="156.57395614066075"></line>
+<line class="link" x1="68.36881039375368" x2="111.63118960624631" y1="156.57395614066075" y2="156.57395614066075"></line>
+<line class="link" x1="68.36881039375368" x2="146.63118960624632" y1="156.57395614066075" y2="131.14496766047313"></line>
+<line class="link" x1="111.63118960624631" x2="146.63118960624632" y1="156.57395614066075" y2="131.14496766047313"></line>
+<line class="link" x1="111.63118960624631" x2="160" y1="156.57395614066075" y2="90"></line>
+<line class="link" x1="146.63118960624632" x2="160" y1="131.14496766047313" y2="90"></line>
+<line class="link" x1="146.63118960624632" x2="146.63118960624632" y1="131.14496766047313" y2="48.85503233952688"></line>
+</g>
+<g class="nodes">
+<circle class="node" cx="160" cy="90" r="10"></circle>
+<circle class="node" cx="146.63118960624632" cy="48.85503233952688" r="10"></circle>
+<circle class="node" cx="111.63118960624632" cy="23.42604385933926" r="10"></circle>
+<circle class="node" cx="68.36881039375369" cy="23.426043859339245" r="10"></circle>
+<circle class="node" cx="33.368810393753684" cy="48.85503233952687" r="10"></circle>
+<circle class="node" cx="20" cy="89.99999999999999" r="10"></circle>
+<circle class="node" cx="33.36881039375368" cy="131.14496766047313" r="10"></circle>
+<circle class="node" cx="68.36881039375368" cy="156.57395614066075" r="10"></circle>
+<circle class="node" cx="111.63118960624631" cy="156.57395614066075" r="10"></circle>
+<circle class="node" cx="146.63118960624632" cy="131.14496766047313" r="10"></circle>
+</g>
+</g>
+<g id="graph2">
+<g class="links">
+<line class="link" x1="270" x2="340" y1="90" y2="90"></line>
+<line class="link" x1="270" x2="326.6311896062463" y1="90" y2="48.85503233952688"></line>
+<line class="link" x1="270" x2="291.6311896062463" y1="90" y2="23.42604385933926"></line>
+<line class="link" x1="270" x2="248.36881039375368" y1="90" y2="23.426043859339245"></line>
+<line class="link" x1="270" x2="213.36881039375368" y1="90" y2="48.85503233952687"></line>
+<line class="link" x1="270" x2="200" y1="90" y2="89.99999999999999"></line>
+<line class="link" x1="270" x2="213.36881039375368" y1="90" y2="131.14496766047313"></line>
+<line class="link" x1="270" x2="248.36881039375368" y1="90" y2="156.57395614066075"></line>
+<line class="link" x1="270" x2="291.6311896062463" y1="90" y2="156.57395614066075"></line>
+<line class="link" x1="270" x2="326.6311896062463" y1="90" y2="131.14496766047313"></line>
+<line class="link" x1="340" x2="326.6311896062463" y1="90" y2="48.85503233952688"></line>
+<line class="link" x1="326.6311896062463" x2="291.6311896062463" y1="48.85503233952688" y2="23.42604385933926"></line>
+<line class="link" x1="291.6311896062463" x2="248.36881039375368" y1="23.42604385933926" y2="23.426043859339245"></line>
+<line class="link" x1="248.36881039375368" x2="213.36881039375368" y1="23.426043859339245" y2="48.85503233952687"></line>
+<line class="link" x1="213.36881039375368" x2="200" y1="48.85503233952687" y2="89.99999999999999"></line>
+<line class="link" x1="200" x2="213.36881039375368" y1="89.99999999999999" y2="131.14496766047313"></line>
+<line class="link" x1="213.36881039375368" x2="248.36881039375368" y1="131.14496766047313" y2="156.57395614066075"></line>
+<line class="link" x1="248.36881039375368" x2="291.6311896062463" y1="156.57395614066075" y2="156.57395614066075"></line>
+<line class="link" x1="291.6311896062463" x2="326.6311896062463" y1="156.57395614066075" y2="131.14496766047313"></line>
+<line class="link" x1="326.6311896062463" x2="340" y1="131.14496766047313" y2="90"></line>
+</g>
+<g class="nodes">
+<circle class="node" cx="340" cy="90" r="10"></circle>
+<circle class="node" cx="326.6311896062463" cy="48.85503233952688" r="10"></circle>
+<circle class="node" cx="291.6311896062463" cy="23.42604385933926" r="10"></circle>
+<circle class="node" cx="248.36881039375368" cy="23.426043859339245" r="10"></circle>
+<circle class="node" cx="213.36881039375368" cy="48.85503233952687" r="10"></circle>
+<circle class="node" cx="200" cy="89.99999999999999" r="10"></circle>
+<circle class="node" cx="213.36881039375368" cy="131.14496766047313" r="10"></circle>
+<circle class="node" cx="248.36881039375368" cy="156.57395614066075" r="10"></circle>
+<circle class="node" cx="291.6311896062463" cy="156.57395614066075" r="10"></circle>
+<circle class="node" cx="326.6311896062463" cy="131.14496766047313" r="10"></circle>
+<circle class="node" cx="270" cy="90" r="10"></circle>
+</g>
+</g>
+</svg></p>
+<p><em>Two graphs with different measures of clustering.</em></p>
+</div></p>
 </li>
 </ol>
 <hr/>
 <h1>Answers</h1>
-<p>The <em>patterns</em> formed by <em>undirected</em> graphs with three and four nodes can be
-found <a href="https://oeis.org/A000088/a000088a.gif">here</a>.</p>
-<p>The <em>patterns</em> formed by <em>directed</em> graphs with three nodes are
-<a href="http://mathworld.wolfram.com/SimpleDirectedGraph.html">here</a>.</p>
-<p>The <em>number</em> of <em>undirected</em> graphs with <span class="math">\(n\)</span> nodes can be found
-<a href="https://oeis.org/A000088">here</a>.</p>
-<p>The <em>number</em> of <em>directed</em> graphs with <span class="math">\(n\)</span> nodes can be found
-<a href="https://oeis.org/A000273">here</a>.</p>
 <ol>
 <li>
-<p>The patterns formed by three nodes in a directed social network
-   represent all the possible distinct ways that three people can follow
-   each other, without taking into account who follows whom.</p>
+<p>Briefly put, density is a measure of the number of edges present in a
+   network, relative to the maximum possible number of edges.  Transitivity
+   is the concept behind clustering, and indicates the extent to which two
+   nodes that are connected to the same node are connected to each other.
+   Clustering is a way of measuring transitivity, by counting triangles,
+   relative to the maximum possible number of said triangles (either
+   locally, or globally).</p>
 </li>
 <li>
-<p>The occurrence of 4-vertex patterns is less useful for measuring
-   transitivity, as its definition as a measure involves three nodes, not
-   four.  The occurrences of these patterns might or might not be useful in
-   measuring other graph properties.</p>
+<p>If one node has clustering coefficient equal to 1.0, it means that all
+   its neighbors are connected to each other.  If all nodes have clustering
+   coefficient equal to 1.0, it means that all nodes are connected to each
+   other.  This means that the network is a complete graph.</p>
+</li>
+<li>
+<p>It is highly more likely that your college friends know each other than
+   it is for them to know your other acquaintances.  In other words, the
+   relationship "we are friends from college" is more transitive than "we
+   are friends".  Formally speaking, your college friends (and other
+   tightly-knit groups) are expected to be highly more clustered than the
+   total of your friends.</p>
+</li>
+<li>
+<p>The global clustering coefficient and average clustering coefficient for
+   both networks is <span class="math">\(0.5\)</span>, and <span class="math">\(0.5\)</span> for the network on the left, and
+   <span class="math">\(0.626\)</span>, <span class="math">\(0.4\)</span> for the network on the right, respectively.</p>
 </li>
 </ol>
 </div>
@@ -337,8 +448,8 @@ found <a href="https://oeis.org/A000088/a000088a.gif">here</a>.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                    data-disqus-identifier="d2615dde-triangles-describe-network-transitivity"
-                href="http://erdosnet.work/challenges/triangles-and-transitivity.html#disqus_thread",
+                    data-disqus-identifier="9c1d83e4-how-tightlyknit-are-a-nodes-neighbors"
+                href="http://erdosnet.work/challenges/clustering-coeficient.html#disqus_thread",
                 id="disqus-accordion-toggle">
                 Comments
             </a>
@@ -349,8 +460,8 @@ found <a href="https://oeis.org/A000088/a000088a.gif">here</a>.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'erdos';
-        var disqus_identifier = 'd2615dde-triangles-describe-network-transitivity';
-    var disqus_url = 'http://erdosnet.work/challenges/triangles-and-transitivity.html';
+        var disqus_identifier = '9c1d83e4-how-tightlyknit-are-a-nodes-neighbors';
+    var disqus_url = 'http://erdosnet.work/challenges/clustering-coeficient.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

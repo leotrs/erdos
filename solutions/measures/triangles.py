@@ -72,7 +72,7 @@ def triangles():
 
     A = matrix
     A2 = np.dot(A, A)
-    A3 = np.dot(A2, matrix)
+    A3 = np.dot(A2, A)
 
     # the trace is the sum of all diagonal entries in a matrix
     #     trace(A) = ∑ᵢ aᵢᵢ
