@@ -107,7 +107,8 @@ JINJA_FILTERS = {}
 CATEGORIES_POS = {
     'Graphs': 10,
     'Representations': 20,
-    'Measures': 30
+    'Measures': 30,
+    'Random Graphs': 40
 }
 
 

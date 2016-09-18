@@ -7,24 +7,24 @@
     <meta name="author" content="leotrs" />
     <meta name="copyright" content="leotrs" />
 
-    <meta name="description" content="Graphs can be represented by a matrix
+    <meta name="description" content="One of the simplest ways to generate graphs randomly
 " />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary">
 
 
-<meta name="keywords" content=", Representations, " />
+<meta name="keywords" content=", Random Graphs, " />
 
-<meta property="og:title" content="Incidence Matrix "/>
-<meta property="og:url" content="http://erdosnet.work/challenges/incidence-matrix.html" />
-<meta property="og:description" content="Graphs can be represented by a matrix" />
+<meta property="og:title" content="Erdos-Renyi Random Graph "/>
+<meta property="og:url" content="http://erdosnet.work/challenges/erdos-renyi-random-graph.html" />
+<meta property="og:description" content="One of the simplest ways to generate graphs randomly" />
 <meta property="og:site_name" content="erdos" />
 <meta property="og:article:author" content="leotrs" />
-<meta property="og:article:published_time" content="2016-07-17T00:00:00-04:00" />
-<meta name="twitter:title" content="Incidence Matrix ">
-<meta name="twitter:description" content="Graphs can be represented by a matrix">
+<meta property="og:article:published_time" content="2016-09-17T00:00:00-04:00" />
+<meta name="twitter:title" content="Erdos-Renyi Random Graph ">
+<meta name="twitter:description" content="One of the simplest ways to generate graphs randomly">
 
-    <title>Incidence Matrix  · erdos
+    <title>Erdos-Renyi Random Graph  · erdos
 </title>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -67,7 +67,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://erdosnet.work/challenges/incidence-matrix.html"> Incidence Matrix  </a></h1>
+    <h1><a href="http://erdosnet.work/challenges/erdos-renyi-random-graph.html"> Erdos-Renyi Random Graph  </a></h1>
     </header>
 </div>
 
@@ -99,12 +99,12 @@
         Representations<span>3</span>
       </a>
     </div>
-    <div id="representations-ref" class="accordion-body collapse in">
+    <div id="representations-ref" class="accordion-body collapse">
       <div class="accordion-inner">
         <ul class="list-articles-category">
           <li><a href="http://erdosnet.work/challenges/adjacency-lists.html">Adjacency Lists</a></li>
           <li><a href="http://erdosnet.work/challenges/adjacency-matrix.html">Adjacency Matrix</a></li>
-          <li class="active" ><a href="http://erdosnet.work/challenges/incidence-matrix.html">Incidence Matrix</a></li>
+          <li><a href="http://erdosnet.work/challenges/incidence-matrix.html">Incidence Matrix</a></li>
         </ul>
       </div>
     </div>
@@ -131,10 +131,10 @@
         Random Graphs<span>1</span>
       </a>
     </div>
-    <div id="random-graphs-ref" class="accordion-body collapse">
+    <div id="random-graphs-ref" class="accordion-body collapse in">
       <div class="accordion-inner">
         <ul class="list-articles-category">
-          <li><a href="http://erdosnet.work/challenges/erdos-renyi-random-graph.html">Erdos-Renyi Random Graph</a></li>
+          <li class="active" ><a href="http://erdosnet.work/challenges/erdos-renyi-random-graph.html">Erdos-Renyi Random Graph</a></li>
         </ul>
       </div>
     </div>
@@ -150,174 +150,128 @@
       <div class="tab-content">
         <div class="tab-pane fade in active" id="erdos-context">
 <h1>Context</h1>
-<p>The incidence matrix is another matrix representation of a graph. It stores
-the same information as other representations, but in a different way.</p>
-<div class="img-desc">
-<p><svg class="chart" height="220" width="220">
-<g class="links">
-<g>
-<line class="link" x1="126.7712154149886" x2="57.86353017672007" y1="61.55281962015166" y2="100.38380508279546"></line>
-<text class="edge-label" x="92.31737279585434" y="80.96831235147356">0</text>
-</g>
-<g>
-<line class="link" x1="126.7712154149886" x2="25.966465995892243" y1="61.55281962015166" y2="14.08247581709249"></line>
-<text class="edge-label" x="76.36884070544042" y="37.81764771862208">1</text>
-</g>
-<g>
-<line class="link" x1="126.7712154149886" x2="188.63654884921303" y1="61.55281962015166" y2="107.45748940256993"></line>
-<text class="edge-label" x="157.70388213210083" y="84.5051545113608">2</text>
-</g>
-<g>
-<line class="link" x1="57.86353017672007" x2="25.966465995892243" y1="100.38380508279546" y2="14.08247581709249"></line>
-<text class="edge-label" x="41.914998086306156" y="57.233140449943974">3</text>
-</g>
-</g>
-<g class="nodes">
-<g transform="translate(126.7712154149886,61.55281962015166)">
-<circle class="node" r="10"></circle>
-<text class="node-label" dy=".35em" x="12">0</text>
-</g>
-<g transform="translate(57.86353017672007,100.38380508279546)">
-<circle class="node" r="10"></circle>
-<text class="node-label" dy=".35em" x="12">1</text>
-</g>
-<g transform="translate(25.966465995892243,14.08247581709249)">
-<circle class="node" r="10"></circle>
-<text class="node-label" dy=".35em" x="12">2</text>
-</g>
-<g transform="translate(188.63654884921303,107.45748940256993)">
-<circle class="node" r="10"></circle>
-<text class="node-label" dy=".35em" x="12">3</text>
-</g>
-</g>
-</svg></p>
-<p><em>Exampld graph.</em></p>
-</div>
-<p>To construct the incidence matrix of the example graph, we first need to
-order its edges, not just the nodes. The matrix will have one row for each
-node, and one column for each edge.</p>
-<p>
-<div class="math">$$\begin {pmatrix}0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \end{pmatrix}$$</div>
-</p>
-<p>Now, for each edge, going through them in order, we need to write down
-which nodes it is <em>incident</em> to.</p><a name="incident-edge"></a>
+<p>To perform any kind of research, it is always a good idea to keep some
+simple models at hand.  These simple models can deviate from real-life
+data, but their utility comes from the fact that they are tractable and
+easy to understand.  They are also useful as statistical null-models,
+against which to test our hypotheses.</p>
+<p>In Network Science, when we uncover some property of a network and we want
+to test whether or not this property truly comes from the topology of the
+graph, and did not appear purely at random, we compare our network to a
+random sample of networks.  If the networks generated at random also have
+the property, then it's likely that our network also has it by chance, and
+not as the product of its structure.  This is why we need to generate
+random graphs.</p><a name="random-graph"></a>
 <dl>
-<dt>Incident Edge<a href="#incident-edge"></a></dt>
-<dd>An edge is <strong>incident</strong> to a node if the node is at one of the edge's
-endpoints.</dd>
+<dt>Random Graph</dt>
+<dd>A <strong>random graph</strong> is a graph that was generated by some stochastic
+process.  In Mathematics, the term <strong>random graph</strong> is also used to refer
+to the ensemble of all such graphs that <em>could possibly</em> be generated by a
+random process.  That is, the process itself embodies the <em>random graph</em>,
+instead of just one realization of such process.</dd>
 </dl>
-<p>Starting from the first edge, we see it's incident to nodes <code>0</code> and <code>1</code>, so
-we write it like so</p>
-<p>
-<div class="math">$$\begin {pmatrix}1  &amp;0  &amp;0  &amp;0  &amp;0 \\ 1  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \end{pmatrix}$$</div>
-</p>
-<p>Edge number <code>1</code> is incident to nodes <code>0</code> and <code>3</code>:</p>
-<p>
-<div class="math">$$\begin {pmatrix}1  &amp;1  &amp;0  &amp;0  &amp;0 \\ 1  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;0  &amp;0  &amp;0  &amp;0 \\ 0  &amp;1  &amp;0  &amp;0  &amp;0 \end{pmatrix}$$</div>
-</p>
-<p>We continue in the same fashion until all edges have been accounted for.</p>
-<p>
-<div class="math">$$\begin{pmatrix} 1  &amp;1  &amp;0  &amp;0  &amp;0 \\ 1  &amp;0  &amp;1  &amp;1  &amp;0 \\ 0  &amp;0  &amp;1  &amp;0  &amp;1 \\ 0  &amp;1  &amp;0  &amp;1  &amp;1 \end{pmatrix}$$</div>
-</p>
-<p>This is the incidence matrix of our graph.</p><a name="incidence-matrix"></a>
+<p>One of the simplest ways to generate a random graph is to start with a
+fixed amount of nodes, <span class="math">\(n\)</span>.  Then, we generate the edges at random, one by
+one, for example, by tossing a coin.  Heads, we put down the link, tails,
+we don't.  In this way, we perform a random procedure for each edge, and
+the end result is a graph generated at random.</p>
+<p>Now, to have more control over the kind of graph that is generated, instead
+of tossing a coin, we can choose any other random process.  In this case,
+we will focus on the process of drawing a number from <span class="math">\(0\)</span> to <span class="math">\(1\)</span>.  If the
+number is less than a predefined value of <span class="math">\(p\)</span>, we add the edge to the
+network.  The graphs generated by such a process are the most common random
+graphs in Network Science, and are called the Erdos-Renyi random graph,
+after the mathematicians who studied them.</p><a name="erdos-renyi-random-graph"></a>
 <dl>
-<dt>Incidence Matrix<a href="#adjacency-matrix"></a></dt>
-<dd>The <strong>incidence matrix</strong> of a graph with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges is an
-<span class="math">\(n \times m\)</span> matrix whose rows represent nodes and whose columns represent
-edges. The entry in the <span class="math">\(i\)</span>-th row and <span class="math">\(j\)</span>-th column indicates whether edge
-<code>j</code> is incident to node <code>i</code>.</dd>
+<dt>Erdos-Renyi Random Graph</dt>
+<dd>The <strong>Erdos-Renyi Random Graph</strong> refers to the process of fixing the
+number of nodes <span class="math">\(n\)</span> and the individual edge probability, <span class="math">\(p\)</span>, and drawing
+one edge at a time, with probability <span class="math">\(p\)</span>.  Because it depends on two
+parameters, it is sometimes denoted <span class="math">\(G(n, p)\)</span>.  This random graph model is
+so common in Network Science that it is often referred to as just <strong>random
+graph</strong>.</dd>
 </dl>
 </div>
 <!-- erdos-context -->
 <div class="tab-pane fade" id="erdos-challenge">
 <h1>Challenge</h1>
-<p>To solve this challenge, you will need to read a file in adjacency list
-form, and output its incidence matrix.</p>
-<p>The input will be a file where the first line contains just one integer,
-<span class="math">\(n\)</span>, the number of nodes in the graph. Each of the following <span class="math">\(n\)</span> lines
-holds a list of space-separated integers, representing the adjacencies of
-every node. As before, assume that nodes are labeled from <code>0</code> to <code>n-1</code>. The
-lines are in ascending order of node label, e.g., the first line of the
-output contains the adjacencies of node <code>0</code>, the second line contains the
-adjacencies of node <code>1</code>, etc.</p>
-<p>Output the incidence matrix of the graph.</p>
+<p>This time, we will generate our own Erdos-Renyi random graphs.</p>
+<p>The input is a file with one line, containing two numbers, <span class="math">\(n\)</span> and <span class="math">\(p\)</span>, the
+number of nodes and the individual edge probabilities.  Write a function
+that generates a random graph.</p>
+<p>The output will be one realization of the Erdos-Renyi process.  You can
+choose to show it as a picture using the visualization framework of your
+choice (we recommend NetworkX for python), or just printing the adjacency
+matrix.</p>
 <h3>Sample Input</h3>
-<div class="highlight"><pre><span></span>4
-1 3
-0 2 3
-1 3
-0 1 2
+<div class="highlight"><pre><span></span>100 0.15
 </pre></div>
-<h3>Sample Output</h3>
-<div class="highlight"><pre><span></span>1 1 0 0 0
-1 0 1 1 0
-0 0 1 0 1
-0 1 0 1 1
-</pre></div>
+<p>The output is your choice of visualization for a network.</p>
 <hr/>
 <h1>Solution</h1>
 <p>The solution to this challenge is hosted on
-<a href="https://github.com/leotrs/erdos/blob/master/solutions/reprs/incmatrix.py">Github</a>.</p>
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/random/erdos.py">Github</a>.</p>
 </div>
 <!-- erdos-challenge -->
 <div class="tab-pane fade" id="erdos-questions">
 <h1>Expansion Questions</h1>
+<p>The following questions require knowledge of elementary probability.
+Formulas should be expressed in terms of parameteres <span class="math">\(n\)</span> and <span class="math">\(p\)</span>, where
+appropriate.</p>
+<p>In a Erdos-Renyi graph,</p>
 <ol>
 <li>
-<p>For a network with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges, how many <span class="math">\(1\)</span>s will the
-   incidence matrix have?</p>
+<p>what is the expected number of edges?</p>
 </li>
 <li>
-<p>Compare the memory usage of adjacency lists, adjacency matrix and
-   incidence matrix for a given network with <span class="math">\(n\)</span> nodes and <span class="math">\(m\)</span> edges.</p>
+<p>what is the expected degree of a node?</p>
 </li>
 <li>
-<p>Compute the incidence matrix for the example graph, but whose edges are
-   labeled in a different order. How are these two matrices related?</p>
-</li>
-<li>
-<p>Can you build the incidence matrix for a directed graph following the
-   same procedure as in this challenge? Why or why not?</p>
+<p>what is the expected clustering coefficient?</p>
 </li>
 </ol>
 <hr/>
 <h1>Answers</h1>
 <ol>
 <li>
-<p>There will be <span class="math">\(m\)</span> columns in the incidence matrix, one for each edge,
-   and two <span class="math">\(1\)</span>s in each column, for a total of <span class="math">\(2m\)</span>.</p>
+<p>Since each edge follows a Bernoulli distribution with paramter <span class="math">\(p\)</span>, then
+   the total number of edges, <span class="math">\(m\)</span>, follows a Binomial distribution <span class="math">\(m
+   \sim Bin(\frac{n (n-1)}{2}, p)\)</span>.  Thus, the expected value of <span class="math">\(m\)</span> is
+   <span class="math">\(\frac{n (n-1)}{2} p\)</span>.</p>
 </li>
 <li>
-<p>The adjacency list representation needs <span class="math">\(n\)</span> lists, each of length equal
-   to the degree of the node.  In total, we are using <span class="math">\(\sum_{u \in G}
-   deg(u) = 2m\)</span> slots.  Each slot in the adjacency lists holds a label of
-   one node, so the memory usage is <span class="math">\(2m \times L\)</span>, where <span class="math">\(L\)</span> is the amount
-   of space that a node label takes.</p>
-<p>Adjacency matrices are of size <span class="math">\(n \times n\)</span> and they hold a single
-number in each entry, for a total memory usage of <span class="math">\(n^2 \times N\)</span>, where
-<span class="math">\(N\)</span> is the memory usage of a single number.</p>
-<p>Incidence matrices take <span class="math">\(m \times n \times N\)</span>.</p>
-<p>The choice of representation will depend on the nature of node labels
-(they can be single numbers, in which case <span class="math">\(L\)</span> = <span class="math">\(N\)</span>, or strings of
-characters, in which case their size will depend on their length), and
-on the graph being sparse or dense.  However, sometimes representations
-are chosen because of how easy it is to manipulate them, not their
-memory usage.</p>
-<p>Another representation that will be covered later is the sparse array,
-which saves much memory compared to these ones, specifically for
-sparse graphs.</p>
+<p>Similarly, the degree of a node will be distributed as <span class="math">\(Bin(n - 1, p)\)</span>,
+   with expected value <span class="math">\((n - 1) p\)</span>.</p>
 </li>
 <li>
-<p>Since the nodes have the same labels, the rows of the new matrix will be
-   in the same order.  However, the columns will represent the same edges
-   but in a different order, ultimately yielding the same matrix but with
-   permuted columns.</p>
-</li>
-<li>
-<p>Incidence matrices as we have built them don't carry information
-   regarding the direction of edges, since in directed graphs there isn't
-   such a thing.  For directed graphs, we could write a <span class="math">\(-1\)</span> for the source
-   node and <span class="math">\(+1\)</span> for the target node of each edge.</p>
+<p>The clustering coefficient of node <code>i</code> is equal to the number of edges
+   between its neighbors, which we call <span class="math">\(m_i\)</span>, divided by the total number
+   of possible edges between them.  Thus, if <span class="math">\(k_i\)</span> is <code>i</code>'s degree, we
+   have</p>
+<p>
+<div class="math">$$
+k_i \sim Bin(n-1, p) \\
+m_i \mid _{k_i} \sim Bin(\frac{k_i (k_i - 1)}{2}, p) \\
+c_i = \frac{2 m_i}{k_i (k_i - 1)}
+$$</div>
+</p>
+<p>Now, we can compute the conditional expectation of the clustering
+coefficient given the degree,</p>
+<p>
+<div class="math">$$\begin{align*}
+\mathbf{E}[c_i \mid k_i] &amp;= \sum_d \mathbf{E}[\frac{2 m_i}{d (d - 1)} \mid k_i = d] \mathbf{P}(k_i = d) \\
+                    &amp;= \sum_d \frac{2}{d (d - 1)} \mathbf{E}[m_i \mid k_i = d] \mathbf{P}(k_i = d) \\
+                    &amp;= p \sum_d \mathbf{P}(k_i = d) \\
+                    &amp;= p \\
+\end{align*}
+$$</div>
+</p>
+<p>Where we have used the fact that the expected value of a <span class="math">\(Bin(\frac{d
+(d - 1)}{2}, p)\)</span> random variable is <span class="math">\(p \frac{d (d - 1)}{2}\)</span>.</p>
+<p>We finish by observing that</p>
+<p>
+<div class="math">$$ \mathbf{E}[c_i] = \mathbf{E}[\mathbf{E}[c_i \mid k_i]] = p. $$</div>
+</p>
 </li>
 </ol>
 </div>
@@ -385,8 +339,8 @@ sparse graphs.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                    data-disqus-identifier="d7c72056-graphs-can-be-represented-by-a-matrix"
-                href="http://erdosnet.work/challenges/incidence-matrix.html#disqus_thread",
+                    data-disqus-identifier="87fade33-one-of-the-simplest-ways-to-generate-graphs-randomly"
+                href="http://erdosnet.work/challenges/erdos-renyi-random-graph.html#disqus_thread",
                 id="disqus-accordion-toggle">
                 Comments
             </a>
@@ -397,8 +351,8 @@ sparse graphs.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'erdos';
-        var disqus_identifier = 'd7c72056-graphs-can-be-represented-by-a-matrix';
-    var disqus_url = 'http://erdosnet.work/challenges/incidence-matrix.html';
+        var disqus_identifier = '87fade33-one-of-the-simplest-ways-to-generate-graphs-randomly';
+    var disqus_url = 'http://erdosnet.work/challenges/erdos-renyi-random-graph.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
