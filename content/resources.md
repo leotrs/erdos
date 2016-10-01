@@ -33,6 +33,7 @@ Summary: Online and print resources on NetSci
   [Princeton University Press](http://press.princeton.edu/titles/8767.html)
 
 ## Software
+* Gephi. [link](https://gephi.org/)
 * Network Workbench. [NWB Team](http://nwb.cns.iu.edu/)
 * Graphviz. [link](http://www.graphviz.org/)
 * NetworkX. [link](https://networkx.github.io/)
