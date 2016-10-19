@@ -7,24 +7,24 @@
     <meta name="author" content="leotrs" />
     <meta name="copyright" content="leotrs" />
 
-    <meta name="description" content="Components are the &#34;separate&#34; parts of a graph.
+    <meta name="description" content="Average path length and diameter.
 " />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary">
 
 
-<meta name="keywords" content=", Graphs, " />
+<meta name="keywords" content=", Measures, " />
 
-<meta property="og:title" content="Paths and Components "/>
-<meta property="og:url" content="http://erdosnet.work/challenges/paths-and-components.html" />
-<meta property="og:description" content="Components are the &#34;separate&#34; parts of a graph." />
+<meta property="og:title" content="Path Lengths "/>
+<meta property="og:url" content="http://erdosnet.work/challenges/path-lengths.html" />
+<meta property="og:description" content="Average path length and diameter." />
 <meta property="og:site_name" content="erdos" />
 <meta property="og:article:author" content="leotrs" />
-<meta property="og:article:published_time" content="2016-07-25T00:00:00-04:00" />
-<meta name="twitter:title" content="Paths and Components ">
-<meta name="twitter:description" content="Components are the &#34;separate&#34; parts of a graph.">
+<meta property="og:article:published_time" content="2016-10-19T00:00:00-04:00" />
+<meta name="twitter:title" content="Path Lengths ">
+<meta name="twitter:description" content="Average path length and diameter.">
 
-    <title>Paths and Components  · erdos
+    <title>Path Lengths  · erdos
 </title>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -67,7 +67,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://erdosnet.work/challenges/paths-and-components.html"> Paths and Components  </a></h1>
+    <h1><a href="http://erdosnet.work/challenges/path-lengths.html"> Path Lengths  </a></h1>
     </header>
 </div>
 
@@ -80,14 +80,14 @@
         Graphs<span>6</span>
       </a>
     </div>
-    <div id="graphs-ref" class="accordion-body collapse in">
+    <div id="graphs-ref" class="accordion-body collapse">
       <div class="accordion-inner">
         <ul class="list-articles-category">
           <li><a href="http://erdosnet.work/challenges/nodes-and-edges.html">Nodes and Edges</a></li>
           <li><a href="http://erdosnet.work/challenges/directed-graphs.html">Directed Graphs</a></li>
           <li><a href="http://erdosnet.work/challenges/weighted-graphs.html">Weighted Graphs</a></li>
           <li><a href="http://erdosnet.work/challenges/simple-graphs.html">Simple Graphs</a></li>
-          <li class="active" ><a href="http://erdosnet.work/challenges/paths-and-components.html">Paths and Components</a></li>
+          <li><a href="http://erdosnet.work/challenges/paths-and-components.html">Paths and Components</a></li>
           <li><a href="http://erdosnet.work/challenges/graph-density.html">Graph Density</a></li>
         </ul>
       </div>
@@ -115,13 +115,13 @@
         Measures<span>4</span>
       </a>
     </div>
-    <div id="measures-ref" class="accordion-body collapse">
+    <div id="measures-ref" class="accordion-body collapse in">
       <div class="accordion-inner">
         <ul class="list-articles-category">
           <li><a href="http://erdosnet.work/challenges/graph-measures.html">Graph Measures</a></li>
           <li><a href="http://erdosnet.work/challenges/triangles-and-transitivity.html">Triangles and Transitivity</a></li>
           <li><a href="http://erdosnet.work/challenges/clustering-coeficient.html">Clustering Coeficient</a></li>
-          <li><a href="http://erdosnet.work/challenges/path-lengths.html">Path Lengths</a></li>
+          <li class="active" ><a href="http://erdosnet.work/challenges/path-lengths.html">Path Lengths</a></li>
         </ul>
       </div>
     </div>
@@ -152,159 +152,81 @@
       <div class="tab-content">
         <div class="tab-pane fade in active" id="erdos-context">
 <h1>Context</h1>
-<p>Networks come in all shapes and sizes, presenting many different properties
-and structures. We've already seen how the degree describes the importance
-of nodes, and how density quantifies the sparseness of a graph. These two
-indicators are calculated from the most basic elements of a graph: its
-nodes and edges.</p>
-<p>However, there are many other elements that we can identify which are also
-of interest when trying to describe a network.</p><a name="walk"></a><a name="cycle"></a><a name="path"></a><a name="connected-component"></a>
+<p>An important way to describe networks is by how far apart its nodes are.
+Consider an airport network, where each node is an airport and two nodes
+are joined if there is a civilian plane route going from one to the other.
+In this network, it's easy to say how separate two nodes are, because they
+are geographically determined, and we can just measure the distance between
+them.</p>
+<p>But what happens if we're looking at a social network?  Is the distance
+between two nodes the physical distance between the two people they
+represent?  And what happens if the people travel and meet?</p>
+<p>To generalize the notion of distance to networks where physical distances
+don't seem to be the right choice, we introduce a distance concept
+intrinsic to graphs.</p><a name="distance"></a><a name="average-path-length"></a><a name="diameter"></a>
 <dl>
-<dt>Walk</dt>
-<dd>A <strong>walk</strong> is an ordered sequence of nodes <code>(u₁, u₂, ..., uₙ)</code> where
-every consecutive pair of nodes are adjacent.  That is, each can be reached
-from the previous one by following an edge in the graph.</dd>
-<dt>Cycle</dt>
-<dd>A <strong>cycle</strong> is a walk whose starting and ending nodes are the same.  It
-is also called a <strong>closed walk</strong>.</dd>
-<dt>Path</dt>
-<dd>A <strong>path</strong> is a walk in which every node is unique.  This means the walk
-does not loop around into itself: it does not self-cross.  If there exists
-a path from <code>u</code> to <code>v</code>, we say <code>u</code> and <code>v</code> are <strong>connected</strong>.</dd>
-<dt>Connected Component</dt>
-<dd>A <strong>connected component</strong>, or simply <strong>component</strong>, is a set of nodes in
-which any two are connected by a path. A graph that only has one component
-is called <strong>connected graph</strong></dd>
+<dt>Distance</dt>
+<dd>In graph-theoretical terms, the <strong>distance</strong> between two nodes is the
+length of the shortest path joining them.  If there is no such path, the
+distance is <span class="math">\(\infty\)</span>.  The distance from a node to itself is zero.</dd>
+<dt>Average Path Length</dt>
+<dd>The <strong>average path length</strong> is the average distance between every pair of
+nodes in a graph.</dd>
+<dt>Diameter</dt>
+<dd>The <strong>diameter</strong> of a graph is the maximum distance between any pair of
+nodes.</dd>
 </dl>
-<div class="img-desc">
-<p><svg class="chart" height="220" width="220">
-<g id="graph">
-<g class="links">
-<line class="link" x1="190" x2="166.5685424949238" y1="110" y2="53.4314575050762"></line>
-<line class="link" x1="190" x2="110" y1="110" y2="30"></line>
-<line class="link" x1="166.5685424949238" x2="110" y1="53.4314575050762" y2="30"></line>
-<line class="link" x1="53.4314575050762" x2="30" y1="53.431457505076196" y2="109.99999999999999"></line>
-<line class="link" x1="53.4314575050762" x2="109.99999999999999" y1="53.431457505076196" y2="190"></line>
-<line class="link" x1="30" x2="53.43145750507618" y1="109.99999999999999" y2="166.5685424949238"></line>
-<line class="link" x1="30" x2="109.99999999999999" y1="109.99999999999999" y2="190"></line>
-</g>
-<g class="nodes">
-<circle class="node" cx="190" cy="110" r="10"></circle>
-<circle class="node" cx="166.5685424949238" cy="53.4314575050762" r="10"></circle>
-<circle class="node" cx="110" cy="30" r="10"></circle>
-<circle class="node" cx="53.4314575050762" cy="53.431457505076196" r="10"></circle>
-<circle class="node" cx="30" cy="109.99999999999999" r="10"></circle>
-<circle class="node" cx="53.43145750507618" cy="166.5685424949238" r="10"></circle>
-<circle class="node" cx="109.99999999999999" cy="190" r="10"></circle>
-<circle class="node" cx="166.5685424949238" cy="166.5685424949238" r="10"></circle>
-</g>
-</g>
-</svg></p>
-<p><em>A graph with three components. Note a sole node counts as one more component.</em></p>
-</div>
 </div>
 <!-- erdos-context -->
 <div class="tab-pane fade" id="erdos-challenge">
 <h1>Challenge</h1>
-<p>In this challenge, you are asked to compute the number of components in a
-graph.</p>
-<p>The input is a file where the first line contains two integers, <span class="math">\(n\)</span> and
-<span class="math">\(m\)</span>, defining the number of nodes and edges, respectively. The next <span class="math">\(m\)</span>
-lines each contain two integers, representing two nodes that are joined by
-an edge. Assume undirected edges.</p>
-<p>Print out the number of connected components in the graph.</p>
+<p>This time, you need to compute the average path length and the diameter of
+the graph.</p>
+<p>The input is a file which contains one line with two integers <span class="math">\(n\)</span>, the
+number of nodes in the network.  The following <span class="math">\(n\)</span> lines each contain one
+the adjacency list of the <span class="math">\(i\)</span>-th node, where each entry is separated by a
+space.  Assume the nodes are 0-indexed.</p>
+<p>As output, write two numbers, the average path length and the diameter of
+the network.  Output both as floats to three decimal places.</p>
 <h3>Sample Input</h3>
-<div class="highlight"><pre><span></span>8 7
-0 1
-1 2
-0 2
-3 4
-4 6
-4 5
-6 3
+<div class="highlight"><pre><span></span>6
+1 3 5
+0 2 3
+0 1 3 5
+1 2 4
+2 3 5
+0 2 4
 </pre></div>
 <h3>Sample Output</h3>
-<div class="highlight"><pre><span></span>3
+<div class="highlight"><pre><span></span>1.400 2.000
 </pre></div>
 <hr/>
 <h1>Solution</h1>
 <p>The solution to this challenge is hosted on
-<a href="https://github.com/leotrs/erdos/blob/master/solutions/graphs/paths.py">Github</a>.</p>
+<a href="https://github.com/leotrs/erdos/blob/master/solutions/measures/path_length.py">Github</a>.</p>
 </div>
 <!-- erdos-challenge -->
 <div class="tab-pane fade" id="erdos-questions">
 <h1>Expansion Questions</h1>
 <ol>
 <li>
-<p>In directed graphs, it is necessary to distinguish between nodes <code>u</code> and
-   <code>v</code> being <em>connected</em>, and <code>v</code> being <em>reachable</em> from <code>u</code> and vice
-   versa. Discuss why this is necessary and how this distinction affects
-   the number of components in a directed graph.</p>
+<p>Find the maximum possible distance between a pair of nodes in an
+   undirected, connected graph.</p>
 </li>
 <li>
-<p>Consider the network of the World Wide Web. In this network, a node
-   represents one website, and nodes <code>u</code> and <code>v</code> are joined by a <em>directed</em>
-   edge from <code>u</code> to <code>v</code> if the former contains a link to the latter.</p>
-<ul>
-<li>For this network, estimate the number of nodes and edges.</li>
-<li>Imagine you are writing a new search engine for the WWW. Your
-  objective is to index (catalogue) every website online. Given enough
-  resources, can you achieve this goal? Discuss in terms of connected
-  components, as well as the possibility of there being nodes with no
-  incoming or outgoing edges (websites with no incoming or outgoing
-  links).</li>
-</ul>
+<p>Generalize the definition of distance to directed and weighted networks.</p>
+</li>
+<li>
+<p>What do you expect the average path length and the diameter to be in a
+   global social network like Facebook?</p>
 </li>
 </ol>
 <hr/>
 <h1>Answers</h1>
 <ol>
-<li>
-<p>In an undirected graph, if node <code>u</code> is reachable from <code>v</code>, then <code>v</code> is
-   also reachable from <code>u</code>, because every edge can be traversed in both
-   directions.  However, in a directed graph, since edges have an
-   orientation and can only be traversed in one direction, we need to
-   modify our definition of path and connected component.</p><a name="directed-path"></a><a name="strongly-connected-component"></a>
-<dl>
-<dt>Directed Path</dt>
-<dd>A <strong>directed path</strong> is an ordered set of nodes <code>(u₁, u₂, ..., uₙ)</code> in
-which every consecutive pair <code>uᵢ</code>, <code>uᵢ₊₁</code> are such that there is an
-edge <em>from</em> <code>uᵢ</code> <em>to</em> <code>uᵢ₊₁</code>. If there is a directed path from <code>u</code> to
-<code>v</code>, we say <code>v</code> is <strong>reachable</strong> from <code>u</code>.</dd>
-<dt>Strongly Connected Component</dt>
-<dd>In a directed graph, a <strong>strongly connected component</strong> is a subset
-of nodes in which every node is reachable from all the others.</dd>
-</dl>
-</li>
-<li>
-<p>Estimating the size of the WWW is not a simple task.  Different
-   sources<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup> agree that there are billions of webpages and tens
-   if not hundreds of billions of hyperlinks, but the exact number seems
-   elusive.  Why is it so hard?  Part of it is because the size is so large
-   that the time and space it takes to go through the whole graph are
-   massive, and we require complex indexing<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup> algorithms to do it
-   correctly.  Another problem is one that arises from the structure of the
-   strongly connected components of the WWW graph.  Consider a website
-   called "my-site" that contains links to different outside domains, but
-   no website links directly to "my-site".  This means that if we start at
-   an arbitrary website (say, google.com) and try to <em>crawl</em> to all others,
-   indexing them as we see them, we are never going to reach "my-site".  In
-   other words, "my-site" doesn't belong to the strongly connected
-   component of websites that includes google.com.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup></p>
-<p>In fact, there's a popular term for websites that aren't indexed by
-search engines: the <em>deep web</em><sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">6</a></sup>.  Contrary to popular belief, not
-all websites in the deep web are related to criminal or otherwise
-nefarious activities.  It's just a name for the websites that haven't
-yet been reached by search engines. (A related but different term is
-<em>dark net</em>, more closely related to illegal activities.)</p>
-<p>With such complicated structure, we need a useful way of visualizing
-the structure of this graph.  One such way is by using a <em>bow tie</em>
-diagram.  By using algorithms to crawl path of the WWW and determine
-its components, websites can be arranged in such a way that the overall
-structure resembles a bow
-tie. <a href="http://www.nature.com/nature/journal/v405/n6783/fig_tab/405113a0_F1.html">Here</a>
-is an example.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">7</a></sup></p>
-</li>
+<li>Make sure these are actually questions,</li>
+<li>Or at the very least, explain exactly</li>
+<li>What it is to be discussed</li>
 </ol>
 </div>
 <!-- erdos-solutions -->
@@ -313,27 +235,13 @@ is an example.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footno
 <hr/>
 <ol>
 <li id="fn:1">
-<p><a href="http://www.dailymail.co.uk/sciencetech/article-2759636/Number-websites-hits-BILLION-counting-Tracker-reveals-new-site-registered-SECOND.html">Number of websites hits a BILLION</a>. <a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
+<p><a href="">footnote 1</a> <a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p><a href="http://webdatacommons.org/hyperlinkgraph/">Hyperlink Graphs</a>. <a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">↩</a></p>
+<p><a href="">footnote 2</a> <a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:3">
-<p><a href="https://en.wikipedia.org/wiki/World_Wide_Web#Statistics">Wikipedia: World Wide Web - Statistics</a>. <a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">↩</a></p>
-</li>
-<li id="fn:4">
-<p><a href="https://www.google.com/insidesearch/howsearchworks/crawling-indexing.html">Google: Crawling and Indexing</a>. <a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">↩</a></p>
-</li>
-<li id="fn:5">
-<p>We are assuming the only way to index a website is by navigating to
-it from another one. This is not entirely true, but we have simplified the
-indexing process for illustration purposes. <a class="footnote-backref" href="#fnref:5" rev="footnote" title="Jump back to footnote 5 in the text">↩</a></p>
-</li>
-<li id="fn:6">
-<p><a href="https://en.wikipedia.org/wiki/Deep_web">Deep Web</a>. <a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text">↩</a></p>
-</li>
-<li id="fn:7">
-<p><a href="http://www.nature.com/nature/journal/v405/n6783/full/405113a0.html">The web is a bow tie</a>. <a class="footnote-backref" href="#fnref:7" rev="footnote" title="Jump back to footnote 7 in the text">↩</a></p>
+<p><a href="">footnote 3</a> <a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -402,8 +310,8 @@ indexing process for illustration purposes. <a class="footnote-backref" href="#
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                    data-disqus-identifier="fe6f0ebd-components-are-the-separate-parts-of-a-graph"
-                href="http://erdosnet.work/challenges/paths-and-components.html#disqus_thread",
+                    data-disqus-identifier="d3d41ed8-average-path-length-and-diameter"
+                href="http://erdosnet.work/challenges/path-lengths.html#disqus_thread",
                 id="disqus-accordion-toggle">
                 Comments
             </a>
@@ -414,8 +322,8 @@ indexing process for illustration purposes. <a class="footnote-backref" href="#
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'erdos';
-        var disqus_identifier = 'fe6f0ebd-components-are-the-separate-parts-of-a-graph';
-    var disqus_url = 'http://erdosnet.work/challenges/paths-and-components.html';
+        var disqus_identifier = 'd3d41ed8-average-path-length-and-diameter';
+    var disqus_url = 'http://erdosnet.work/challenges/path-lengths.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
