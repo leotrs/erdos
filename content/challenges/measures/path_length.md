@@ -94,14 +94,8 @@ The solution to this challenge is hosted on
 {% include "answers_header.md" %}
 
 
-1. Make sure these are actually questions,
-2. Or at the very least, explain exactly
-3. What it is to be discussed
-
-
-{% include 'footnote_header.md' %}
-
-
-[^1]: [footnote 1]()
-[^2]: [footnote 2]()
-[^3]: [footnote 3]()
+1. Consider a connected graph with $n$ nodes.  The longest possible path
+   between a pair of nodes in this graph has to go through every node
+   exactly once.  It can't loop back around because in that case there
+   would be a way of choosing a shorter path with no loops.  Thus, the
+   maximum diameter of a connected network is $n-1$.
