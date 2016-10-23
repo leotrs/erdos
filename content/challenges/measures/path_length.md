@@ -99,3 +99,35 @@ The solution to this challenge is hosted on
    exactly once.  It can't loop back around because in that case there
    would be a way of choosing a shorter path with no loops.  Thus, the
    maximum diameter of a connected network is $n-1$.
+
+2. The definition for directed networks is the same as for undirected
+   networks, except one must be mindful of the direction of the each link
+   in the path.  For weighted networks, the distance between two nodes
+   depends on the meaning of the weights.  If the weights represent a
+   distance concept (e.g. in road networks where weights is physical
+   distance from one place to another), then the shortest path between two
+   nodes will be the least-weighted path.  On the contrary, if the weights
+   represent a closeness concept (e.g. in social networks where we may join
+   two users with a stronger weight the more frequently they interact),
+   then the shortest path between two nodes will be the highest weighted
+   path, because it represents the volume or frequency of interaction,
+   which we can take as a proxy for "closeness".
+
+3. Due to the Six Degrees of Separation[^1] experiment, we know that
+   average path lengths are considerably less than one would expect in
+   networks that exhibit the small-world[^2] phenomenon.  The folks at
+   Facebook know this, and so they repeated Milgram's experiment[^3]
+   recently, discovering a surprising three and a half degrees of
+   separation[^4].
+
+
+
+{% include 'footnote_header.md' %}
+
+[^1]: [Six Degrees of Separation](https://en.wikipedia.org/wiki/Six_degrees_of_separation)
+
+[^2]: [Small-world Network](https://en.wikipedia.org/wiki/Small-world_network)
+
+[^3]: [Milgram's small-world experiment](https://en.wikipedia.org/wiki/Small-world_experiment)
+
+[^4]: [Three and a half degrees of separation](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/)

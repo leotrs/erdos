@@ -224,12 +224,56 @@ the network.  Output both as floats to three decimal places.</p>
 <hr/>
 <h1>Answers</h1>
 <ol>
-<li>Consider a connected graph with <span class="math">\(n\)</span> nodes.  The longest possible path
+<li>
+<p>Consider a connected graph with <span class="math">\(n\)</span> nodes.  The longest possible path
    between a pair of nodes in this graph has to go through every node
    exactly once.  It can't loop back around because in that case there
    would be a way of choosing a shorter path with no loops.  Thus, the
-   maximum diameter of a connected network is <span class="math">\(n-1\)</span>.</li>
+   maximum diameter of a connected network is <span class="math">\(n-1\)</span>.</p>
+</li>
+<li>
+<p>The definition for directed networks is the same as for undirected
+   networks, except one must be mindful of the direction of the each link
+   in the path.  For weighted networks, the distance between two nodes
+   depends on the meaning of the weights.  If the weights represent a
+   distance concept (e.g. in road networks where weights is physical
+   distance from one place to another), then the shortest path between two
+   nodes will be the least-weighted path.  On the contrary, if the weights
+   represent a closeness concept (e.g. in social networks where we may join
+   two users with a stronger weight the more frequently they interact),
+   then the shortest path between two nodes will be the highest weighted
+   path, because it represents the volume or frequency of interaction,
+   which we can take as a proxy for "closeness".</p>
+</li>
+<li>
+<p>Due to the Six Degrees of Separation<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> experiment, we know that
+   average path lengths are considerably less than one would expect in
+   networks that exhibit the small-world<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> phenomenon.  The folks at
+   Facebook know this, and so they repeated Milgram's experiment<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>
+   recently, discovering a surprising three and a half degrees of
+   separation<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup>.</p>
+</li>
 </ol>
+</div>
+<!-- erdos-solutions -->
+<div class="tab-pane fade" id="erdos-footnote">
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="https://en.wikipedia.org/wiki/Six_degrees_of_separation">Six Degrees of Separation</a> <a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://en.wikipedia.org/wiki/Small-world_network">Small-world Network</a> <a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://en.wikipedia.org/wiki/Small-world_experiment">Milgram's small-world experiment</a> <a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/">Three and a half degrees of separation</a> <a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
