@@ -39,10 +39,15 @@ Summary: Online and print resources on NetSci
 * NetworkX. [link](https://networkx.github.io/)
 
 ## Institutions
-* Network Science Institute. [Northeastern University](http://www.networkscienceinstitute.org/)
-* Yale Institute for Network Science. [Yale University](http://yins.yale.edu/)
-* Indiana University Network Science Institute. [Indiana University](http://iuni.iu.edu/)
-* Network Science IGERT. [UCSB](http://networkscience.igert.ucsb.edu/)
+* Network Science Institute, [Northeastern University](http://www.networkscienceinstitute.org/)
+* Yale Institute for Network Science, [Yale University](http://yins.yale.edu/)
+* Indiana University Network Science Institute, [Indiana University](http://iuni.iu.edu/)
+* Network Science IGERT, [UC Santa Barbara](http://networkscience.igert.ucsb.edu/)
+* Network Analysis Center, [Duke University](https://dnac.ssri.duke.edu/)
+* Center for Network Science, [Central European University](https://cns.ceu.edu/)
+* Warren Center for Data & Network Sciences, [University of Pennsylvania](http://warrencenter.upenn.edu/)
+* Channing Division of Network Medicine, [Harvard Medical School](www.channing.harvard.edu/)
+* Computation and Mathematics for Biological Networks, [University of Maryland](http://www.combine.umd.edu/)
 
 ## Datasets
 * Stanford Large Network Dataset Collection. [SNAP](https://snap.stanford.edu/data/)
