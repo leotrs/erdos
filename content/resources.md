@@ -46,7 +46,7 @@ Summary: Online and print resources on NetSci
 * Network Analysis Center, [Duke University](https://dnac.ssri.duke.edu/)
 * Center for Network Science, [Central European University](https://cns.ceu.edu/)
 * Warren Center for Data & Network Sciences, [University of Pennsylvania](http://warrencenter.upenn.edu/)
-* Channing Division of Network Medicine, [Harvard Medical School](www.channing.harvard.edu/)
+* Channing Division of Network Medicine, [Harvard Medical School](http://channing.harvard.edu/)
 * Computation and Mathematics for Biological Networks, [University of Maryland](http://www.combine.umd.edu/)
 
 ## Datasets
